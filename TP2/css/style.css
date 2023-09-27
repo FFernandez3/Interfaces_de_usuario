@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif ;
+}
+:root{
+    /*Colores*/
+    --primaryColor:#333333;
+    --primaryColorS1:#1f1f1f;
+    --primaryColorS2:#0d0d0d;
+    --primaryColorL1:#666666;
+    --primaryColorL2:#999999;
+    --primaryColorL3:#cccccc;
+    --secondaryColor:gradient: #ec098c, #ff9d0b;
+    --secondaryColorS1:#df247a, #e6900e;
+    --secondaryColorS2:#cc0861, #cb7d0a;
+    --secondaryColorS3:#ab0752, #b7730f ;
+    --secondaryColorL1:#ee35a1, #ffaa2c;
+    --secondaryColorL2:#f141a8, #ffb341;
+    --secondaryColorL3:#f163b6, #ffc875;
+    --accentColor:#99dc0b;
+    --black:#111111;
+    --white:#f2f2f2;
+    --googleColor:#f90101;
+    --facebookColor:#3b5998;
+    /*Fuentes*/
+    --h1: 32px;
+    --h2: 24px;
+    --h3: 20px;
+    --bodyFontSize: 16px;
+    --bodyBold: 16px, bold;
+    --buttonText:14px, letter: spacing 30%;
+    --bigCardText:25px, letter: font: weight 600px;
+    --smallCardText: 23px;
+    --smallText:14px;
+    /*Cards*/
+    --divSmallCardSize: 290px, 360px;
+    --imgSmallCardSize:290px, 214px;
+    /*Tamanios botones*/
+    --smallButtonSize:120px, 36px;
+    --BigButtonSize:203px, 56px;
+    --buttonLogInSingUpFormSize:400px, 44px;
+    --cartButton:420px, 38px;
+    /*label gratis*/
+    --labelSize:79px, 26px;
+    /*Inputs*/
+    --inputFormSize: 400px, 33px;
+    --inputSearchSize:300px, 40px;
+    --inputCommentSize:996px, 50px;
+    --inputDateSize:120px, 35.94px;
+
+}
+body{
+    background-color: var(--primaryColor);
+}
