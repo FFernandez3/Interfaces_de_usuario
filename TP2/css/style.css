@@ -6,6 +6,7 @@
     border: none;
     outline: none;
     font-family: 'Roboto', sans-serif ;
+    overflow-x: hidden;
 }
 :root{
     /*Colores*/
@@ -15,13 +16,13 @@
     --primaryColorL1:#666666;
     --primaryColorL2:#999999;
     --primaryColorL3:#cccccc;
-    --secondaryColor:gradient: #ec098c, #ff9d0b;
-    --secondaryColorS1:#df247a, #e6900e;
-    --secondaryColorS2:#cc0861, #cb7d0a;
-    --secondaryColorS3:#ab0752, #b7730f ;
-    --secondaryColorL1:#ee35a1, #ffaa2c;
-    --secondaryColorL2:#f141a8, #ffb341;
-    --secondaryColorL3:#f163b6, #ffc875;
+    --secondaryColor: #ec098c;/*linear-gradient(#ec098c, #ff9d0b); */
+    --secondaryColorS1: #df247a; /*#df247a, #e6900e;*/
+    --secondaryColorS2: #cc0861; /*#cc0861, #cb7d0a;*/
+    --secondaryColorS3: #ab0752;/*#ab0752, #b7730f;*/
+    --secondaryColorL1:#ee35a1; /*#ee35a1, #ffaa2c;*/
+    --secondaryColorL2:#f141a8; /*#ffb341;*/
+    --secondaryColorL3:#f163b6;/* #ffc875;*/
     --accentColor:#99dc0b;
     --black:#111111;
     --white:#f2f2f2;
@@ -56,15 +57,17 @@
 }
 
 body{
+    /*width: 390px;*/
     background-color: var(--primaryColor);
     /*height: fit-content;*/
     display: grid;
     grid-template-columns: 1fr;
     /*grid-template-rows: 3% 91% 6%;*/
-    grid-template-rows: 3% auto 6% ; /* con 1fr auto 3fr el body toma todo*/
+    grid-template-rows: 1fr auto 3fr ; /* con 3% auto 6% el body no toma todo*/
     grid-template-areas: "header" 
                         "container"
                         "footer";
+                        
 }
 
 nav.mainNav, nav.userNav, div.cartPopUp{
@@ -77,6 +80,10 @@ header{
     grid-row: 1;*/
     grid-area: "header";
     /*height: fit-content;*/
+    position: sticky;
+    top:0;
+    z-index: 100;
+    
 }
 
 div.container{
@@ -85,6 +92,7 @@ div.container{
     margin-left: 8px;
     margin-right: 8px;
     grid-area: "container";
+    
 }
 
 footer{
@@ -93,4 +101,90 @@ footer{
     grid-area: "footer";
     background-color: var(--primaryColorS2);
     height: fit-content;
+}
+/*div.bigCarousel{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+
+}*/
+
+
+/*Carrusel grande*/
+section.recommended{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+div.imgBigCarousel img{
+    height: 250px;
+    width: 100%;
+    opacity: 0;
+    transition:opacity 1s;
+    /*position: absolute;*/
+    /*left: 0;
+    top: 0;*/
+    display: none;
+
+}
+div.imgBigCarousel img:first-child{
+    opacity: 1;
+    /*display: block;*/
+}
+div.imgBigCarousel img:target{
+    opacity: 1;
+    display: block;
+}
+
+/*Botones carrusel grande*/
+nav.elipseButton{
+    display: flex;
+    justify-content: center;
+    /*position: relative;*/
+    
+}
+nav.elipseButton button{
+    margin: 8px;
+}
+/*Carrusel chico*/
+section.smallCarousel{
+    /*display: block;*/
+    /*overflow-x: auto;*/
+}
+div.carousel{
+    overflow-x: scroll;
+}
+div.slides{
+    display: flex;
+    flex-direction: row;
+    /*flex-wrap: nowrap;*/
+    /*overflow-x: scroll;*/
+    width: fit-content;
+    /*scroll-snap-type: x;*/
+    /*transform: translateX(200px);*/
+}
+/*card pequeña*/
+div.card{
+    background-color: var(--white);
+    width: 250px;
+    display: flex;
+    flex-direction: column;  
+}
+
+div.card-img img{
+    height: 100px;
+    width: 100%;
+    
+}
+button.cardButton{
+    background-color: var(--secondaryColor);
+    text-align: center;
+    width: 100px;
+    border-radius: 5px;
+    align-self: center; 
+      
+}
+button.cardButton a{
+    color: var(--white);
 }
