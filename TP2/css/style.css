@@ -34,10 +34,12 @@
     --h3: 20px;
     --bodyFontSize: 16px;
     --bodyBold: 16px, bold;
-    --buttonText:14px, letter: spacing 30%;
-    --bigCardText:25px, letter: font: weight 600px;
-    --smallCardText: 23px;
-    --smallText:14px;
+    /*--buttonText:14px, letter: spacing 30%;*/ /*asi no lo aplica*/
+    --buttonText: 14px;
+    /*--bigCardText:25px, letter: font: weight 600px;*/ /*asi no lo toma*/
+    --bigCardText:20px; /*25 es muy grande lo achique*/
+    --smallCardText: 18px; /*antes 23 px*/
+    --smallText:14px; /*ojo este se repite con buttonText ahora*/
     /*Cards*/
     --divSmallCardSize: 290px, 360px;
     --imgSmallCardSize:290px, 214px;
@@ -98,9 +100,22 @@ div.container{
 footer{
    /* grid-column: 1;
     grid-row: 3;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     grid-area: "footer";
     background-color: var(--primaryColorS2);
     height: fit-content;
+    color: var(--primaryColorL1);
+    
+}
+footer h2.titleFooterLinks{
+    font-size: var(--h3);
+}
+footer ul li a, .copyright{
+    color: var(--primaryColorL1);
+    font-size: var(--buttonText);
+    
 }
 /*div.bigCarousel{
     height: 300px;
@@ -147,18 +162,61 @@ div.imgBigCarousel img:target{
 
 /*Botones carrusel grande*/
 nav.elipseButton{
-    display: inline;
-   /* justify-content: center;*/
+    /*cambios para q los botones se pongan en el medio en cualquier tamaño de pantalla*/
+    /*display: inline;
+    justify-self: center;*/
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
     position: absolute;
     top: 250px;
-    left:100px;
-    margin-left: 45px;
+    width: 100%;
+    /*left:100px;*/
+    /*left: 40%; */
+   /* right: 40%;*/
+    /*margin-left: 45px;*/
     
 }
 nav.elipseButton button{
     margin: 8px;
+    border-radius: 100%;
+    height: 15px; /*debe ser cuadrado para darle borde 100% y que quede un circulo*/
+    width: 15px;
+    background-color: var(--primaryColorS1);
+    opacity: 0.71;
+    /*opacity: 0;*/
+   /* border: none;
+    outline: none;*/
+    
 }
+/*.circleButton{
+    height: 20px;
+    width: 20px;
+    opacity: 1;
+    
+}*/
+nav.elipseButton button a{
+    opacity: 0;
+    /*height: 20px;
+    width: auto;*/
+    /*text-decoration: none;*/
+    /*border: none;*/
+   /* outline: none;*/
+}
+ /*nav.elipseButton button:checked{
+    opacity: 1;
+}*/
+
+
 /*Carrusel chico*/
+h1.categoryName{
+    color: var(--white);
+    font-size: var(--h3);
+}
+.card{
+    border-radius: 10px;
+    margin: 5px;
+}
 section.smallCarousel{
     /*display: block;*/
     /*overflow-x: auto;*/
@@ -176,6 +234,10 @@ div.slides{
     /*transform: translateX(200px);*/
 }
 /*card pequeña*/
+section.smallCarousel{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 div.card{
     background-color: var(--white);
     width: 250px;
@@ -198,4 +260,26 @@ button.cardButton{
 }
 button.cardButton a{
     color: var(--white);
+}
+div.card-title p{
+    color: var(--black);
+    font-weight: bold;
+    font-size: var(--bigCardText);
+    margin-left: 2%;
+    
+}
+div.card-price p{
+    color: var(--primaryColor);
+    font-size: var(--smallCardText);
+    margin-left: 2%;
+}
+.card-price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  /*esto pone al precio y boton sobre los margenes de la card*/
+}
+/*para alejar el boton de agregar del borde de la card*/
+.cardButtonPrice{
+    margin-right: 2%;
+    
 }
