@@ -272,6 +272,7 @@ div.card-price p{
     color: var(--primaryColor);
     font-size: var(--smallCardText);
     margin-left: 2%;
+    
 }
 .card-price{
     display: flex;
@@ -282,4 +283,9 @@ div.card-price p{
 .cardButtonPrice{
     margin-right: 2%;
     
+}
+/*hace que lo que sobra de titulo se esconda y ponga ..*/
+p.title-card{
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
