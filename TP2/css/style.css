@@ -112,20 +112,28 @@ footer{
 
 /*Carrusel grande*/
 section.recommended{
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    position: relative;
+    min-height: 300px;
     
+}
+div.imgBigCarousel {
+    position:relative;
+    /*height: fit-content;*/
+    min-height: 250px;
 }
 div.imgBigCarousel img{
     height: 250px;
     width: 100%;
     opacity: 0;
     transition:opacity 1s;
-    /*position: absolute;*/
+    position: absolute;
     /*left: 0;
     top: 0;*/
-    display: none;
+   /* display: none;*/
 
 }
 div.imgBigCarousel img:first-child{
@@ -139,9 +147,12 @@ div.imgBigCarousel img:target{
 
 /*Botones carrusel grande*/
 nav.elipseButton{
-    display: flex;
-    justify-content: center;
-    /*position: relative;*/
+    display: inline;
+   /* justify-content: center;*/
+    position: absolute;
+    top: 250px;
+    left:100px;
+    margin-left: 45px;
     
 }
 nav.elipseButton button{
