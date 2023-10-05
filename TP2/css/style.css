@@ -420,6 +420,55 @@ form button.btnFormLogin{
     margin-top: 50px;
     
 }
-@media only screen and(min-width:660px){
+/*---------------------------------------Juego--------------------------------*/
+section.gameContainer{
+    width: 100%;
+    background-color: var(--primaryColorS1);
+    border-radius: 10px;
+    padding: 10px;
+}
+h1.gameName{
+    color:var(--primaryColorL2);
+    font-size: var(--h1);
+}
+section.autoPlay h2{
+    color: var(--primaryColorL3);
+    font-size: var(--h2);
+}
+div.breadCrumbs a, section.autoPlay p{
+    color: var(--primaryColorL3);
+    font-size: var(--bodyFontSize); 
+}
+img.banner{
+    width: 100%;
+    display: block;
+    height: auto;
+}
+button.share, button.like, button.dislike, button.heart, button.share img, button.like img, button.dislike img, button.heart img{
+    background-color: var(--primaryColorS1);
+}
+div.popUpShare{ /*por ahora oculto el pop up para compatir*/
+    display: none;
+}
+div.postedComment,input.comment{
+    border-radius: 5px;
+    padding: 5px;
+}
+ div.postedComment {
+    background-color: var(--white);
     
+}
+input.comment{
+    background-color: var(--primaryColorL3);
+    font-size: var(--bodyFontSize);
+    width: 100%;
+  
+}
+article div.postedComment div p{
+    color: var(--black);
+}
+@media only screen and(min-width:660px){
+    header{
+        max-height: 70px;
+    }
 }
