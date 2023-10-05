@@ -3,16 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
     <title>ArcadeZone</title>
   </head>
   <body>
-
+    <img class="logoForm" src="img/avatar/Logo.png" alt="logo">
     <form>
-      <h1>Formulario de registro</h1>
+      <h1>CREA TU CUENTA</h1>
 
       <div class="buttons">
-        <button type="button"><a href="http://">Entra con Google</a></button>
-        <button type="button"><a href="http://">Entra con Facebook</a></button>
+        <a href=""><img class="btnGoogle" src="img/botones/Btn-Google (1).svg" alt="google"></a>
+        <a href=""><img class="btnFace"src="img/botones/Btn-Facebook.svg" alt="facebook"></a>
+       
       </div>
 
       <div class="field">
@@ -32,9 +34,11 @@
 
       <div class="field">
         <label for="birthday">Fecha de nacimiento*</label>
-        <select name="" id="" placeholder="Día"></select>
-        <select name="" id="" placeholder="Mes"></select>
-        <select name="" id="" placeholder="Año"></select>
+        <div class="select">
+          <select name="" id="" placeholder="Día"></select>
+          <select name="" id="" placeholder="Mes"></select>
+          <select name="" id="" placeholder="Año"></select>
+        </div>
       </div>
 
       <div class="field">
@@ -52,16 +56,17 @@
         <input type="password" name="repeatePassword" />
       </div>
 
-      <img src="" alt=""> <!--agregar imagen de recaptcha-->
+      <img class="captcha"src="img/botones/Capcha.png" alt="recaptcha"> <!--agregar imagen de recaptcha-->
 
-      <div class="field">
+      <div class="field agreement">
+        <input class="checkbox" type="checkbox" name="suscriptionAgreement" id="">
         <label for="suscriptionAgreement">Acepto los términos de Acuerdo de Suscriptor de ArcadeZone</label>
-        <input type="checkbox" name="suscriptionAgreement" id="">
+        
       </div>  
 
       <button type="button">Registrarme</button>
 
-      <div class="field">
+      <div class="linkLogin">
         <p>¿Ya tienes cuenta?</p>
         <a href="">Iniciar Sesion</a>
       </div>

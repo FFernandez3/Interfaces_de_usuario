@@ -85,6 +85,9 @@ header{
     position: sticky;
     top:0;
     z-index: 100;
+    display: grid;
+    grid-template-columns: 15% 55% 15% 15%;
+    grid-template-rows: 1fr;
     
 }
 
@@ -272,7 +275,7 @@ div.card-price p{
     color: var(--primaryColor);
     font-size: var(--smallCardText);
     margin-left: 2%;
-    
+  
 }
 .card-price{
     display: flex;
@@ -288,4 +291,129 @@ div.card-price p{
 p.title-card{
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+/*header*/
+a img.logo{
+    max-width: 150px;
+    max-height: 100px;
+}
+img.hamburger, img.cart-icon{
+    max-width: 100px;
+    max-height: 100px;
+    justify-self: center;
+    margin-top: 33%;
+}
+img.cart-icon{
+    justify-self: center;
+    margin-top: 37%;
+}
+img.avatar{
+    justify-self: center;
+    margin-top: 33%;
+}
+/*formularios*/
+form label{
+    color: var(--primaryColorL3);
+    font-size: var(--smallText);
+}
+form{
+    background-color: var(--primaryColorL1);
+    width: 500px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+form div.field{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 67.89px;
+}
+form input, form select{
+    background-color: var(--primaryColorL2);
+    border-radius: 10px;
+}
+form input{
+    width: 400px;
+    height: 35.94px;
+}
+form h1, form p{
+    color: var(--white);
+}
+form h1{
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+form a{
+    color: var(--accentColor);
+}
+form div.select, form div.agreement{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+form button{
+    border-radius: 10px;
+    width: 203px;
+    height: 55.91px;
+    font-size: var(--buttonText);
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: var(--secondaryColorL3);
+}
+form select{
+    width: 120px;
+    height: 35.94px;
+
+}
+form div.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+form div.linkLogin{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px;
+}
+form div.linkLogin p{
+    margin-right: 5px;
+}
+form div.linkLogin a{
+    margin-left: 5px;
+}
+div input.checkbox{
+    width: 20px;
+    height: 20px;
+}
+div.agreement label{
+    width: 355px;
+}
+div.agreement{
+    margin-top: 30px;
+}
+form img.captcha{
+    margin-left: 12px;
+    margin-top: 15px;
+}
+div.buttons a img.btnGoogle{
+    margin-bottom: 6px;
+}
+div.buttons a img.btnFace{
+    margin-bottom: 15px;
+}
+img.logoForm{
+    margin: 0 auto;
+    margin-top: 2%;
+    min-width: 280px;
+    min-height: 140px;
+}
+
+@media only screen and(min-width:660px){
+    
 }
