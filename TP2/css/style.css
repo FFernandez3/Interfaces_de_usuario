@@ -405,7 +405,7 @@ div.buttons a img.btnGoogle{
     margin-bottom: 6px;
 }
 div.buttons a img.btnFace{
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 img.logoForm{
     margin: 0 auto;
@@ -413,7 +413,13 @@ img.logoForm{
     min-width: 280px;
     min-height: 140px;
 }
-
+form a.forgotPassword{
+    margin-left: 170px;
+}
+form button.btnFormLogin{
+    margin-top: 50px;
+    
+}
 @media only screen and(min-width:660px){
     
 }
