@@ -80,7 +80,7 @@ header{
     background-color: var(--primaryColorS2);
     /*grid-column: 1;
     grid-row: 1;*/
-    grid-area: "header";
+    grid-area: header;
     /*height: fit-content;*/
     position: sticky;
     top:0;
@@ -90,13 +90,17 @@ header{
     grid-template-rows: 1fr;
     
 }
+input.searchGames{
+    display: none;
+}
 
 div.container{
    /* grid-column: 1;
     grid-row: 2;*/
     margin-left: 8px;
     margin-right: 8px;
-    grid-area: "container";
+    grid-area: container;
+    margin-bottom: 40px;
     
 }
 
@@ -106,7 +110,7 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    grid-area: "footer";
+    grid-area: footer;
     background-color: var(--primaryColorS2);
     height: fit-content;
     color: var(--primaryColorL1);
@@ -119,6 +123,9 @@ footer ul li a, .copyright{
     color: var(--primaryColorL1);
     font-size: var(--buttonText);
     
+}
+div.categoriesFooter, img.logoFooter{
+    display: none;
 }
 /*div.bigCarousel{
     height: 300px;
@@ -422,22 +429,122 @@ form button.btnFormLogin{
 }
 /*---------------------------------------Juego--------------------------------*/
 section.gameContainer{
-    width: 100%;
+    /*width: 100%;*/
     background-color: var(--primaryColorS1);
     border-radius: 10px;
     padding: 10px;
+    margin-bottom: 30px;
+    padding-bottom: 50px;
+}
+div.miniGameContainer{
+    display:flex;
+    flex-direction: row;
+}
+div.miniGameContainer:first-child{
+    margin-left: 28px;
+}
+
+img.game{
+    width: 1000px;
+}
+div.asideGame{
+    margin-left: 65px;
+}
+div.turnContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 261px;
+    height: 277px;
+    border-radius: 20px;
+    border:10px solid var(--primaryColorL3); ;
+}
+div.turnContainer  p{
+    font-size: var(--h2);
+    color: var(--primaryColorL3);
+    margin-top: 30px;
+}
+img.turnKen{
+    width: 60px;
+    height: 60px;
+}
+div.turnContainer button{
+    width: 180px;
+    height: 56px;
+    background-color: var(--secondaryColor);
+    color: var(--white);
+    border-radius: 10px;
+    font-size: var(--buttonText);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+div.gameAvatars{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px;
+}
+div.gameAvatars div{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    
+}
+div.gameAvatars div p{
+    margin-top: 10px;
+    margin-left: 20px;
+    color: var(--primaryColorL2);
+    font-size: var(--bodyFontSize);
+}
+
+div.navGame{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 72px;
+    width: 980px;
+    border-bottom: 10px solid var(--primaryColorL3);
+    border-left: 10px solid var(--primaryColorL3);
+    border-right: 10px solid var(--primaryColorL3);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 h1.gameName{
     color:var(--primaryColorL2);
-    font-size: var(--h1);
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+div.optionsGame button{
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+div.optionsGame button.heart{
+    margin-right: 22px;
 }
 section.autoPlay h2{
     color: var(--primaryColorL3);
     font-size: var(--h2);
+    margin-bottom: 10px;
+}
+iFrame{
+    width: 420px;
+    height: 240px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 8px;
 }
 div.breadCrumbs a, section.autoPlay p{
     color: var(--primaryColorL3);
     font-size: var(--bodyFontSize); 
+}
+div.breadCrumbs a{
+    font-size: 20px;
 }
 img.banner{
     width: 100%;
@@ -456,19 +563,176 @@ div.postedComment,input.comment{
 }
  div.postedComment {
     background-color: var(--white);
-    
+    width: 90%;
 }
 input.comment{
     background-color: var(--primaryColorL3);
     font-size: var(--bodyFontSize);
-    width: 100%;
-  
+    width: 90%;
 }
-article div.postedComment div p{
+article div.postedComment p{
     color: var(--black);
+    margin-top: 10px;
 }
-@media only screen and(min-width:660px){
+div.posted, div.post{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+article, div.containerComment{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+div.containerComment{
+    margin-bottom: 40px;
+}
+div.containerComment button{
+    margin-right: 20px;
+    margin-left: auto;
+    margin-top: 10px;
+    width: 120px;
+    height: 36px;
+    border-radius: 10px;
+    color: var(--white);
+    background-color: var(--secondaryColorL3);
+}
+div.leaveComment h3, section.autoPlay h2, section.autoPlay p, div.pastComments h3{
+    margin-left: 8px;
+}
+div.pastComments{
+    margin-top: 10px;
+}
+img.line{
+
+    width: 99%;
+    margin-bottom: 20px;
+    margin-top: 7px;
+    background-color: var(--primaryColor);
+}
+div.buttonsComment{
+    display: flex;
+    flex-direction: row;
+    margin-left: 115px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+}
+div.buttonsComment a{
+    width: 100px;
+    color: var(--accentColor);
+}
+@media only screen and (min-width:660px){
+
     header{
-        max-height: 70px;
+        height: 70px;
+        grid-template-columns: 5% 15% 60% 10% 10%;
+        grid-template-areas: "menu logo search cart avatar";
     }
+    input.searchGames{
+        display: block;
+        width: 300px;
+        height: 40px;
+        border-radius: 50px;
+        background-color: var(--primaryColorL1);
+        grid-area: search;
+        align-self: center;
+        justify-self: center;
+    
+    }
+    input.searchGames[type="text"]{
+        color: var(--white);
+        
+    }
+    input.searchGames::placeholder{
+        color: var(--white);
+        padding: 30px;
+        opacity: 0.5;
+        
+        
+
+    }
+   /* input.searchGames::placeholder{
+            margin-left: 10px;
+            color: #111111; 
+    }*/
+    input.searchGamesMob, li.searchGamesMob{
+        display: none;
+    }
+    img.hamburger {
+        margin-top: 0;
+        width: 24px;
+        height: 24px;
+        grid-area: menu;
+        align-self: center;
+        justify-self: left;
+        margin-left: 35px;
+    }
+    img.cart-icon{
+        width: 28px;
+        height: 28px;
+        margin-top: 23px;
+        grid-area: cart;
+        justify-self: right;
+    }
+    img.avatar{
+        width: 32px;
+        height: 32px;
+        margin-top: 19px ;
+        grid-area: avatar;
+    }
+    a img.logo{
+        grid-area: logo;
+        
+    
+    }
+    footer{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 90% 10%;
+        grid-template-areas: "footerLogo aboutUs categories contact"
+                             "copyR copyR copyR copyR";
+
+    }
+    div.categoriesFooter, img.logoFooter{
+        display: block;
+    }
+    img.logoFooter{
+        width:296px ;
+        height: 141px;
+        grid-area: footerLogo;
+    }
+    div.categoriesFooter{
+        grid-area: categories;
+    }
+    div.contact{
+        grid-area: contact;
+    }
+    div.aboutUs{
+        grid-area: aboutUs;
+    }
+    img.logoFooter, div.contact,  div.aboutUs, div.categoriesFooter{
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    div.contact li, div.aboutUs li, div.categoriesFooter li{
+        margin:10px;
+        margin-left: 0%;
+    }
+    p.copyright{
+        grid-area: copyR;
+        align-self: center;
+        justify-self: center;
+        margin-bottom: 20px;
+    }
+    div.contact ul li a img{
+        background-color: var(--primaryColorS2);
+    }
+    div.socials{
+        display: flex;
+        flex-direction: row;
+
+    }
+   
 }
