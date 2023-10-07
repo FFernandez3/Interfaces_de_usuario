@@ -71,8 +71,21 @@ body{
                         "footer";
                         
 }
-
-nav.mainNav, nav.userNav, div.cartPopUp{
+nav.styleNav{
+    background-color: var(--primaryColor);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 80%;
+    height: 100%;
+    box-shadow: 0 0 1px 1px;
+}
+nav.styleNav a{
+    color: var(--white);
+}
+li.menuLine{
+    border-bottom: solid 2px var(--primaryColorL1);
+}
+.displayNone{
     display: none;
 }
 
@@ -88,7 +101,11 @@ header{
     display: grid;
     grid-template-columns: 15% 55% 15% 15%;
     grid-template-rows: 1fr;
+    height: 70px;
     
+}
+button.btnMenu{
+    background-color: var(--primaryColorS2);
 }
 input.searchGames{
     display: none;
@@ -107,13 +124,16 @@ div.container{
 footer{
    /* grid-column: 1;
     grid-row: 3;*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    
     grid-area: footer;
     background-color: var(--primaryColorS2);
-    height: fit-content;
     color: var(--primaryColorL1);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 90% 10%;
+    grid-template-areas:
+        "aboutUs contact"
+        "copyR copyR";
     
 }
 footer h2.titleFooterLinks{
@@ -124,8 +144,40 @@ footer ul li a, .copyright{
     font-size: var(--buttonText);
     
 }
+footer div.aboutUs{
+    grid-area: aboutUs;
+    position: relative;
+    left: 10%;
+    top: 10%;
+}
+footer div.contact{
+    grid-area: contact;
+    position: relative;
+    left: 20%;
+    top: 10%;
+}
+footer p.copyright{
+    grid-area: copyR;
+    align-self: center;
+    justify-self: center;
+}
+footer div.socials{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+div.socials li a img{
+    width: 35px;
+    height: 35px;
+}
 div.categoriesFooter, img.logoFooter{
     display: none;
+}
+footer ul.ulFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50%;
 }
 /*div.bigCarousel{
     height: 300px;
@@ -446,9 +498,10 @@ div.miniGameContainer:first-child{
 
 img.game{
     width: 1000px;
+    height: 700px;
 }
 div.asideGame{
-    margin-left: 65px;
+    margin-left: 118px;
 }
 div.turnContainer{
     display: flex;
@@ -505,12 +558,13 @@ div.navGame{
     flex-direction: row;
     justify-content: space-between;
     height: 72px;
-    width: 980px;
+    width: 825px;
     border-bottom: 10px solid var(--primaryColorL3);
     border-left: 10px solid var(--primaryColorL3);
     border-right: 10px solid var(--primaryColorL3);
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
+    margin-left: 78px;
 }
 h1.gameName{
     color:var(--primaryColorL2);
@@ -734,5 +788,15 @@ div.buttonsComment a{
         flex-direction: row;
 
     }
-   
+    footer ul.ulFooter{
+        display: block;
+        height: 147.84px;
+        width: 379.8px;
+    }
+    footer div.contact{
+        position: static;
+    }
+   footer div.aboutUs{
+    position: static;
+   }
 }

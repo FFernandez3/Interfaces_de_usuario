@@ -1,558 +1,627 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>ArcadeZone</title>
-</head>
-<body>
-    <header> 
-      <img class="hamburger" src="img/iconos/hamburger.svg" alt="hamburgerIcon">
-        <nav class="mainNav">
-            
-            <ul class="">
-                <li><img src="" alt="">Logo</li>
-                <li><input type="text" placeholder="Buscar juegos"></li>
-                <li><img src="" alt="news"><a href="">Novedades</a></li>
-                <li><img src="" alt="flame"><a href="">Tendencias</a></li>
-                <li><img src="" alt="swords"><a href="">Accion</a></li>
-                <li><img src="" alt="pacman"><a href="">Arcade</a></li>
-                <li><img src="" alt="flag"><a href="">Aventura</a></li>
-                <li><img src="" alt="ball"><a href="">Deporte</a></li>
-                <li><img src="" alt="tower"><a href="">Estrategia</a></li>
-                <li><img src="" alt="deadHand"><a href="">Zombies</a></li>
-            </ul>
+  </head>
+  <body>
+    <header>
+      <button class="btnMenu" id="menu-btn"><img
+        class="hamburger"
+        src="img/iconos/hamburger.svg"
+        alt="hamburgerIcon"
+      /></button>
 
-        </nav>
-        
-        <a href=""><img class="logo" src="img/avatar/Logo.png" alt="logo"></a><!--logo-->
-        <img class="cart-icon" src="img/iconos/cart.svg" alt="cart"><!--icono cart-->
-        <div class="cartPopUp">
-            <table>
-                <tr>
-                    <th>CARRITO DE COMPRAS</th>
-                    <th><img src="img/" alt=""></th><!--cruz para cerrar-->
-                </tr>
-                <tbody>
-                    <tr>
-                        <td><img src="" alt=""></td>
-                        <td class="gameTitle cart"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Subtotal:</td>
-                        <td></td> <!--precio-->
-                    </tr>
-                    <tr>
-                        <td>Total:</td>
-                        <td></td><!--precio-->
-                    </tr>
-                    <tr>
-                        <td><button>Iniciar compra</button></td>
-                    </tr>
+      <a href=""><img class="logo" src="img/avatar/Logo.png" alt="logo" /></a
+      ><!--logo-->
+      <input class="searchGames" type="text" placeholder="Buscar juegos" />
+      <img
+        class="cart-icon"
+        src="img/iconos/cart.svg"
+        alt="cart"
+      /><!--icono cart-->
 
-                </tbody>
-                
-            </table>
-        </div>
-
-        <img class="avatar" src="img/avatar/Ellipse 41.svg" alt="avatar">
-        <nav class="userNav">
-            
-            <ul>
-                <li><a href=""><img src="" alt=""></a></li>
-                <li><img src="" alt="avatar"><a href="">Mi perfil</a></li>
-                <li><img src="" alt="bell"><a href="">Notificaciones</a></li>
-                <li><img src="" alt="joystick"><a href="">Mis juegos</a></li>
-                <li><img src="" alt="shopBag"><a href="">Mis compras</a></li>
-                <li><img src="" alt="shield"><a href="">Privacidad</a></li>
-                <li><img src="" alt="question"><a href="">Soporte</a></li>
-                <li><img src="" alt="logOut"><a href="">Cerrar sesión</a></li>
-
-            </ul>
-        </nav>
-
+      <button class="btnMenu" id="avatar-btn"> <img class="avatar" src="img/avatar/Ellipse 41.svg" alt="avatar" /></button>
     </header>
+    <nav class="displayNone styleNav" id="main-nav">
+      <ul class="">
+        <li><img src="img/avatar/Logo.svg" alt="logo" />Logo</li>
+        <li><button><img src="img/iconos/cross.svg" alt=""></button></li>
+        <li><input type="text" placeholder="Buscar juegos" /></li>
+        <li><img src="img/iconos/news.svg" alt="news" /><a href="">Novedades</a></li>
+        <li class="menuLine"><img src="img/iconos/fire.svg" alt="fire" /><a href="">Tendencias</a></li>
+        <li><img src="img/iconos/swords.svg" alt="swords" /><a href="">Accion</a></li>
+        <li><img src="img/iconos/pacman.svg" alt="pacman" /><a href="">Arcade</a></li>
+        <li><img src="img/iconos/flag.svg" alt="flag" /><a href="">Aventura</a></li>
+        <li><img src="img/iconos/ball.svg" alt="ball" /><a href="">Deporte</a></li>
+        <li><img src="img/iconos/tower.svg" alt="tower" /><a href="">Estrategia</a></li>
+        <li><img src="img/iconos/zombie.svg" alt="deadHand" /><a href="">Zombies</a></li>
+      </ul>
+    </nav>
+    <nav class="displayNone styleNav" id="user-nav">
+      <ul>
+        <li>
+          <a href=""><img src="" alt="" /></a>
+        </li>
+        <li><img src="img/iconos/user.svg" alt="avatar" /><a href="">Mi perfil</a></li>
+        <li><img src="img/iconos/novedades.svg" alt="bell" /><a href="">Notificaciones</a></li>
+        <li><img src="img/iconos/joystick.svg" alt="joystick" /><a href="">Mis juegos</a></li>
+        <li><img src="img/iconos/shop.svg" alt="shopBag" /><a href="">Mis compras</a></li>
+        <li><img src="img/iconos/privacity.svg" alt="shield" /><a href="">Privacidad</a></li>
+        <li><img src="img/iconos/support.svg" alt="question" /><a href="">Soporte</a></li>
+        <li><img src="img/iconos/logOut.svg" alt="logOut" /><a href="">Cerrar sesión</a></li>
+      </ul>
+    </nav>
+    <div class="displayNone">
+      <table>
+        <tr>
+          <th>CARRITO DE COMPRAS</th>
+          <th><img src="img/" alt="" /></th>
+          <!--cruz para cerrar-->
+        </tr>
+        <tbody>
+          <tr>
+            <td><img src="" alt="" /></td>
+            <td class="gameTitle cart"></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Subtotal:</td>
+            <td></td>
+            <!--precio-->
+          </tr>
+          <tr>
+            <td>Total:</td>
+            <td></td>
+            <!--precio-->
+          </tr>
+          <tr>
+            <td><button>Iniciar compra</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <div class="container">
-        <section class="recommended">
-            <!--carrusel grande-->
-            <!--div class="bigCarousel"-->
-                <div class="imgBigCarousel">
-                    <img id="imgBig1" src="img/sea_of_stars_big.webp" alt="Sea Of Stars">
-                    <img id="imgBig2" src="img/cyberpunk2.jpg" alt="cyberpunk">
-                    <img id="imgBig3" src="img/the_w_big.jpg" alt="The Witch">
-                </div>       
-                <nav class="elipseButton">
-                    <button id="btn1"><a href="#imgBig1">●</a></button>
-                    <!--button><a href="#imgBig1"><img class="circleButton" src="img/Ellipse 28.svg" alt="">1</a></button-->
-                    <button id="btn2"><a href="#imgBig2">●</a></button>
-                    <button id="btn3"><a href="#imgBig3">●</a></button>
-                    
-                </nav> 
-            <!--/div-->
-        </section>
-        <section class="smallCarousel">
-            <h1 class="categoryName">Mis juegos</h1>
-            <div class="carousel">
-                <div class="slides">
-                  <!-- Card 1 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/gameImgForCard.svg" alt="">
-                    </div>
-                    <div class="card-title">
-                      <p>4 en línea</p>
-                    </div>
-                    <button class="cardButton"><a href="">JUGAR</a></button>
-                  </div>
-              
-                  <!-- Card 2 -->
-                  <div class="card">
-                    <div class="card-header">
-                      <h3>Titulo de la tarjeta 2</h3>
-                    </div>
-                    <div class="card-body">
-                      <p>Contenido de la tarjeta 2</p>
-                    </div>
-                    <div class="card-footer">
-                      <p>Pie de la tarjeta 2</p>
-                    </div>
-                  </div>
-              
-                  <!-- Card 3 -->
-                  <div class="card">
-                    <div class="card-header">
-                      <h3>Titulo de la tarjeta 3</h3>
-                    </div>
-                    <div class="card-body">
-                      <p>Contenido de la tarjeta 3</p>
-                    </div>
-                    <div class="card-footer">
-                      <p>Pie de la tarjeta 3</p>
-                    </div>
-                  </div>
-                
-                
-                  <!-- Card 4 -->
-                  <div class="card">
-                    <div class="card-header">
-                      <h3>Titulo de la tarjeta 3</h3>
-                    </div>
-                    <div class="card-body">
-                      <p>Contenido de la tarjeta 3</p>
-                    </div>
-                    <div class="card-footer">
-                      <p>Pie de la tarjeta 3</p>
-                    </div>
-                  </div>
-                
-                
-                  <!-- Card 5 -->
-                  <div class="card">
-                    <div class="card-header">
-                      <h3>Titulo de la tarjeta 3</h3>
-                    </div>
-                    <div class="card-body">
-                      <p>Contenido de la tarjeta 3</p>
-                    </div>
-                    <div class="card-footer">
-                      <p>Pie de la tarjeta 3</p>
-                    </div>
-                  </div>
+      <section class="recommended">
+        <!--carrusel grande-->
+        <!--div class="bigCarousel"-->
+        <div class="imgBigCarousel">
+          <img
+            id="imgBig1"
+            src="img/sea_of_stars_big.webp"
+            alt="Sea Of Stars"
+          />
+          <img id="imgBig2" src="img/cyberpunk2.jpg" alt="cyberpunk" />
+          <img id="imgBig3" src="img/the_w_big.jpg" alt="The Witch" />
+        </div>
+        <nav class="elipseButton">
+          <button id="btn1"><a href="#imgBig1">●</a></button>
+          <!--button><a href="#imgBig1"><img class="circleButton" src="img/Ellipse 28.svg" alt="">1</a></button-->
+          <button id="btn2"><a href="#imgBig2">●</a></button>
+          <button id="btn3"><a href="#imgBig3">●</a></button>
+        </nav>
+        <!--/div-->
+      </section>
+      <section class="smallCarousel">
+        <h1 class="categoryName">Mis juegos</h1>
+        <div class="carousel">
+          <div class="slides">
+            <!-- Card 1 -->
+            <div class="card">
+              <div class="card-img">
+                <img src="img/gameImgForCard.svg" alt="" />
+              </div>
+              <div class="card-title">
+                <p>4 en línea</p>
+              </div>
+              <button class="cardButton"><a href="">JUGAR</a></button>
+            </div>
 
-                </div> <!--slides?-->             
-                <!-- Controles del carrusel -->
-                <div class="controls">
-                  <button class="prev">Anterior</button>
-                  <button class="next">Siguiente</button>
-                </div>
-              </div> <!--cierra carrousel-->
+            <!-- Card 2 -->
+            <div class="card">
+              <div class="card-header">
+                <h3>Titulo de la tarjeta 2</h3>
+              </div>
+              <div class="card-body">
+                <p>Contenido de la tarjeta 2</p>
+              </div>
+              <div class="card-footer">
+                <p>Pie de la tarjeta 2</p>
+              </div>
+            </div>
 
-        </section>
-        <section class="smallCarousel">
-            <h1 class="categoryName">Acción</h1>
-            <div class="carousel">
-                <div class="slides">
-                  <!-- Card 1 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/accion/World-of-Tanks-3-min.jpg" alt="World of Tanks">
-                    </div>
-                    <div class="card-title">
-                      <p>World of Tanks</p>
-                    </div>
-                    <button class="cardButton"><a href="">JUGAR</a></button>
-                  </div>
-              
-                  <!-- Card 2 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/accion/free-fire-game.jpg" alt="Free Fire">
-                    </div>
-                    <div class="card-title">
-                      <p>Free Fire</p>
-                    </div>
-                    <button class="cardButton"><a href="">JUGAR</a></button>
-                  </div>
-              
-                  <!-- Card 3 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/godfall_1200_630.jpg" alt="god fall">
-                    </div>
-                    <div class="card-title">
-                      <p>Godfall</p>
-                    </div>
-                    <div class="card-price">
-                      <p>$2500</p>
-                      <button class="cardButton cardButtonPrice"><a href="">COMPRAR</a></button>
-                    </div>
-                    
-                  </div>
-                
-                
-                  <!-- Card 4 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/accion/World-of-Tanks-3-min.jpg" alt="World of tanks">
-                    </div>
-                    <div class="card-title">
-                      <p>World of Tanks</p>
-                    </div>
-                    <button class="cardButton"><a href="">JUGAR</a></button>
-                  </div>
-                
-                
-                  <!-- Card 5 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/accion/21472686229_68490879b5.jpg" alt="Gladiator">
-                    </div>
-                    <div class="card-title">
-                      <p>Gladiator</p>
-                    </div>
-                    <button class="cardButton"><a href="">JUGAR</a></button>
-                  </div>
-                
-                  <!-- Card 6 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/accion/apps.42226.14162962598130697.205f5e3e-d77d-4217-a74a-b82d8ce5539e.jpg" alt="Monster truck simulator">
-                    </div>
-                    <div class="card-title">
-                      <p class="title-card">Monster Truck Simulatormmmmmmmmm</p>
-                    </div>
-                    <button class="cardButton"><a href="">JUGAR</a></button>
-                  </div>
-                </div> <!--slides-->              
-                <!-- Controles del carrusel -->
-                <div class="controls">
-                  <button class="prev">Anterior</button>
-                  <button class="next">Siguiente</button>
-                </div>
-              </div><!--cierre carrousel-->
-        </section>
-        <section class="smallCarousel">
-            <h1 class="categoryName">Arcade</h1>
-            <div class="carousel">
-                <div class="slides">
-                  <!-- Card 1 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/arcade/frogger-300.jpg" alt="frogger">
-                    </div>
-                    <div class="card-title">
-                      <p>Frogger</p>
-                    </div>
-                    <div class="card-price">
-                      <p>$1500</p>
-                      <button class="cardButton cardButtonPrice"><a href="">COMPRAR</a></button>
-                    </div>
-                  </div>
-              
-                  <!-- Card 2 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/arcade/the_simpsons_game-4461220.jpg" alt="the simpson game">
-                    </div>
-                    <div class="card-title">
-                      <p>The Simpsons</p>
-                    </div>
-                    <div class="card-price">
-                      <p>$4500</p>
-                      <button class="cardButton cardButtonPrice"><a href="">COMPRAR</a></button>
-                    </div>
-                  </div>
-              
-                  <!-- Card 3 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/arcade/tetris.jpg" alt="tetris">
-                    </div>
-                    <div class="card-title">
-                      <p>Tetris</p>
-                    </div>
-                    <button class="cardButton"><a href="">JUGAR</a></button>
-                  </div>
-                
-                
-                  <!-- Card 4 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/arcade/pacman.jpg" alt="pacman">
-                    </div>
-                    <div class="card-title">
-                      <p>Pacman</p>
-                    </div>
-                    <button class="cardButton"><a href="">JUGAR</a></button>
-                  </div>
-                
-                
-                  <!-- Card 5 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/arcade/Street-Fighter-V-es-gratis-por-tiempo-limitado-aprende-a.jpg" alt="street-fighter">
-                    </div>
-                    <div class="card-title">
-                      <p>Street Fighter</p>
-                    </div>
-                    <div class="card-price">
-                      <p>$5500</p>
-                      <button class="cardButton cardButtonPrice"><a href="">COMPRAR</a></button>
-                    </div>
-                  </div>
-                
-                  <!-- Card 6 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/arcade/toki.jpg" alt="toki">
-                    </div>
-                    <div class="card-title">
-                      <p>Toki</p>
-                    </div>
-                    <div class="card-price">
-                      <p>$2000</p>
-                      <button class="cardButton cardButtonPrice"><a href="">COMPRAR</a></button>
-                    </div>
-                  </div>
-                </div>               
-                <!-- Controles del carrusel -->
-                <div class="controls">
-                  <button class="prev">Anterior</button>
-                  <button class="next">Siguiente</button>
-                </div>
+            <!-- Card 3 -->
+            <div class="card">
+              <div class="card-header">
+                <h3>Titulo de la tarjeta 3</h3>
               </div>
-        </section>
-        <section class="smallCarousel">
-            <h1 class="categoryName">Aventura</h1>
-            <div class="carousel">
-                <div class="slides">
-                  <!-- Card 1 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/Aventura/persona3.jpg" alt="persona 3">
-                    </div>
-                    <div class="card-title">
-                      <p>Persona 3 portable</p>
-                    </div>
-                    <button class="cardButton"><a href="">JUGAR</a></button>
-                  </div>
-              
-                  <!-- Card 2 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/Aventura/sonic.jpg" alt="sonic colors">
-                    </div>
-                    <div class="card-title">
-                      <p>Sonic colors: Ultimate</p>
-                    </div>
-                    <div class="card-price">
-                      <p>$3000</p>
-                      <button class="cardButton cardButtonPrice"><a href="">COMPRAR</a></button>
-                    </div>
-                    
-                  </div>
-              
-                  <!-- Card 3 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/Aventura/exile.jpeg" alt="exile">
-                    </div>
-                    <div class="card-title">
-                      <p>Path of exile: Expedition</p>
-                    </div>
-                    <button class="cardButton"><a href="">JUGAR</a></button>
-                  </div>
-                
-                
-                  <!-- Card 4 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/Aventura/lostark.jpeg" alt="lostark">
-                    </div>
-                    <div class="card-title">
-                      <p>Lostark</p>
-                    </div>
-                    <div class="card-price">
-                      <p>$3999</p>
-                      <button class="cardButton cardButtonPrice"><a href="">COMPRAR</a></button>
-                    </div>
-                  </div>
-                
-                
-                  <!-- Card 5 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/Aventura/Cyberpunk-2077.jpg" alt="cyberpunk">
-                    </div>
-                    <div class="card-title">
-                      <p>CyberPunk</p>
-                    </div>
-                    <div class="card-price">
-                      <p>$4200</p>
-                      <button class="cardButton cardButtonPrice"><a href="">COMPRAR</a></button>
-                    </div>
-                  </div>
-                
-                  <!-- Card 6 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/Aventura/huntBig.jpg" alt="hunt">
-                    </div>
-                    <div class="card-title">
-                      <p>Hunt</p>
-                    </div>
-                    <div class="card-price">
-                      <p>$4200</p>
-                      <button class="cardButton cardButtonPrice"><a href="">COMPRAR</a></button>
-                    </div>
-                  </div>
-                </div>               
-                <!-- Controles del carrusel -->
-                <div class="controls">
-                  <button class="prev">Anterior</button>
-                  <button class="next">Siguiente</button>
-                </div>
+              <div class="card-body">
+                <p>Contenido de la tarjeta 3</p>
               </div>
-        </section>
-        <section class="smallCarousel">
-            <h1 class="categoryName">Deporte</h1>
-            <div class="carousel">
-                <div class="slides">
-                  <!-- Card 1 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/deportes/840_560.jpg" alt="just dance">
-                    </div>
-                    <div class="card-title">
-                      <p>Just Dance 2021</p>
-                    </div>
-                    <button class="cardButton"><a href="">JUGAR</a></button>
-                  </div>
-              
-                  <!-- Card 2 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/deportes/free kick.jpg" alt="free kick">
-                    </div>
-                    <div class="card-title">
-                      <p>Free Kick</p>
-                    </div>
-                    <div class="card-price">
-                      <p>$2200</p>
-                      <button class="cardButton cardButtonPrice"><a href="">COMPRAR</a></button>
-                    </div>
-                  </div>
-              
-                  <!-- Card 3 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/deportes/streethoop.jpg" alt="street hoop">
-                    </div>
-                    <div class="card-title">
-                      <p>Street Hoop</p>
-                    </div>
-                    <div class="card-price">
-                      <p>$5900</p>
-                      <button class="cardButton cardButtonPrice"><a href="">COMPRAR</a></button>
-                    </div>
-                  </div>
-                
-                
-                  <!-- Card 4 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/deportes/nitro-crash.jpg" alt="nitro cash">
-                    </div>
-                    <div class="card-title">
-                      <p>Nitro Cash</p>
-                    </div>
-                    <div class="card-price">
-                      <p>$3000</p>
-                      <button class="cardButton cardButtonPrice"><a href="">COMPRAR</a></button>
-                    </div>
-                  </div>
-                
-                
-                  <!-- Card 5 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/deportes/orig.jpg" alt="only up">
-                    </div>
-                    <div class="card-title">
-                      <p>Only Up</p>
-                    </div>
-                    <button class="cardButton"><a href="">JUGAR</a></button>
-                  </div>
-                
-                  <!-- Card 6 -->
-                  <div class="card">
-                    <div class="card-img">
-                      <img src="img/deportes/SI_N64_MarioGolf.jpg" alt="mario golf">
-                    </div>
-                    <div class="card-title">
-                      <p>Mario Golf</p>
-                    </div>
-                    <div class="card-price">
-                      <p>$6000</p>
-                      <button class="cardButton cardButtonPrice"><a href="">COMPRAR</a></button>
-                    </div>
-                  </div>
-                </div>               
-                <!-- Controles del carrusel -->
-                <div class="controls">
-                  <button class="prev">Anterior</button>
-                  <button class="next">Siguiente</button>
-                </div>
+              <div class="card-footer">
+                <p>Pie de la tarjeta 3</p>
               </div>
-        </section>
-        
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+              <div class="card-header">
+                <h3>Titulo de la tarjeta 3</h3>
+              </div>
+              <div class="card-body">
+                <p>Contenido de la tarjeta 3</p>
+              </div>
+              <div class="card-footer">
+                <p>Pie de la tarjeta 3</p>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+              <div class="card-header">
+                <h3>Titulo de la tarjeta 3</h3>
+              </div>
+              <div class="card-body">
+                <p>Contenido de la tarjeta 3</p>
+              </div>
+              <div class="card-footer">
+                <p>Pie de la tarjeta 3</p>
+              </div>
+            </div>
+          </div>
+          <!--slides?-->
+          <!-- Controles del carrusel -->
+          <div class="controls">
+            <button class="prev">Anterior</button>
+            <button class="next">Siguiente</button>
+          </div>
+        </div>
+        <!--cierra carrousel-->
+      </section>
+      <section class="smallCarousel">
+        <h1 class="categoryName">Acción</h1>
+        <div class="carousel">
+          <div class="slides">
+            <!-- Card 1 -->
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="img/accion/World-of-Tanks-3-min.jpg"
+                  alt="World of Tanks"
+                />
+              </div>
+              <div class="card-title">
+                <p>World of Tanks</p>
+              </div>
+              <button class="cardButton"><a href="">JUGAR</a></button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+              <div class="card-img">
+                <img src="img/accion/free-fire-game.jpg" alt="Free Fire" />
+              </div>
+              <div class="card-title">
+                <p>Free Fire</p>
+              </div>
+              <button class="cardButton"><a href="">JUGAR</a></button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+              <div class="card-img">
+                <img src="img/godfall_1200_630.jpg" alt="god fall" />
+              </div>
+              <div class="card-title">
+                <p>Godfall</p>
+              </div>
+              <div class="card-price">
+                <p>$2500</p>
+                <button class="cardButton cardButtonPrice">
+                  <a href="">COMPRAR</a>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="img/accion/World-of-Tanks-3-min.jpg"
+                  alt="World of tanks"
+                />
+              </div>
+              <div class="card-title">
+                <p>World of Tanks</p>
+              </div>
+              <button class="cardButton"><a href="">JUGAR</a></button>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="img/accion/21472686229_68490879b5.jpg"
+                  alt="Gladiator"
+                />
+              </div>
+              <div class="card-title">
+                <p>Gladiator</p>
+              </div>
+              <button class="cardButton"><a href="">JUGAR</a></button>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="img/accion/apps.42226.14162962598130697.205f5e3e-d77d-4217-a74a-b82d8ce5539e.jpg"
+                  alt="Monster truck simulator"
+                />
+              </div>
+              <div class="card-title">
+                <p class="title-card">Monster Truck Simulatormmmmmmmmm</p>
+              </div>
+              <button class="cardButton"><a href="">JUGAR</a></button>
+            </div>
+          </div>
+          <!--slides-->
+          <!-- Controles del carrusel -->
+          <div class="controls">
+            <button class="prev">Anterior</button>
+            <button class="next">Siguiente</button>
+          </div>
+        </div>
+        <!--cierre carrousel-->
+      </section>
+      <section class="smallCarousel">
+        <h1 class="categoryName">Arcade</h1>
+        <div class="carousel">
+          <div class="slides">
+            <!-- Card 1 -->
+            <div class="card">
+              <div class="card-img">
+                <img src="img/arcade/frogger-300.jpg" alt="frogger" />
+              </div>
+              <div class="card-title">
+                <p>Frogger</p>
+              </div>
+              <div class="card-price">
+                <p>$1500</p>
+                <button class="cardButton cardButtonPrice">
+                  <a href="">COMPRAR</a>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="img/arcade/the_simpsons_game-4461220.jpg"
+                  alt="the simpson game"
+                />
+              </div>
+              <div class="card-title">
+                <p>The Simpsons</p>
+              </div>
+              <div class="card-price">
+                <p>$4500</p>
+                <button class="cardButton cardButtonPrice">
+                  <a href="">COMPRAR</a>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+              <div class="card-img">
+                <img src="img/arcade/tetris.jpg" alt="tetris" />
+              </div>
+              <div class="card-title">
+                <p>Tetris</p>
+              </div>
+              <button class="cardButton"><a href="">JUGAR</a></button>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+              <div class="card-img">
+                <img src="img/arcade/pacman.jpg" alt="pacman" />
+              </div>
+              <div class="card-title">
+                <p>Pacman</p>
+              </div>
+              <button class="cardButton"><a href="">JUGAR</a></button>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="img/arcade/Street-Fighter-V-es-gratis-por-tiempo-limitado-aprende-a.jpg"
+                  alt="street-fighter"
+                />
+              </div>
+              <div class="card-title">
+                <p>Street Fighter</p>
+              </div>
+              <div class="card-price">
+                <p>$5500</p>
+                <button class="cardButton cardButtonPrice">
+                  <a href="">COMPRAR</a>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card">
+              <div class="card-img">
+                <img src="img/arcade/toki.jpg" alt="toki" />
+              </div>
+              <div class="card-title">
+                <p>Toki</p>
+              </div>
+              <div class="card-price">
+                <p>$2000</p>
+                <button class="cardButton cardButtonPrice">
+                  <a href="">COMPRAR</a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Controles del carrusel -->
+          <div class="controls">
+            <button class="prev">Anterior</button>
+            <button class="next">Siguiente</button>
+          </div>
+        </div>
+      </section>
+      <section class="smallCarousel">
+        <h1 class="categoryName">Aventura</h1>
+        <div class="carousel">
+          <div class="slides">
+            <!-- Card 1 -->
+            <div class="card">
+              <div class="card-img">
+                <img src="img/Aventura/persona3.jpg" alt="persona 3" />
+              </div>
+              <div class="card-title">
+                <p>Persona 3 portable</p>
+              </div>
+              <button class="cardButton"><a href="">JUGAR</a></button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+              <div class="card-img">
+                <img src="img/Aventura/sonic.jpg" alt="sonic colors" />
+              </div>
+              <div class="card-title">
+                <p>Sonic colors: Ultimate</p>
+              </div>
+              <div class="card-price">
+                <p>$3000</p>
+                <button class="cardButton cardButtonPrice">
+                  <a href="">COMPRAR</a>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+              <div class="card-img">
+                <img src="img/Aventura/exile.jpeg" alt="exile" />
+              </div>
+              <div class="card-title">
+                <p>Path of exile: Expedition</p>
+              </div>
+              <button class="cardButton"><a href="">JUGAR</a></button>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+              <div class="card-img">
+                <img src="img/Aventura/lostark.jpeg" alt="lostark" />
+              </div>
+              <div class="card-title">
+                <p>Lostark</p>
+              </div>
+              <div class="card-price">
+                <p>$3999</p>
+                <button class="cardButton cardButtonPrice">
+                  <a href="">COMPRAR</a>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+              <div class="card-img">
+                <img src="img/Aventura/Cyberpunk-2077.jpg" alt="cyberpunk" />
+              </div>
+              <div class="card-title">
+                <p>CyberPunk</p>
+              </div>
+              <div class="card-price">
+                <p>$4200</p>
+                <button class="cardButton cardButtonPrice">
+                  <a href="">COMPRAR</a>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card">
+              <div class="card-img">
+                <img src="img/Aventura/huntBig.jpg" alt="hunt" />
+              </div>
+              <div class="card-title">
+                <p>Hunt</p>
+              </div>
+              <div class="card-price">
+                <p>$4200</p>
+                <button class="cardButton cardButtonPrice">
+                  <a href="">COMPRAR</a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Controles del carrusel -->
+          <div class="controls">
+            <button class="prev">Anterior</button>
+            <button class="next">Siguiente</button>
+          </div>
+        </div>
+      </section>
+      <section class="smallCarousel">
+        <h1 class="categoryName">Deporte</h1>
+        <div class="carousel">
+          <div class="slides">
+            <!-- Card 1 -->
+            <div class="card">
+              <div class="card-img">
+                <img src="img/deportes/840_560.jpg" alt="just dance" />
+              </div>
+              <div class="card-title">
+                <p>Just Dance 2021</p>
+              </div>
+              <button class="cardButton"><a href="">JUGAR</a></button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+              <div class="card-img">
+                <img src="img/deportes/free kick.jpg" alt="free kick" />
+              </div>
+              <div class="card-title">
+                <p>Free Kick</p>
+              </div>
+              <div class="card-price">
+                <p>$2200</p>
+                <button class="cardButton cardButtonPrice">
+                  <a href="">COMPRAR</a>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+              <div class="card-img">
+                <img src="img/deportes/streethoop.jpg" alt="street hoop" />
+              </div>
+              <div class="card-title">
+                <p>Street Hoop</p>
+              </div>
+              <div class="card-price">
+                <p>$5900</p>
+                <button class="cardButton cardButtonPrice">
+                  <a href="">COMPRAR</a>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+              <div class="card-img">
+                <img src="img/deportes/nitro-crash.jpg" alt="nitro cash" />
+              </div>
+              <div class="card-title">
+                <p>Nitro Cash</p>
+              </div>
+              <div class="card-price">
+                <p>$3000</p>
+                <button class="cardButton cardButtonPrice">
+                  <a href="">COMPRAR</a>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+              <div class="card-img">
+                <img src="img/deportes/orig.jpg" alt="only up" />
+              </div>
+              <div class="card-title">
+                <p>Only Up</p>
+              </div>
+              <button class="cardButton"><a href="">JUGAR</a></button>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card">
+              <div class="card-img">
+                <img src="img/deportes/SI_N64_MarioGolf.jpg" alt="mario golf" />
+              </div>
+              <div class="card-title">
+                <p>Mario Golf</p>
+              </div>
+              <div class="card-price">
+                <p>$6000</p>
+                <button class="cardButton cardButtonPrice">
+                  <a href="">COMPRAR</a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Controles del carrusel -->
+          <div class="controls">
+            <button class="prev">Anterior</button>
+            <button class="next">Siguiente</button>
+          </div>
+        </div>
+      </section>
     </div>
     <footer>
-        <div>
-            <h2 class="titleFooterLinks">Sobre nosotros</h2>
-            <ul>
-                <li><a href="">Privacidad</a></li>
-                <li><a href="">Cookies</a></li>
-                <li><a href="">Terminos de uso</a></li>
-                <li><a href="">Ayuda</a></li>
-            </ul>
-
-        </div>
-        <div>
-            <h2 class="titleFooterLinks">Contacto</h2>
-            <ul>
-                <li><a href="">Contactanos</a></li>
-                <li><a href=""></a><img src="" alt=""></li> <!--Twitter-->
-                <li><a href=""><img src="" alt=""></a></li><!--facebook-->
-                <li><a href=""><img src="" alt=""></a></li><!--tumbler-->
-                <li><a href=""><img src="" alt=""></a></li><!--instagram-->
-            </ul>
-        </div>
-        <p class="copyright">Copyright © 2023 ArcadeZone - All rights reserved</p>
-        
+      <img class="logoFooter" src="img/avatar/Logo.png" alt="logo" />
+      <div class="aboutUs">
+        <h2 class="titleFooterLinks">Sobre nosotros</h2>
+        <ul class="ulFooter">
+          <li><a href="">Privacidad</a></li>
+          <li><a href="">Cookies</a></li>
+          <li><a href="">Terminos de uso</a></li>
+          <li><a href="">Ayuda</a></li>
+        </ul>
+      </div>
+      <div class="categoriesFooter">
+        <h2 class="titleFooterLinks">Categorias</h2>
+        <ul>
+          <li><a href="">Acción</a></li>
+          <li><a href="">Arcade</a></li>
+          <li><a href="">Aventura</a></li>
+          <li><a href="">Deportes</a></li>
+          <li><a href="">Zombies</a></li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h2 class="titleFooterLinks">Contacto</h2>
+        <ul class="ulFooter">
+          <li><a href="">Contactanos</a></li>
+          <div class="socials">
+            <li>
+              <a href=""><img src="img/iconos/TwitterX.svg" alt="" /></a>
+            </li>
+            <!--Twitter-->
+            <li>
+              <a href=""><img src="img/iconos/Facebook.svg" alt="" /></a>
+            </li>
+            <!--facebook-->
+            <li>
+              <a href=""><img src="img/iconos/Tumblr.svg" alt="" /></a>
+            </li>
+            <!--tumbler-->
+            <li>
+              <a href=""><img src="img/iconos/Instagram.svg" alt="" /></a>
+            </li>
+            <!--instagram-->
+          </div>
+        </ul>
+      </div>
+      <p class="copyright">Copyright © 2023 ArcadeZone - All rights reserved</p>
     </footer>
-<script src="js/carousel.js"></script>
-</body>
+    <script src="js/carousel.js"></script>
+    <script src="js/nav.js"></script>
+  </body>
 </html>
