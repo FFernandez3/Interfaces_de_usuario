@@ -23,6 +23,8 @@
     --secondaryColorL1:#ee35a1; /*#ee35a1, #ffaa2c;*/
     --secondaryColorL2:#f141a8; /*#ffb341;*/
     --secondaryColorL3:#f163b6;/* #ffc875;*/
+    --tertiaryColor: #FF9D0B;
+    --tertiaryColorL1: #ffc875;
     --accentColor:#99dc0b;
     --black:#111111;
     --white:#f2f2f2;
@@ -71,6 +73,55 @@ body{
                         "footer";
                         
 }
+
+/*---------------------------------------loading------------------------------------------*/
+
+.loadContainer {
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-color: rgb(7, 7, 7,0.9);
+    position: fixed;
+    transition: all 1s ease;
+    overflow: hidden;
+    visibility: visible;
+}
+
+.load-container-hidden {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    visibility: hidden;
+}
+
+.loadContainer .load {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    border-top: 5px solid #ef4361;
+    border-right: 5px solid #ef4361;
+    animation: spin 3s infinite ease-out;
+    z-index: 2;
+}
+
+.loadContainer .percentage {
+position: absolute;
+top: 50%; left: 50%;
+font-size: 45px;
+font-weight: 700;
+color: #ef4361;
+z-index: 2;
+transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+0%   { transform: translate(-50%, -50%) rotate(0deg); }
+100% { transform: translate(-50%, -50%) rotate(360deg)}
+}
+
+
+/*-----------------------------------------------------------------------------------------*/
 nav.styleNav{
     background-color: var(--primaryColor);
     border-bottom-right-radius: 10px;
@@ -175,7 +226,7 @@ li.avatarNav img.avatarNav{
 div.cartPopUp{
     background-color: var(--primaryColorL3);
     border-radius: 0 10px 10px 10px;
-    height: 500px;
+    height: 400px;
     width: 300px ;
     position: fixed;
     z-index: 100;
@@ -194,9 +245,25 @@ div.cartPopUp{
                         "cartButton"
                         ;*/
 }
+img.backColorCross{
+    background-color: var(--black);
+}
+ul li.rowCart{
+    display: flex;
+    margin-top: 20px;
+}
+div.asideCart{
+    padding-left: 80px
+
+}
+ul li.subtotalCart{
+    display: flex;
+    margin-top: 40px;
+}
 li img.imgCart{
     max-width: 69px;
     max-height: 59px;
+    margin-left: 10px;
 }
 
 table{
@@ -225,40 +292,60 @@ p.gameTitle, p.price, p.cartTitle{
 p.gameTitle{
     height: 40px;
     width: 80px;
-    
+    margin-left: 5px;
+    margin-top: 5px;
 }
 p.cartTitle{
     color: var(--white);
+    margin-left: 30px;
+    margin-top: 5px;
 }
 
 div.cartHead{
     background-color: var(--black);
     /*grid-area: thead;*/
+    display: flex;
+    justify-content: space-around;
 }
 
 p.subtotal{
     font-size: var(--bodyBold);
+    margin-left: 10px;
+}
+p.price{
+    /*margin-left: 170px;*/
+}
+p.priceTotal{
+    padding-left: 170px;
 }
 p.total{
     font-size: 18px;
     font-weight: bold;
+    margin-left: 10px;
 }
 img.imgCart{
    
 }
 button.cartButton{
-    width: 420px;
+    width: 278px;
     height: 38px;
-    background-color: var(--secondaryColor);
+    background: linear-gradient(to bottom, var(--secondaryColor),var(--tertiaryColor) );
     color: var(--white);
+    position: relative;
+    left: 10px;
+    border-radius: 10px;
+}
+li.btnCart{
+    margin-top: 40px;
 }
 img.trash{
     height: 24px;
     width: 24px;
+    margin-left: 24px;
 }
 /*DISPLAY NONE PARA LOS NAVS y CART*/
 .displayNone{
-    display: none;
+    display: none !important;
 }
 
 
@@ -492,7 +579,7 @@ div.card-img img{
     
 }
 button.cardButton{
-    background-color: var(--secondaryColor);
+    background: linear-gradient(to bottom, var(--secondaryColor),var(--tertiaryColor) );
     text-align: center;
     width: 100px;
     border-radius: 5px;
@@ -543,7 +630,7 @@ img.hamburger, img.cart-icon{
 }
 img.cart-icon{
     justify-self: center;
-    margin-top: 37%;
+   /* margin-top: 37%;*/
 }
 img.avatar{
     justify-self: center;
@@ -599,9 +686,9 @@ form button{
     width: 203px;
     height: 55.91px;
     font-size: var(--buttonText);
-    font-weight: bold;
+    /*font-weight: bold;*/
     text-transform: uppercase;
-    background-color: var(--secondaryColorL3);
+    background: linear-gradient(to bottom, var(--secondaryColor),var(--tertiaryColor) );
 }
 form select{
     width: 120px;
@@ -658,6 +745,96 @@ form button.btnFormLogin{
     margin-top: 50px;
     
 }
+
+/*---------------- animacion registro exitoso------------------------*/
+
+
+
+/*----------------animacion boton login------------------------------*/
+button.btnFormLogin{
+    position: relative;
+    /*margin: 0 35px;
+    border-radius: 50px;
+    border: none;
+    outline: none;*/
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.5s;
+    overflow-y: hidden;
+  }
+  button.btnFormLogin:hover{
+    background: linear-gradient(90deg, var(--accentColor), var(--secondaryColorL2), #ffeb3b,#FF9D0B);
+    background-size: 400%;
+  }
+  
+  button.btnFormLogin::before{
+    content: '';
+    position: absolute;
+    background: inherit;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    border-radius: 50px;
+    filter: blur(20px);
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  button.btnFormLogin:hover::before{
+    opacity: 1;
+    z-index: -1;
+  }
+ button.btnFormLogin:hover{
+    z-index: 1;
+    animation: glow 8s linear infinite;
+  }
+  @keyframes glow {
+    0%{
+      background-position: 0%;
+    }
+    100%{
+      background-position: 400%;
+    }
+  }
+/*-------------------------animacion boton comprar cart----------------------------*/
+
+/*** ESTILOS BOTÓN GROW BOX ***/
+.cartButton {
+    /*background: #fff; 
+    color: #4741d7; 
+    border: 2px solid #4741d7; 
+    padding: 16px 20px;
+    border-radius: 3px;*/ /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .cartButton:hover {
+    color: var(--white);/* color de fuente hover */
+  }
+  .cartButton::after {
+    content: "";
+    background: linear-gradient(#d2a259, #FF9D0B) ; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(0, 0);
+    transition: all 0.3s ease;
+  }
+  .cartButton:hover::after {
+    transition: all 0.3s ease-out;
+    transform: scale(1, 1);
+  }
 /*---------------------------------------Juego--------------------------------*/
 section.gameContainer{
     /*width: 100%;*/
@@ -704,7 +881,7 @@ img.turnKen{
 div.turnContainer button{
     width: 180px;
     height: 56px;
-    background-color: var(--secondaryColor);
+    background: linear-gradient(to bottom, var(--secondaryColor),var(--tertiaryColor) );
     color: var(--white);
     border-radius: 10px;
     font-size: var(--buttonText);
@@ -830,7 +1007,7 @@ div.containerComment button{
     height: 36px;
     border-radius: 10px;
     color: var(--white);
-    background-color: var(--secondaryColorL3);
+    background:linear-gradient(to bottom, var(--secondaryColorL3),var(--tertiaryColorL1) );
 }
 div.leaveComment h3, section.autoPlay h2, section.autoPlay p, div.pastComments h3{
     margin-left: 8px;
@@ -905,7 +1082,7 @@ div.buttonsComment a{
     img.cart-icon{
         width: 28px;
         height: 28px;
-        margin-top: 23px;
+        /*margin-top: 23px;*/
         grid-area: cart;
         justify-self: right;
     }

@@ -9,74 +9,91 @@
 </head>
 
 <body>
+   
     <header>
-        <img class="hamburger" src="img/iconos/hamburger.svg" alt="hamburgerIcon">
-        <nav class="mainNav">
-
-            <ul class="">
-                <li><img src="" alt="">Logo</li>
-                <li class="searchGamesMob"><input class="searchGamesMob" src="text" placeholder="Buscar juegos"></li>
-                <li><img src="" alt="news"><a href="">Novedades</a></li>
-                <li><img src="" alt="flame"><a href="">Tendencias</a></li>
-                <li><img src="" alt="swords"><a href="">Accion</a></li>
-                <li><img src="" alt="pacman"><a href="">Arcade</a></li>
-                <li><img src="" alt="flag"><a href="">Aventura</a></li>
-                <li><img src="" alt="ball"><a href="">Deporte</a></li>
-                <li><img src="" alt="tower"><a href="">Estrategia</a></li>
-                <li><img src="" alt="deadHand"><a href="">Zombies</a></li>
-            </ul>
-
-        </nav>
-        <a href="index.html"><img class="logo" src="img/avatar/Logo.png" alt="logo"></a><!--logo-->
-        <input class="searchGames" type="text" placeholder="Buscar juegos" >
-        
-        <img class="cart-icon" src="img/iconos/cart.svg" alt="cart"><!--icono cart-->
-        <div class="cartPopUp">
-            <table>
-                <tr>
-                    <th>CARRITO DE COMPRAS</th>
-                    <th><img src="img/" alt=""></th><!--cruz para cerrar-->
-                </tr>
-                <tbody>
-                    <tr>
-                        <td><img src="" alt=""></td>
-                        <td class="gameTitle cart"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Subtotal:</td>
-                        <td></td> <!--precio-->
-                    </tr>
-                    <tr>
-                        <td>Total:</td>
-                        <td></td><!--precio-->
-                    </tr>
-                    <tr>
-                        <td><button>Iniciar compra</button></td>
-                    </tr>
-
-                </tbody>
-
-            </table>
+        <button class="btnMenu" id="menu-btn"><img class="hamburger" src="img/iconos/hamburger.svg"
+            alt="hamburgerIcon" /></button>
+    
+        <a href=""><img class="logo" src="img/avatar/Logo.png" alt="logo" /></a><!--logo-->
+        <input class="searchGames" type="text" placeholder="Buscar juegos" />
+        <!--icono cart-->
+        <button class="btnMenu" id="cart-btn"><img class="cart-icon" src="img/iconos/cart.svg" alt="cart" />
+        </button>
+    
+        <button class="btnMenu" id="avatar-btn"> <img class="avatar" src="img/avatar/Ellipse 41.svg"
+            alt="avatar" /></button>
+      </header>
+      <nav class="displayNone styleNav" id="main-nav">
+        <ul class="">
+          <li class="logoNav"><img class="logoNav" src="img/avatar/Logo.svg" alt="logo" /><button id="crossNav-btn"><img
+                src="img/iconos/cross.svg" alt=""></button></li>
+          <li class="searchLi"><input class="searchNav" src="text" placeholder="Buscar juegos" /></li>
+          <li><img src="img/iconos/news.svg" alt="news" /><a href="">Novedades</a></li>
+          <li><img src="img/iconos/fire.svg" alt="fire" /><a href="">Tendencias</a></li>
+          <li class="lineMenu"><img class="lineMenu" src="img/line.svg" alt=""></li>
+          <li><img src="img/iconos/swords.svg" alt="swords" /><a href="">Accion</a></li>
+          <li><img src="img/iconos/pacman.svg" alt="pacman" /><a href="">Arcade</a></li>
+          <li><img src="img/iconos/flag.svg" alt="flag" /><a href="">Aventura</a></li>
+          <li><img src="img/iconos/ball.svg" alt="ball" /><a href="">Deporte</a></li>
+          <li><img src="img/iconos/tower.svg" alt="tower" /><a href="">Estrategia</a></li>
+          <li><img src="img/iconos/zombie.svg" alt="deadHand" /><a href="">Zombies</a></li>
+        </ul>
+      </nav>
+      <nav class="displayNone userNav" id="user-nav">
+        <ul>
+          <li class="avatarNav"><img class="avatarNav" src="img/avatar/avatarRalph.svg" alt="avatar" /><button
+              id="crossUserNav-btn"><img class="userNavCross" src="img/iconos/cross.svg" alt=""></button></li>
+          <li class="lineMenu"><img class="lineMenu" src="img/line.svg" alt=""></li>
+          <li><img src="img/iconos/user.svg" alt="avatar" /><a href="">Mi perfil</a></li>
+          <li><img src="img/iconos/novedades.svg" alt="bell" /><a href="">Notificaciones</a></li>
+          <li><img src="img/iconos/joystick.svg" alt="joystick" /><a href="">Mis juegos</a></li>
+          <li><img src="img/iconos/shop.svg" alt="shopBag" /><a href="">Mis compras</a></li>
+          <li><img src="img/iconos/privacity.svg" alt="shield" /><a href="">Privacidad</a></li>
+          <li><img src="img/iconos/support.svg" alt="question" /><a href="">Soporte</a></li>
+          <li class="lineMenu"><img class="lineMenu" src="img/line.svg" alt=""></li>
+          <li><img src="img/iconos/logOut.svg" alt="logOut" /><a href="">Cerrar sesión</a></li>
+        </ul>
+      </nav>
+    
+      <div id="cartDiv" class="displayNone cartPopUp">
+        <div class="cartHead">
+          <p class="cartTitle">CARRITO DE COMPRAS</p>
+          <button id="userNavCross"><img class="userNavCross backColorCross" src="img/iconos/cross.svg" alt=""></button>
         </div>
-        
-        <img class="avatar" src="img/avatar/Ellipse 41.svg" alt="avatar">
-        <nav class="userNav">
+        <ul>
+          <li class="rowCart">
+            <img class="imgCart" src="img/godfall_1200_630.jpg" alt="godFall" />
+            <p class="gameTitle">GodFall</p>
+            <div class="asideCart">
+              <img class="trash" src="img/iconos/trashVector.svg" alt="">
+              <p class="price">$2500</p>
+            </div>
+           
+          </li>
+          <li class="rowCart">
+            <img class="imgCart" src="img/Aventura/sonic.jpg" alt="sonic" />
+            <p class="gameTitle">Sonic</p>
+            <div class="asideCart">
+              <img class="trash" src="img/iconos/trashVector.svg" alt="">
+              <p class="price">$3000</p>
+            </div>
+          </li>
+    
+          <li class="subtotalCart">
+            <p class="subtotal">Subtotal:</p>
+            <p class="priceTotal">$5500</p>
+          </li>
+          <li class="subtotalCart">
+            <p class="total">TOTAL:</p>
+            <p class="priceTotal">$5500</p>
+          </li>
+          <li class="btnCart">
+            <button class="cartButton">INICIAR COMPRA</button>
+          </li>
+        </ul>
+      </div>
 
-            <ul>
-                <li><a href=""><img src="" alt=""></a></li>
-                <li><img src="" alt="avatar"><a href="">Mi perfil</a></li>
-                <li><img src="" alt="bell"><a href="">Notificaciones</a></li>
-                <li><img src="" alt="joystick"><a href="">Mis juegos</a></li>
-                <li><img src="" alt="shopBag"><a href="">Mis compras</a></li>
-                <li><img src="" alt="shield"><a href="">Privacidad</a></li>
-                <li><img src="" alt="question"><a href="">Soporte</a></li>
-                <li><img src="" alt="logOut"><a href="">Cerrar sesión</a></li>
 
-            </ul>
-        </nav>
-
-    </header>
     <div class="container">
         <section class="gameContainer">
             <div class="breadCrumbs">
@@ -276,6 +293,7 @@
         <p class="copyright">Copyright © 2023 ArcadeZone - All rights reserved</p>
 
     </footer>
+    <script src="js/nav.js"></script>
 </body>
 
 </html>

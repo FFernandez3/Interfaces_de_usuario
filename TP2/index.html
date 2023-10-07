@@ -9,6 +9,14 @@
 </head>
 
 <body>
+  <div id="load-container" class="loadContainer">
+    <div id="load" class="load">
+    </div>
+    
+    <div class="percentage">
+    <p id="load-percentage">0%</p>
+    </div>
+  </div>
   <header>
     <button class="btnMenu" id="menu-btn"><img class="hamburger" src="img/iconos/hamburger.svg"
         alt="hamburgerIcon" /></button>
@@ -16,7 +24,7 @@
     <a href=""><img class="logo" src="img/avatar/Logo.png" alt="logo" /></a><!--logo-->
     <input class="searchGames" type="text" placeholder="Buscar juegos" />
     <!--icono cart-->
-    <button id="cart-btn"><img class="cart-icon" src="img/iconos/cart.svg" alt="cart" />
+    <button class="btnMenu" id="cart-btn"><img class="cart-icon" src="img/iconos/cart.svg" alt="cart" />
     </button>
 
     <button class="btnMenu" id="avatar-btn"> <img class="avatar" src="img/avatar/Ellipse 41.svg"
@@ -57,31 +65,36 @@
   <div id="cartDiv" class="displayNone cartPopUp">
     <div class="cartHead">
       <p class="cartTitle">CARRITO DE COMPRAS</p>
-      <button id="userNavCross"><img class="userNavCross" src="img/iconos/cross.svg" alt=""></button>
+      <button id="userNavCross"><img class="userNavCross backColorCross" src="img/iconos/cross.svg" alt=""></button>
     </div>
     <ul>
-      <li>
+      <li class="rowCart">
         <img class="imgCart" src="img/godfall_1200_630.jpg" alt="godFall" />
         <p class="gameTitle">GodFall</p>
-        <img class="trash" src="img/iconos/trashVector.svg" alt="">
-        <p class="price">$2500</p>
+        <div class="asideCart">
+          <img class="trash" src="img/iconos/trashVector.svg" alt="">
+          <p class="price">$2500</p>
+        </div>
+       
       </li>
-      <li>
+      <li class="rowCart">
         <img class="imgCart" src="img/Aventura/sonic.jpg" alt="sonic" />
         <p class="gameTitle">Sonic</p>
-        <img class="trash" src="img/iconos/trashVector.svg" alt="">
-        <p class="price">$3000</p>
+        <div class="asideCart">
+          <img class="trash" src="img/iconos/trashVector.svg" alt="">
+          <p class="price">$3000</p>
+        </div>
+      </li>
 
-      </li>
-      <li>
+      <li class="subtotalCart">
         <p class="subtotal">Subtotal:</p>
-        <p class="price">$5500</p>
+        <p class="priceTotal">$5500</p>
       </li>
-      <li>
+      <li class="subtotalCart">
         <p class="total">TOTAL:</p>
-        <p class="price">$5500</p>
+        <p class="priceTotal">$5500</p>
       </li>
-      <li>
+      <li class="btnCart">
         <button class="cartButton">INICIAR COMPRA</button>
       </li>
     </ul>
@@ -157,7 +170,7 @@
             <div class="card-title">
               <p>4 en línea</p>
             </div>
-            <button class="cardButton"><a href="">JUGAR</a></button>
+            <button class="cardButton"> <a href="#">JUGAR</a></button>
           </div>
 
           <!-- Card 2 -->
@@ -210,6 +223,39 @@
             <div class="card-footer">
               <p>Pie de la tarjeta 3</p>
             </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="card">
+            <div class="card-img">
+              <img src="img/gameImgForCard.svg" alt="" />
+            </div>
+            <div class="card-title">
+              <p>4 en línea</p>
+            </div>
+            <button class="cardButton"><a href="">JUGAR</a></button>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="card">
+            <div class="card-img">
+              <img src="img/gameImgForCard.svg" alt="" />
+            </div>
+            <div class="card-title">
+              <p>4 en línea</p>
+            </div>
+            <button class="cardButton"><a href="">JUGAR</a></button>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="card">
+            <div class="card-img">
+              <img src="img/gameImgForCard.svg" alt="" />
+            </div>
+            <div class="card-title">
+              <p>4 en línea</p>
+            </div>
+            <button class="cardButton"><a href="">JUGAR</a></button>
           </div>
         </div>
         <!--slides?-->
@@ -295,6 +341,22 @@
               <p class="title-card">Monster Truck Simulatormmmmmmmmm</p>
             </div>
             <button class="cardButton"><a href="">JUGAR</a></button>
+          </div>
+
+          <!-- Card 7-->
+          <div class="card">
+            <div class="card-img">
+              <img src="img/godfall_1200_630.jpg" alt="god fall" />
+            </div>
+            <div class="card-title">
+              <p>Godfall</p>
+            </div>
+            <div class="card-price">
+              <p>$2500</p>
+              <button class="cardButton cardButtonPrice">
+                <a href="">COMPRAR</a>
+              </button>
+            </div>
           </div>
         </div>
         <!--slides-->
@@ -390,6 +452,22 @@
             </div>
             <div class="card-price">
               <p>$2000</p>
+              <button class="cardButton cardButtonPrice">
+                <a href="">COMPRAR</a>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="card">
+            <div class="card-img">
+              <img src="img/arcade/the_simpsons_game-4461220.jpg" alt="the simpson game" />
+            </div>
+            <div class="card-title">
+              <p>The Simpsons</p>
+            </div>
+            <div class="card-price">
+              <p>$4500</p>
               <button class="cardButton cardButtonPrice">
                 <a href="">COMPRAR</a>
               </button>
@@ -492,6 +570,17 @@
               </button>
             </div>
           </div>
+
+          <!-- Card 7 -->
+          <div class="card">
+            <div class="card-img">
+              <img src="img/Aventura/persona3.jpg" alt="persona 3" />
+            </div>
+            <div class="card-title">
+              <p>Persona 3 portable</p>
+            </div>
+            <button class="cardButton"><a href="">JUGAR</a></button>
+          </div>
         </div>
         <!-- Controles del carrusel -->
         <div class="controls">
@@ -589,6 +678,22 @@
               </button>
             </div>
           </div>
+
+          <!-- Card 7 -->
+          <div class="card">
+            <div class="card-img">
+              <img src="img/deportes/free kick.jpg" alt="free kick" />
+            </div>
+            <div class="card-title">
+              <p>Free Kick</p>
+            </div>
+            <div class="card-price">
+              <p>$2200</p>
+              <button class="cardButton cardButtonPrice">
+                <a href="">COMPRAR</a>
+              </button>
+            </div>
+          </div>
         </div>
         <!-- Controles del carrusel -->
         <div class="controls">
@@ -647,6 +752,7 @@
   </footer>
   <script src="js/carousel.js"></script>
   <script src="js/nav.js"></script>
+  <script src="js/loading.js"></script>
 </body>
 
 </html>
