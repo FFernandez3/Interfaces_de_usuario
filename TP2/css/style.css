@@ -78,16 +78,189 @@ nav.styleNav{
     width: 80%;
     height: 100%;
     box-shadow: 0 0 1px 1px;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    height: 480px;
 }
-nav.styleNav a{
+nav.userNav{
+    background-color: var(--primaryColor);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 80%;
+    height: 100%;
+    box-shadow: 0 0 1px 1px;
+    position: fixed;
+    z-index: 100;
+    right: 0;
+    top: 0;
+    height: 445px;
+}
+nav.styleNav a, nav.userNav a{
     color: var(--white);
 }
-li.menuLine{
-    border-bottom: solid 2px var(--primaryColorL1);
+nav.styleNav li img, nav.userNav li img {
+    margin-right: 10px;
+    margin-left: 20px;
 }
+nav.styleNav ul li, nav.userNav ul li{
+    height: 40px;
+}
+input.searchNav{
+    border-radius: 10px;
+    width: 100%;
+    height: 60%;
+    background-color: var(--primaryColorL3);
+
+}
+input.searchNav::placeholder{
+    color: var(--primaryColor);
+    padding: 30px;
+    opacity: 0.5;
+}
+li.searchLi{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+/*nav.styleNav ul li:hover, nav.styleNav ul li a:hover{
+    background-color: var(--secondaryColor);
+}*/
+nav.styleNav ul li.logoNav{
+    height: 70px;
+    justify-self: center;
+}
+nav.styleNav ul li.logoNav button{
+ background-color: var(--primaryColor);
+}
+nav.styleNav ul li.logoNav, nav.userNav ul li.avatarNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+img.logoNav{
+    height: 100%;
+    width: auto ;
+    margin-left: 0;
+}
+/*li.menuLine{
+    border-bottom: solid 2px var(--primaryColorL1);
+}*/
+nav.styleNav li.lineMenu img.lineMenu, nav.userNav li.lineMenu img.lineMenu {
+    width: 100%;
+    height: 10px;
+    margin-left: 0;
+    
+}
+li.lineMenu{
+    margin-right: 10px;
+    margin-left: 10px;
+    
+
+}
+/*NAV USER*/
+nav.userNav ul li.avatarNav {
+    height: 60px;
+
+}
+nav.userNav ul li.avatarNav button img.userNavCross, nav.userNav ul li.avatarNav button{
+    background-color: var(--primaryColor);
+}
+li.avatarNav img.avatarNav{
+    width: 45px;
+    height: 45px;
+    margin-top: 12px;
+}
+/*CARRITO DE COMPRAS*/
+div.cartPopUp{
+    background-color: var(--primaryColorL3);
+    border-radius: 0 10px 10px 10px;
+    height: 500px;
+    width: 300px ;
+    position: fixed;
+    z-index: 100;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+   /* display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15% 20% 20% 10% 15% 20%;
+    grid-template-areas: "thead "
+                        "game1"
+                        "game2"
+                        "subtotal"
+                        "total"
+                        "cartButton"
+                        ;*/
+}
+li img.imgCart{
+    max-width: 69px;
+    max-height: 59px;
+}
+
+table{
+    width: 100%;
+    height: 100%;
+}
+tr.game1{
+    /*grid-area: game1;*/
+}
+tr.game2{
+   /* grid-area: game2;*/
+}
+tr.subtotal{
+    /*grid-area: subtotal;*/
+    color:var(--primaryColor);
+}
+tr.total{
+    /*grid-area: total;*/
+}
+tr.cartButton{
+    /*grid-area: cartButton;*/
+}
+p.gameTitle, p.price, p.cartTitle{
+    font-size: var(--bodyFontSize);
+}
+p.gameTitle{
+    height: 40px;
+    width: 80px;
+    
+}
+p.cartTitle{
+    color: var(--white);
+}
+
+div.cartHead{
+    background-color: var(--black);
+    /*grid-area: thead;*/
+}
+
+p.subtotal{
+    font-size: var(--bodyBold);
+}
+p.total{
+    font-size: 18px;
+    font-weight: bold;
+}
+img.imgCart{
+   
+}
+button.cartButton{
+    width: 420px;
+    height: 38px;
+    background-color: var(--secondaryColor);
+    color: var(--white);
+}
+img.trash{
+    height: 24px;
+    width: 24px;
+}
+/*DISPLAY NONE PARA LOS NAVS y CART*/
 .displayNone{
     display: none;
 }
+
 
 header{
     background-color: var(--primaryColorS2);
@@ -102,8 +275,13 @@ header{
     grid-template-columns: 15% 55% 15% 15%;
     grid-template-rows: 1fr;
     height: 70px;
-    
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
 }
+
+
 button.btnMenu{
     background-color: var(--primaryColorS2);
 }
@@ -118,13 +296,14 @@ div.container{
     margin-right: 8px;
     grid-area: container;
     margin-bottom: 40px;
+    /*margin-top: 30px;*/
     
 }
 
 footer{
    /* grid-column: 1;
     grid-row: 3;*/
-    
+    height: 200px;
     grid-area: footer;
     background-color: var(--primaryColorS2);
     color: var(--primaryColorL1);
@@ -360,7 +539,7 @@ img.hamburger, img.cart-icon{
     max-width: 100px;
     max-height: 100px;
     justify-self: center;
-    margin-top: 33%;
+    /*margin-top: 33%;*/
 }
 img.cart-icon{
     justify-self: center;
@@ -368,7 +547,7 @@ img.cart-icon{
 }
 img.avatar{
     justify-self: center;
-    margin-top: 33%;
+    /*margin-top: 33%;*/
 }
 /*formularios*/
 form label{
@@ -733,7 +912,7 @@ div.buttonsComment a{
     img.avatar{
         width: 32px;
         height: 32px;
-        margin-top: 19px ;
+        /*margin-top: 19px ;*/
         grid-area: avatar;
     }
     a img.logo{
@@ -741,7 +920,13 @@ div.buttonsComment a{
         
     
     }
+    /*navs*/
+    nav.userNav, nav.styleNav{
+        width: 20%;
+    }
+  
     footer{
+        height: 300px;
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
         grid-template-rows: 90% 10%;
