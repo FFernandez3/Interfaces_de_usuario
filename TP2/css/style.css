@@ -209,7 +209,10 @@ li.lineMenu{
     
 
 }
-/*NAV USER*/
+a.userOptions:hover, a.mainOptions:hover{
+    text-decoration: underline;
+}
+/*--------------------------------------NAV USER------------------------------------*/
 nav.userNav ul li.avatarNav {
     height: 60px;
 
@@ -323,9 +326,7 @@ p.total{
     font-weight: bold;
     margin-left: 10px;
 }
-img.imgCart{
-   
-}
+
 button.cartButton{
     width: 278px;
     height: 38px;
@@ -367,6 +368,26 @@ header{
     right: 0;
     left: 0;
 }
+/*header*/
+a img.logo{
+    max-width: 150px;
+    max-height: 100px;
+}
+img.hamburger, img.cart-icon{
+    max-width: 100px;
+    max-height: 100px;
+    justify-self: center;
+    cursor: pointer;
+    /*margin-top: 33%;*/
+}
+img.cart-icon{ 
+   /* margin-top: 37%;*/
+}
+img.avatar, img.cart-icon{
+    justify-self: center;
+    cursor: pointer;
+    /*margin-top: 33%;*/
+}
 
 
 button.btnMenu{
@@ -386,7 +407,7 @@ div.container{
     /*margin-top: 30px;*/
     
 }
-
+/*---------------------------------------------FOOTER--------------------------------*/
 footer{
    /* grid-column: 1;
     grid-row: 3;*/
@@ -453,7 +474,7 @@ footer ul.ulFooter{
 }*/
 
 
-/*Carrusel grande*/
+/*----------------------------------Carrusel grande----------------------------*/
 section.recommended{
     width: 100%;
     display: flex;
@@ -536,7 +557,7 @@ nav.elipseButton button a{
 }*/
 
 
-/*Carrusel chico*/
+/*-----------------------------------Carrusel chico-----------------------*/
 h1.categoryName{
     color: var(--white);
     font-size: var(--h3);
@@ -561,7 +582,7 @@ div.slides{
     /*scroll-snap-type: x;*/
     /*transform: translateX(200px);*/
 }
-/*card pequeña*/
+/*------------------------card pequeña-----------------*/
 section.smallCarousel{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -584,6 +605,7 @@ button.cardButton{
     width: 100px;
     border-radius: 5px;
     align-self: center; 
+    transition: transform 0.3s ease; /* Agrega una transición suave a la propiedad transform */
       
 }
 button.cardButton a{
@@ -617,26 +639,29 @@ p.title-card{
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-/*header*/
-a img.logo{
-    max-width: 150px;
-    max-height: 100px;
+/*----------------------------------------------------botones card animados------------------------------------*/
+
+button.cardButton:hover {
+    animation: shake-animation 0.5s ease infinite; /* Aplica la animación al botón al pasar el mouse sobre él */
 }
-img.hamburger, img.cart-icon{
-    max-width: 100px;
-    max-height: 100px;
-    justify-self: center;
-    /*margin-top: 33%;*/
+@keyframes shake-animation {
+    0% {
+        transform: translateX(0); /* Sin sacudida al principio */
+    }
+    25% {
+        transform: translateX(-5px); /* Mueve el botón 5px a la izquierda */
+    }
+    50% {
+        transform: translateX(5px); /* Mueve el botón 5px a la derecha */
+    }
+    75% {
+        transform: translateX(-5px); /* Mueve el botón 5px a la izquierda */
+    }
+    100% {
+        transform: translateX(0); /* Sin sacudida al final */
+    }
 }
-img.cart-icon{
-    justify-self: center;
-   /* margin-top: 37%;*/
-}
-img.avatar{
-    justify-self: center;
-    /*margin-top: 33%;*/
-}
-/*formularios*/
+/*---------------------------------------------------------formularios----------------------------------*/
 form label{
     color: var(--primaryColorL3);
     font-size: var(--smallText);
