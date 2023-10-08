@@ -207,7 +207,6 @@ li.lineMenu{
     margin-right: 10px;
     margin-left: 10px;
     
-
 }
 a.userOptions:hover, a.mainOptions:hover{
     text-decoration: underline;
@@ -215,7 +214,6 @@ a.userOptions:hover, a.mainOptions:hover{
 /*--------------------------------------NAV USER------------------------------------*/
 nav.userNav ul li.avatarNav {
     height: 60px;
-
 }
 nav.userNav ul li.avatarNav button img.userNavCross, nav.userNav ul li.avatarNav button{
     background-color: var(--primaryColor);
@@ -556,7 +554,227 @@ nav.elipseButton button a{
     opacity: 1;
 }*/
 
+/*-------------------------------------Carrusel MIS JUEGOS---------------------------*/
 
+  .carrusel{
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .containerCarrusel{
+    width: 100%;
+    padding: 5px 0px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+ 
+
+  .mgCard a img {
+    width: 100%;
+    height: 100%;
+    transition: all 400ms ease-out;
+  }
+
+
+  
+  .mgCard:hover >.layer{
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .mgCard:hover >  a img{
+    transform: scale(1.1);
+  }
+  .categoryName h4 {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 15px;
+  }
+
+ 
+  .mgCard .layer button{
+    padding: 2px 8px;
+    font-size: 10px;
+    color: #fff;
+  }
+  button.cardButton.mgSolid.mgPlay{
+    width: 30%;
+  }
+  .mgCard .layer button a{
+    padding: 2px 8px;
+    font-size: 12px;
+  }
+  .mgSolid, .fas {
+    font-weight: 900;
+  }
+  .fa, .fa-brands, .fa-classic, .fa-regular, .fa-sharp, .mgSolid, .fab, .far, .fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: var(--fa-display,inline-block);
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+  }
+  .fa-classic, .fa-regular, .mgSolid, .far, .fas {
+    font-family: "Font Awesome 6 Free";
+  }
+
+  .carrusel .btnScrollRight, .btnScrollRight {
+    right: 0;
+    margin-right: -25px;
+  }
+  .carrusel .btnScrollLeft, .btnScrollLeft{
+    left: 0;
+    margin-left: -25px;
+  }
+  .mgCard{
+    min-width: 35%; 
+    height: 245px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    margin-right: 10px;
+  }
+  .mgCard a img{
+    width: 100%;
+    height: 100%;
+    transition: all 400ms ease-out;
+  }
+  
+  .mgCard .layer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.863);
+    color: #fff;
+    transition: all 400ms ease-out;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .mgCard .layer h6{
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .mgCard .layer button{
+    padding: 10px 25px;
+    background-color: #27BF17;
+    font-size: 18px;
+    border-radius: 3px;
+    color: #fff;
+    transition: all 400ms;
+    cursor: pointer;
+  }
+  
+  .mgCard .layer button a{
+    /*padding: 10px 25px;*/
+   /* background-color: #27BF17;*/
+    font-size: 18px;
+    border-radius: 3px;
+    color: #fff;
+    transition: all 400ms;
+    cursor: pointer;
+  }
+  
+/*.mgCard .layer button:hover{
+    background-color: #0B7800;
+  }*/
+  
+  /*.mgCard .layer a:hover{
+    background-color: #0B7800;
+  }*/
+  
+  .mgCard:hover >.layer{
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .mgCard:hover >  a img{
+    transform: scale(1.1);
+  }
+  div.myGames{
+    background-color: var(--primaryColorS1);
+    margin-top: 30px;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }  
+  .categoryName h4{
+    color: #fff;
+    font-size: 20px;
+    margin-left: 15px;
+  }
+  
+
+  
+  .carrusel .btnScrollLeft,
+  .carrusel .btnScrollRight/*, .btnScrollRight,.btnScrollLeft*/ {
+    position: absolute;
+    border: none;
+    background-color: #CA1551;
+    font-size: 24px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    top: calc(50%-25%);
+    line-height: 24px;
+    color: #fff;
+    cursor: pointer;
+    opacity: 1;
+    z-index: 100;
+    transition: 300ms ease all;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.253);
+  }
+
+  .carrusel .btnScrollLeft:hover,
+  .carrusel .btnScrollRight:hover/*, .btnScrollLeft:hover, .btnScrollRight:hover */
+  {
+    background-color: #9E0A3C; 
+  }
+  
+  .carrusel .btnScrollLeft{
+    left: 30px;
+    margin-left: -25px;
+  }
+  /*para acomodar los botones de los carruseles chicos*/
+ /* .btnScrollLeft{
+    position: relative;
+    top: 125px;
+  }
+  .btnScrollRight{
+    position: relative;
+    right: 0;
+    left: 96%;
+    top: -122px;
+  }*/
+  
+  .carrusel .btnScrollRight/*, .btnScrollRight*/{
+    right: 30px;
+    margin-right: -25px;
+  }
+  
+  .containerCarrusel{
+    width: 100%;
+    padding: 5px 0px;
+    overflow: hidden;
+    /*overflow-x: scroll;*/
+    scroll-behavior: smooth;
+  }
+  
+  .containerCarrusel .contCards
+  {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+  }
 /*-----------------------------------Carrusel chico-----------------------*/
 h1.categoryName{
     color: var(--white);
