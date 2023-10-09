@@ -800,7 +800,7 @@ button.cardButton.mgSolid.mgPlay {
 }
 
 .mgCard .layer h6 {
-    font-size: 30px;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
@@ -928,9 +928,39 @@ div.myGames {
     scroll-behavior: smooth;
 
 }
+/*-------------------------------- animacion para scroll-------------------*/
 
+.skewActive{
+    transition: transform 0.3s ease;
+    animation: skewAnimation 0.3s forwards;
+}
+@keyframes skewAnimation {
+    0% {
+      transform: skewX(0deg);
+    }
+    50% {
+      transform: skewX(10deg);
+    }
+    100%{
+        transform: skewX(0deg);
+    }
+  }
 
-
+  .skewActive2{
+    transition: transform 0.3s ease;
+    animation: skewAnimation2 0.3s forwards;
+}
+@keyframes skewAnimation2 {
+    0% {
+      transform: skewX(0deg);
+    }
+    50% {
+      transform: skewX(-10deg);
+    }
+    100%{
+        transform: skewX(0deg);
+    }
+  }
 /*-----------------------------------Carrusel chico-----------------------*/
 h1.categoryName {
     color: var(--white);
