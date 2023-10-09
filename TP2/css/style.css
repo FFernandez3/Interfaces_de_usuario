@@ -283,15 +283,18 @@ div.cartPopUp {
     top: 0;
     display: flex;
     flex-direction: column;
-    
+
 }
-div.cartHead button{
+
+div.cartHead button {
     background-color: var(--black);
 }
+
 img.backColorCross {
     background-color: var(--black);
 }
-div.cartHead button img{
+
+div.cartHead button img {
     cursor: pointer;
 }
 
@@ -321,7 +324,7 @@ table {
 }
 
 tr.subtotal {
-   
+
     color: var(--primaryColor);
 }
 
@@ -427,21 +430,16 @@ img.cart-icon {
     /*margin-top: 33%;*/
 }
 
-img.cart-icon {
-    /* margin-top: 37%;*/
-   
-}
-
 img.avatar,
 img.cart-icon {
     justify-self: center;
     cursor: pointer;
     /*margin-top: 33%;*/
 }
-button#cart-btn{
+
+button#cart-btn {
     padding-left: 120px;
 }
-
 
 button.btnMenu {
     background-color: var(--primaryColorS2);
@@ -452,8 +450,6 @@ input.searchGames {
 }
 
 div.container {
-    /* grid-column: 1;
-    grid-row: 2;*/
     margin-left: 8px;
     margin-right: 8px;
     grid-area: container;
@@ -533,36 +529,25 @@ footer ul.ulFooter {
     height: 50%;
 }
 
-/*div.bigCarousel{
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-
-}*/
 /*----------------------------------- barra de scroll carruseles-----------------*/
 .contCards::-webkit-scrollbar,
 div.carousel::-webkit-scrollbar {
     width: 12px;
-    /* width of the entire scrollbar */
+
 }
 
 .contCards::-webkit-scrollbar-track,
 div.carousel::-webkit-scrollbar-track {
     background: var(--primaryColorS1);
-    /* color of the tracking area */
+
 }
 
 .contCards::-webkit-scrollbar-thumb,
 div.carousel::-webkit-scrollbar-thumb {
     background-color: var(--primaryColor);
-    /* color of the scroll thumb */
     border-radius: 20px;
-    /* roundness of the scroll thumb */
     border: 1px solid var(--primaryColorL1);
-    /* creates padding around scroll thumb */
 }
-
-
 
 /*----------------------------------Carrusel grande----------------------------*/
 section.recommended {
@@ -577,7 +562,6 @@ section.recommended {
 
 div.imgBigCarousel {
     position: relative;
-    /*height: fit-content;*/
     min-height: 250px;
 }
 
@@ -587,9 +571,6 @@ div.imgBigCarousel img {
     opacity: 0;
     transition: opacity 1s;
     position: absolute;
-    /*left: 0;
-    top: 0;*/
-    /* display: none;*/
 
 }
 
@@ -625,7 +606,6 @@ nav.elipseButton button {
     margin: 8px;
     border-radius: 100%;
     height: 20px;
-    /*debe ser cuadrado para darle borde 100% y que quede un circulo*/
     width: 20px;
     background-color: var(--primaryColorS1);
     opacity: 0.71;
@@ -635,12 +615,6 @@ nav.elipseButton button {
 
 }
 
-/*.circleButton{
-    height: 20px;
-    width: 20px;
-    opacity: 1;
-    
-}*/
 nav.elipseButton button a {
     opacity: 0;
     /*height: 20px;
@@ -835,13 +809,8 @@ div.myGames {
     margin-left: 15px;
 }
 
-
-
 .carrusel .btnScrollLeft,
-.carrusel .btnScrollRight
-
-/*, .btnScrollRight,.btnScrollLeft*/
-    {
+.carrusel .btnScrollRight {
     position: absolute;
     border: none;
     background-color: var(--secondaryColor);
@@ -912,37 +881,44 @@ div.myGames {
 
 /*---------------------animacion para skew carrusel ------------------------------*/
 
-.skewActive{
+.skewActive {
     transition: transform 0.3s ease;
     animation: skewAnimation 0.3s forwards;
 }
+
 @keyframes skewAnimation {
     0% {
-      transform: skewX(0deg);
-    }
-    50% {
-      transform: skewX(10deg);
-    }
-    100%{
         transform: skewX(0deg);
     }
-  }
 
-  .skewActive2{
+    50% {
+        transform: skewX(10deg);
+    }
+
+    100% {
+        transform: skewX(0deg);
+    }
+}
+
+.skewActive2 {
     transition: transform 0.3s ease;
     animation: skewAnimation2 0.3s forwards;
 }
+
 @keyframes skewAnimation2 {
     0% {
-      transform: skewX(0deg);
-    }
-    50% {
-      transform: skewX(-10deg);
-    }
-    100%{
         transform: skewX(0deg);
     }
-  }
+
+    50% {
+        transform: skewX(-10deg);
+    }
+
+    100% {
+        transform: skewX(0deg);
+    }
+}
+
 /*-----------------------------------Carrusel chico-----------------------*/
 h1.categoryName {
     color: var(--white);
@@ -1380,19 +1356,21 @@ button.signUpBtn:hover {
     transition: all 0.3s ease-out;
     transform: scale(1, 1);
 }
+
 /*------------------------------------PopUp compartir-------------------*/
-div.sharePopUp{
+div.sharePopUp {
     background-color: var(--primaryColorL3);
     border-radius: 10px;
-    height: 295px ;
+    height: 295px;
     width: 456px;
     position: absolute;
     top: 70%;
     left: 35%;
-    z-index: 230; 
+    z-index: 230;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
-.opacity{
+
+.opacity {
     height: 100%;
     width: 100%;
     z-index: 70;
@@ -1404,21 +1382,23 @@ div.sharePopUp{
 
 }
 
-div.link{
+div.link {
     background-color: var(--primaryColorL2);
     border-radius: 10px;
     height: 73px;
     width: 400px;
     margin-left: 6%;
 }
-div.link p{
+
+div.link p {
     font-size: var(--bodyFontSize);
     color: var(--primaryColor);
     margin-top: 7%;
     margin-left: 5%;
-}   
-button.shareBtn{
-    height:38px;
+}
+
+button.shareBtn {
+    height: 38px;
     width: 400px;
     background: linear-gradient(to bottom, var(--secondaryColor), var(--tertiaryColor));
     color: var(--white);
@@ -1427,35 +1407,43 @@ button.shareBtn{
     margin-top: 5%;
     margin-left: 6%;
 }
-div.sharePopUp img{
+
+div.sharePopUp img {
     width: 38px;
     height: 38px;
     background-color: var(--primaryColorL3);
 }
-div.popUpHead button, div.popUpHead button img{
+
+div.popUpHead button,
+div.popUpHead button img {
     background-color: var(--primaryColorL3);
 }
-div.popUpHead{
+
+div.popUpHead {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-div.popUpHead h2{
+
+div.popUpHead h2 {
     margin-left: 35%;
     margin-top: 3%;
 
 }
-div.shareSocials{
+
+div.shareSocials {
     margin-left: 25%;
     margin-top: 3%;
     margin-bottom: 3%;
 }
-div.shareSocials img{
-    margin:7px;
+
+div.shareSocials img {
+    margin: 7px;
     align-self: center;
     justify-self: center;
 }
-.dNone{
+
+.dNone {
     display: none;
 }
 
@@ -1573,7 +1561,8 @@ div.optionsGame button {
     margin-left: 10px;
     transition: transform 0.3s ease;
 }
-div.optionsGame button:hover{
+
+div.optionsGame button:hover {
     transform: scale(1.1);
 }
 
