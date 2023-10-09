@@ -1,4 +1,5 @@
 addEventListener("DOMContentLoaded", (e) => {
+
     const row = document.querySelectorAll(".contCards");
     const cards = document.querySelectorAll(".mgCard");
     const btnScrollRight = document.querySelectorAll("#btnScrollRight");
@@ -41,3 +42,7 @@ addEventListener("DOMContentLoaded", (e) => {
     
     
     });
+
+
+
+

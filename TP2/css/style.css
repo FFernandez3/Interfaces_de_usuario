@@ -928,6 +928,9 @@ div.myGames {
     scroll-behavior: smooth;
 
 }
+
+/*---------------------animacion para skew carrusel ------------------------------*/
+
 .skewActive{
     transition: transform 0.3s ease;
     animation: skewAnimation 0.3s forwards;
@@ -943,8 +946,6 @@ div.myGames {
         transform: skewX(0deg);
     }
   }
-
-
 
   .skewActive2{
     transition: transform 0.3s ease;
