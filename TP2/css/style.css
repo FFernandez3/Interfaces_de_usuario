@@ -283,20 +283,16 @@ div.cartPopUp {
     top: 0;
     display: flex;
     flex-direction: column;
-    /* display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 15% 20% 20% 10% 15% 20%;
-    grid-template-areas: "thead "
-                        "game1"
-                        "game2"
-                        "subtotal"
-                        "total"
-                        "cartButton"
-                        ;*/
+    
 }
-
+div.cartHead button{
+    background-color: var(--black);
+}
 img.backColorCross {
     background-color: var(--black);
+}
+div.cartHead button img{
+    cursor: pointer;
 }
 
 ul li.rowCart {
@@ -324,26 +320,11 @@ table {
     height: 100%;
 }
 
-tr.game1 {
-    /*grid-area: game1;*/
-}
-
-tr.game2 {
-    /* grid-area: game2;*/
-}
-
 tr.subtotal {
-    /*grid-area: subtotal;*/
+   
     color: var(--primaryColor);
 }
 
-tr.total {
-    /*grid-area: total;*/
-}
-
-tr.cartButton {
-    /*grid-area: cartButton;*/
-}
 
 p.gameTitle,
 p.price,
@@ -366,7 +347,6 @@ p.cartTitle {
 
 div.cartHead {
     background-color: var(--black);
-    /*grid-area: thead;*/
     display: flex;
     justify-content: space-around;
 }
@@ -376,9 +356,6 @@ p.subtotal {
     margin-left: 10px;
 }
 
-p.price {
-    /*margin-left: 170px;*/
-}
 
 p.priceTotal {
     padding-left: 170px;
@@ -452,6 +429,7 @@ img.cart-icon {
 
 img.cart-icon {
     /* margin-top: 37%;*/
+   
 }
 
 img.avatar,
@@ -459,6 +437,9 @@ img.cart-icon {
     justify-self: center;
     cursor: pointer;
     /*margin-top: 33%;*/
+}
+button#cart-btn{
+    padding-left: 120px;
 }
 
 
@@ -1406,7 +1387,7 @@ div.sharePopUp{
     height: 295px ;
     width: 456px;
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 35%;
     z-index: 230; 
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -1590,6 +1571,10 @@ div.optionsGame button {
     margin-top: 20px;
     margin-right: 10px;
     margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+div.optionsGame button:hover{
+    transform: scale(1.1);
 }
 
 div.optionsGame button.heart {

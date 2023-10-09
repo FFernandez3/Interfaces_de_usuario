@@ -49,15 +49,15 @@
           <li class="logoNav"><img class="logoNav" src="img/avatar/Logo.svg" alt="logo" /><button id="crossNav-btn"><img
                 src="img/iconos/cross.svg" alt=""></button></li>
           <li class="searchLi"><input class="searchNav" src="text" placeholder="Buscar juegos" /></li>
-          <li><img src="img/iconos/news.svg" alt="news" /><a href="#">Novedades</a></li>
-          <li><img src="img/iconos/fire.svg" alt="fire" /><a href="#">Tendencias</a></li>
+          <li><img src="img/iconos/news.svg" alt="news" /><a  class="mainOptions" href="#">Novedades</a></li>
+          <li><img src="img/iconos/fire.svg" alt="fire" /><a  class="mainOptions" href="#">Tendencias</a></li>
           <li class="lineMenu"><img class="lineMenu" src="img/line.svg" alt=""></li>
-          <li><img src="img/iconos/swords.svg" alt="swords" /><a href="#">Accion</a></li>
-          <li><img src="img/iconos/pacman.svg" alt="pacman" /><a href="#">Arcade</a></li>
-          <li><img src="img/iconos/flag.svg" alt="flag" /><a href="#">Aventura</a></li>
-          <li><img src="img/iconos/ball.svg" alt="ball" /><a href="#">Deporte</a></li>
-          <li><img src="img/iconos/tower.svg" alt="tower" /><a href="#">Estrategia</a></li>
-          <li><img src="img/iconos/zombie.svg" alt="deadHand" /><a href="#">Zombies</a></li>
+          <li><img src="img/iconos/swords.svg" alt="swords" /><a  class="mainOptions" href="#">Accion</a></li>
+          <li><img src="img/iconos/pacman.svg" alt="pacman" /><a  class="mainOptions" href="#">Arcade</a></li>
+          <li><img src="img/iconos/flag.svg" alt="flag" /><a  class="mainOptions" href="#">Aventura</a></li>
+          <li><img src="img/iconos/ball.svg" alt="ball" /><a  class="mainOptions" href="#">Deporte</a></li>
+          <li><img src="img/iconos/tower.svg" alt="tower" /><a  class="mainOptions" href="#">Estrategia</a></li>
+          <li><img src="img/iconos/zombie.svg" alt="deadHand" /><a  class="mainOptions" href="#">Zombies</a></li>
         </ul>
       </nav>
       <nav class="displayNone userNav" id="user-nav">
@@ -65,14 +65,14 @@
           <li class="avatarNav"><img class="avatarNav" src="img/avatar/avatarRalph.svg" alt="avatar" /><button
               id="crossUserNav-btn"><img class="userNavCross" src="img/iconos/cross.svg" alt=""></button></li>
           <li class="lineMenu"><img class="lineMenu" src="img/line.svg" alt=""></li>
-          <li><img src="img/iconos/user.svg" alt="avatar" /><a href="#">Mi perfil</a></li>
-          <li><img src="img/iconos/novedades.svg" alt="bell" /><a href="#">Notificaciones</a></li>
-          <li><img src="img/iconos/joystick.svg" alt="joystick" /><a href="#">Mis juegos</a></li>
-          <li><img src="img/iconos/shop.svg" alt="shopBag" /><a href="#">Mis compras</a></li>
-          <li><img src="img/iconos/privacity.svg" alt="shield" /><a href="#">Privacidad</a></li>
-          <li><img src="img/iconos/support.svg" alt="question" /><a href="#">Soporte</a></li>
+          <li><img src="img/iconos/user.svg" alt="avatar" /><a class="userOptions" href="#">Mi perfil</a></li>
+          <li><img src="img/iconos/novedades.svg" alt="bell" /><a class="userOptions" href="#">Notificaciones</a></li>
+          <li><img src="img/iconos/joystick.svg" alt="joystick" /><a class="userOptions" href="#">Mis juegos</a></li>
+          <li><img src="img/iconos/shop.svg" alt="shopBag" /><a class="userOptions" href="#">Mis compras</a></li>
+          <li><img src="img/iconos/privacity.svg" alt="shield" /><a class="userOptions" href="#">Privacidad</a></li>
+          <li><img src="img/iconos/support.svg" alt="question" /><a class="userOptions" href="#">Soporte</a></li>
           <li class="lineMenu"><img class="lineMenu" src="img/line.svg" alt="#"></li>
-          <li><img src="img/iconos/logOut.svg" alt="logOut" /><a href="loginForm.html">Cerrar sesión</a></li>
+          <li><img src="img/iconos/logOut.svg" alt="logOut" /><a class="userOptions" href="loginForm.html">Cerrar sesión</a></li>
         </ul>
       </nav>
     
@@ -131,9 +131,9 @@
                         <img src="img/avatar/pacmanBugs.svg" alt="logo">
                         <div class="optionsGame">
                             <button id="share"class="share"><img id="shareImg" src="img/botones/share.svg" alt=""></button>
-                            <button class="like"><img src="img/botones/handUp.svg" alt=""></button>
-                            <button class="dislike"><img src="img/botones/dislike.svg" alt=""></button>
-                            <button class="heart"><img src="img/botones/heart.svg" alt=""></button>
+                            <button id="like" class="like"><img id="likeImg" src="img/botones/handUp.svg" alt=""></button>
+                            <button id= "dislike"class="dislike"><img id="dislikeImg"src="img/botones/dislike.svg" alt=""></button>
+                            <button id="heart"class="heart"><img id="heartImg" src="img/botones/heart.svg" alt=""></button>
                         </div>
                        
                     </div>
@@ -316,6 +316,7 @@
     </footer>
     <script src="js/nav.js"></script>
     <script src="js/share.js"></script>
+    <script src="js/buttons.js"></script>
 </body>
 
 </html>
