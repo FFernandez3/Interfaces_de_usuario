@@ -1,77 +1,92 @@
-*, body{
+*,
+body {
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
     border: none;
     outline: none;
-    font-family: 'Roboto', sans-serif ;
+    font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
 }
-:root{
+
+:root {
     /*Colores*/
-    --primaryColor:#333333;
-    --primaryColorS1:#1f1f1f;
-    --primaryColorS2:#0d0d0d;
-    --primaryColorL1:#666666;
-    --primaryColorL2:#999999;
-    --primaryColorL3:#cccccc;
-    --secondaryColor: #ec098c;/*linear-gradient(#ec098c, #ff9d0b); */
-    --secondaryColorS1: #df247a; /*#df247a, #e6900e;*/
-    --secondaryColorS2: #cc0861; /*#cc0861, #cb7d0a;*/
-    --secondaryColorS3: #ab0752;/*#ab0752, #b7730f;*/
-    --secondaryColorL1:#ee35a1; /*#ee35a1, #ffaa2c;*/
-    --secondaryColorL2:#f141a8; /*#ffb341;*/
-    --secondaryColorL3:#f163b6;/* #ffc875;*/
+    --primaryColor: #333333;
+    --primaryColorS1: #1f1f1f;
+    --primaryColorS2: #0d0d0d;
+    --primaryColorL1: #666666;
+    --primaryColorL2: #999999;
+    --primaryColorL3: #cccccc;
+    --secondaryColor: #ec098c;
+    /*linear-gradient(#ec098c, #ff9d0b); */
+    --secondaryColorS1: #df247a;
+    /*#df247a, #e6900e;*/
+    --secondaryColorS2: #cc0861;
+    /*#cc0861, #cb7d0a;*/
+    --secondaryColorS3: #ab0752;
+    /*#ab0752, #b7730f;*/
+    --secondaryColorL1: #ee35a1;
+    /*#ee35a1, #ffaa2c;*/
+    --secondaryColorL2: #f141a8;
+    /*#ffb341;*/
+    --secondaryColorL3: #f163b6;
+    /* #ffc875;*/
     --tertiaryColor: #FF9D0B;
     --tertiaryColorL1: #ffc875;
-    --accentColor:#99dc0b;
-    --black:#111111;
-    --white:#f2f2f2;
-    --googleColor:#f90101;
-    --facebookColor:#3b5998;
+    --accentColor: #99dc0b;
+    --black: #111111;
+    --white: #f2f2f2;
+    --googleColor: #f90101;
+    --facebookColor: #3b5998;
     /*Fuentes*/
     --h1: 32px;
     --h2: 24px;
     --h3: 20px;
     --bodyFontSize: 16px;
     --bodyBold: 16px, bold;
-    /*--buttonText:14px, letter: spacing 30%;*/ /*asi no lo aplica*/
+    /*--buttonText:14px, letter: spacing 30%;*/
+    /*asi no lo aplica*/
     --buttonText: 14px;
-    /*--bigCardText:25px, letter: font: weight 600px;*/ /*asi no lo toma*/
-    --bigCardText:20px; /*25 es muy grande lo achique*/
-    --smallCardText: 18px; /*antes 23 px*/
-    --smallText:14px; /*ojo este se repite con buttonText ahora*/
+    /*--bigCardText:25px, letter: font: weight 600px;*/
+    /*asi no lo toma*/
+    --bigCardText: 20px;
+    /*25 es muy grande lo achique*/
+    --smallCardText: 18px;
+    /*antes 23 px*/
+    --smallText: 14px;
+    /*ojo este se repite con buttonText ahora*/
     /*Cards*/
     --divSmallCardSize: 290px, 360px;
-    --imgSmallCardSize:290px, 214px;
+    --imgSmallCardSize: 290px, 214px;
     /*Tamanios botones*/
-    --smallButtonSize:120px, 36px;
-    --BigButtonSize:203px, 56px;
-    --buttonLogInSingUpFormSize:400px, 44px;
-    --cartButton:420px, 38px;
+    --smallButtonSize: 120px, 36px;
+    --BigButtonSize: 203px, 56px;
+    --buttonLogInSingUpFormSize: 400px, 44px;
+    --cartButton: 420px, 38px;
     /*label gratis*/
-    --labelSize:79px, 26px;
+    --labelSize: 79px, 26px;
     /*Inputs*/
     --inputFormSize: 400px, 33px;
-    --inputSearchSize:300px, 40px;
-    --inputCommentSize:996px, 50px;
-    --inputDateSize:120px, 35.94px;
+    --inputSearchSize: 300px, 40px;
+    --inputCommentSize: 996px, 50px;
+    --inputDateSize: 120px, 35.94px;
 
 }
 
-body{
+body {
     /*width: 390px;*/
     background-color: var(--primaryColor);
     /*height: fit-content;*/
     display: grid;
     grid-template-columns: 1fr;
     /*grid-template-rows: 3% 91% 6%;*/
-    grid-template-rows: 1fr auto 3fr ; /* con 3% auto 6% el body no toma todo*/
-    grid-template-areas: "header" 
-                        "container"
-                        "footer";
-                        
+    grid-template-rows: 1fr auto 3fr;
+    /* con 3% auto 6% el body no toma todo*/
+    grid-template-areas: "header"
+        "container"
+        "footer";
+
 }
 
 /*---------------------------------------loading------------------------------------------*/
@@ -80,7 +95,7 @@ body{
     height: 100%;
     width: 100%;
     z-index: 100;
-    background-color: rgb(7, 7, 7,0.9);
+    background-color: rgb(7, 7, 7, 0.9);
     position: fixed;
     transition: all 1s ease;
     overflow: hidden;
@@ -95,9 +110,11 @@ body{
 
 .loadContainer .load {
     position: absolute;
-    top: 50%; left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    width: 200px; height: 200px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     border-top: 5px solid #ef4361;
     border-right: 5px solid #ef4361;
@@ -106,23 +123,29 @@ body{
 }
 
 .loadContainer .percentage {
-position: absolute;
-top: 50%; left: 50%;
-font-size: 45px;
-font-weight: 700;
-color: #ef4361;
-z-index: 2;
-transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 45px;
+    font-weight: 700;
+    color: #ef4361;
+    z-index: 2;
+    transform: translate(-50%, -50%);
 }
 
 @keyframes spin {
-0%   { transform: translate(-50%, -50%) rotate(0deg); }
-100% { transform: translate(-50%, -50%) rotate(360deg)}
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg)
+    }
 }
 
 
 /*-----------------------------------------------------------------------------------------*/
-nav.styleNav{
+nav.styleNav {
     background-color: var(--primaryColor);
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -135,7 +158,8 @@ nav.styleNav{
     top: 0;
     height: 480px;
 }
-nav.userNav{
+
+nav.userNav {
     background-color: var(--primaryColor);
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -148,94 +172,118 @@ nav.userNav{
     top: 0;
     height: 445px;
 }
-nav.styleNav a, nav.userNav a{
+
+nav.styleNav a,
+nav.userNav a {
     color: var(--white);
 }
-nav.styleNav li img, nav.userNav li img {
+
+nav.styleNav li img,
+nav.userNav li img {
     margin-right: 10px;
     margin-left: 20px;
 }
-nav.styleNav ul li, nav.userNav ul li{
+
+nav.styleNav ul li,
+nav.userNav ul li {
     height: 40px;
 }
-input.searchNav{
+
+input.searchNav {
     border-radius: 10px;
     width: 100%;
     height: 60%;
     background-color: var(--primaryColorL3);
 
 }
-input.searchNav::placeholder{
+
+input.searchNav::placeholder {
     color: var(--primaryColor);
     padding: 30px;
     opacity: 0.5;
 }
-li.searchLi{
+
+li.searchLi {
     margin-left: 20px;
     margin-right: 20px;
 }
+
 /*nav.styleNav ul li:hover, nav.styleNav ul li a:hover{
     background-color: var(--secondaryColor);
 }*/
-nav.styleNav ul li.logoNav{
+nav.styleNav ul li.logoNav {
     height: 70px;
     justify-self: center;
 }
-nav.styleNav ul li.logoNav button{
- background-color: var(--primaryColor);
+
+nav.styleNav ul li.logoNav button {
+    background-color: var(--primaryColor);
 }
-nav.styleNav ul li.logoNav, nav.userNav ul li.avatarNav{
+
+nav.styleNav ul li.logoNav,
+nav.userNav ul li.avatarNav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-img.logoNav{
+
+img.logoNav {
     height: 100%;
-    width: auto ;
+    width: auto;
     margin-left: 0;
 }
+
 /*li.menuLine{
     border-bottom: solid 2px var(--primaryColorL1);
 }*/
-nav.styleNav li.lineMenu img.lineMenu, nav.userNav li.lineMenu img.lineMenu {
+nav.styleNav li.lineMenu img.lineMenu,
+nav.userNav li.lineMenu img.lineMenu {
     width: 100%;
     height: 10px;
     margin-left: 0;
-    
+
 }
-li.lineMenu{
+
+li.lineMenu {
     margin-right: 10px;
     margin-left: 10px;
-    
+
 }
-a.userOptions:hover, a.mainOptions:hover{
+
+a.userOptions:hover,
+a.mainOptions:hover {
     text-decoration: underline;
 }
+
 /*--------------------------------------NAV USER------------------------------------*/
 nav.userNav ul li.avatarNav {
     height: 60px;
 }
-nav.userNav ul li.avatarNav button img.userNavCross, nav.userNav ul li.avatarNav button{
+
+nav.userNav ul li.avatarNav button img.userNavCross,
+nav.userNav ul li.avatarNav button {
     background-color: var(--primaryColor);
 }
-li.avatarNav img.avatarNav{
+
+li.avatarNav img.avatarNav {
     width: 45px;
     height: 45px;
     margin-top: 12px;
 }
+
 /*CARRITO DE COMPRAS*/
-div.cartPopUp{
+div.cartPopUp {
     background-color: var(--primaryColorL3);
     border-radius: 0 10px 10px 10px;
     height: 400px;
-    width: 300px ;
+    width: 300px;
     position: fixed;
     z-index: 60;
     right: 0;
     top: 0;
     display: flex;
     flex-direction: column;
-   /* display: grid;
+    /* display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 15% 20% 20% 10% 15% 20%;
     grid-template-areas: "thead "
@@ -246,116 +294,136 @@ div.cartPopUp{
                         "cartButton"
                         ;*/
 }
-img.backColorCross{
+
+img.backColorCross {
     background-color: var(--black);
 }
-ul li.rowCart{
+
+ul li.rowCart {
     display: flex;
     margin-top: 20px;
 }
-div.asideCart{
-    padding-left: 80px
 
+div.asideCart {
+    padding-left: 80px
 }
-ul li.subtotalCart{
+
+ul li.subtotalCart {
     display: flex;
     margin-top: 40px;
 }
-li img.imgCart{
+
+li img.imgCart {
     max-width: 69px;
     max-height: 59px;
     margin-left: 10px;
 }
 
-table{
+table {
     width: 100%;
     height: 100%;
 }
-tr.game1{
+
+tr.game1 {
     /*grid-area: game1;*/
 }
-tr.game2{
-   /* grid-area: game2;*/
+
+tr.game2 {
+    /* grid-area: game2;*/
 }
-tr.subtotal{
+
+tr.subtotal {
     /*grid-area: subtotal;*/
-    color:var(--primaryColor);
+    color: var(--primaryColor);
 }
-tr.total{
+
+tr.total {
     /*grid-area: total;*/
 }
-tr.cartButton{
+
+tr.cartButton {
     /*grid-area: cartButton;*/
 }
-p.gameTitle, p.price, p.cartTitle{
+
+p.gameTitle,
+p.price,
+p.cartTitle {
     font-size: var(--bodyFontSize);
 }
-p.gameTitle{
+
+p.gameTitle {
     height: 40px;
     width: 80px;
     margin-left: 5px;
     margin-top: 5px;
 }
-p.cartTitle{
+
+p.cartTitle {
     color: var(--white);
     margin-left: 30px;
     margin-top: 5px;
 }
 
-div.cartHead{
+div.cartHead {
     background-color: var(--black);
     /*grid-area: thead;*/
     display: flex;
     justify-content: space-around;
 }
 
-p.subtotal{
+p.subtotal {
     font-size: var(--bodyBold);
     margin-left: 10px;
 }
-p.price{
+
+p.price {
     /*margin-left: 170px;*/
 }
-p.priceTotal{
+
+p.priceTotal {
     padding-left: 170px;
 }
-p.total{
+
+p.total {
     font-size: 18px;
     font-weight: bold;
     margin-left: 10px;
 }
 
-button.cartButton{
+button.cartButton {
     width: 278px;
     height: 38px;
-    background: linear-gradient(to bottom, var(--secondaryColor),var(--tertiaryColor) );
+    background: linear-gradient(to bottom, var(--secondaryColor), var(--tertiaryColor));
     color: var(--white);
     position: relative;
     left: 10px;
     border-radius: 10px;
 }
-li.btnCart{
+
+li.btnCart {
     margin-top: 40px;
 }
-img.trash{
+
+img.trash {
     height: 24px;
     width: 24px;
     margin-left: 24px;
 }
+
 /*DISPLAY NONE PARA LOS NAVS y CART*/
-.displayNone{
+.displayNone {
     display: none !important;
 }
 
 
-header{
+header {
     background-color: var(--primaryColorS2);
     /*grid-column: 1;
     grid-row: 1;*/
     grid-area: header;
     /*height: fit-content;*/
     position: sticky;
-    top:0;
+    top: 0;
     z-index: 50;
     display: grid;
     grid-template-columns: 15% 55% 15% 15%;
@@ -366,48 +434,56 @@ header{
     right: 0;
     left: 0;
 }
+
 /*header*/
-a img.logo{
+a img.logo {
     max-width: 150px;
     max-height: 100px;
 }
-img.hamburger, img.cart-icon{
+
+img.hamburger,
+img.cart-icon {
     max-width: 100px;
     max-height: 100px;
     justify-self: center;
     cursor: pointer;
     /*margin-top: 33%;*/
 }
-img.cart-icon{ 
-   /* margin-top: 37%;*/
+
+img.cart-icon {
+    /* margin-top: 37%;*/
 }
-img.avatar, img.cart-icon{
+
+img.avatar,
+img.cart-icon {
     justify-self: center;
     cursor: pointer;
     /*margin-top: 33%;*/
 }
 
 
-button.btnMenu{
+button.btnMenu {
     background-color: var(--primaryColorS2);
 }
-input.searchGames{
+
+input.searchGames {
     display: none;
 }
 
-div.container{
-   /* grid-column: 1;
+div.container {
+    /* grid-column: 1;
     grid-row: 2;*/
     margin-left: 8px;
     margin-right: 8px;
     grid-area: container;
     margin-bottom: 40px;
     /*margin-top: 30px;*/
-    
+
 }
+
 /*---------------------------------------------FOOTER--------------------------------*/
-footer{
-   /* grid-column: 1;
+footer {
+    /* grid-column: 1;
     grid-row: 3;*/
     height: 200px;
     grid-area: footer;
@@ -419,51 +495,63 @@ footer{
     grid-template-areas:
         "aboutUs contact"
         "copyR copyR";
-    
+
 }
-footer h2.titleFooterLinks{
+
+footer h2.titleFooterLinks {
     font-size: var(--h3);
 }
-footer ul li a, .copyright{
+
+footer ul li a,
+.copyright {
     color: var(--primaryColorL1);
     font-size: var(--buttonText);
-    
+
 }
-footer div.aboutUs{
+
+footer div.aboutUs {
     grid-area: aboutUs;
     position: relative;
     left: 10%;
     top: 10%;
 }
-footer div.contact{
+
+footer div.contact {
     grid-area: contact;
     position: relative;
     left: 20%;
     top: 10%;
 }
-footer p.copyright{
+
+footer p.copyright {
     grid-area: copyR;
     align-self: center;
     justify-self: center;
 }
-footer div.socials{
+
+footer div.socials {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-div.socials li a img{
+
+div.socials li a img {
     width: 35px;
     height: 35px;
 }
-div.categoriesFooter, img.logoFooter{
+
+div.categoriesFooter,
+img.logoFooter {
     display: none;
 }
-footer ul.ulFooter{
+
+footer ul.ulFooter {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 50%;
 }
+
 /*div.bigCarousel{
     height: 300px;
     display: flex;
@@ -471,59 +559,71 @@ footer ul.ulFooter{
 
 }*/
 /*----------------------------------- barra de scroll carruseles-----------------*/
-.contCards::-webkit-scrollbar, div.carousel::-webkit-scrollbar {
-    width: 12px;               /* width of the entire scrollbar */
-  }
-  
-  .contCards::-webkit-scrollbar-track, div.carousel::-webkit-scrollbar-track {
-    background: var(--primaryColorS1);        /* color of the tracking area */
-  }
-  
-  .contCards::-webkit-scrollbar-thumb, div.carousel::-webkit-scrollbar-thumb {
-    background-color: var(--primaryColor);    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 1px solid var(--primaryColorL1);  /* creates padding around scroll thumb */
-  }
+.contCards::-webkit-scrollbar,
+div.carousel::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+.contCards::-webkit-scrollbar-track,
+div.carousel::-webkit-scrollbar-track {
+    background: var(--primaryColorS1);
+    /* color of the tracking area */
+}
+
+.contCards::-webkit-scrollbar-thumb,
+div.carousel::-webkit-scrollbar-thumb {
+    background-color: var(--primaryColor);
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 1px solid var(--primaryColorL1);
+    /* creates padding around scroll thumb */
+}
 
 
 
 /*----------------------------------Carrusel grande----------------------------*/
-section.recommended{
+section.recommended {
     width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     position: relative;
     min-height: 300px;
-    
+
 }
+
 div.imgBigCarousel {
-    position:relative;
+    position: relative;
     /*height: fit-content;*/
     min-height: 250px;
 }
-div.imgBigCarousel img{
+
+div.imgBigCarousel img {
     height: 250px;
     width: 100%;
     opacity: 0;
-    transition:opacity 1s;
+    transition: opacity 1s;
     position: absolute;
     /*left: 0;
     top: 0;*/
-   /* display: none;*/
+    /* display: none;*/
 
 }
-div.imgBigCarousel img:first-child{
+
+div.imgBigCarousel img:first-child {
     opacity: 1;
     /*display: block;*/
 }
-div.imgBigCarousel img:target{
+
+div.imgBigCarousel img:target {
     opacity: 1;
     display: block;
 }
 
 /*Botones carrusel grande*/
-nav.elipseButton{
+nav.elipseButton {
     /*cambios para q los botones se pongan en el medio en cualquier tamaño de pantalla*/
     /*display: inline;
     justify-self: center;*/
@@ -535,123 +635,155 @@ nav.elipseButton{
     width: 100%;
     /*left:100px;*/
     /*left: 40%; */
-   /* right: 40%;*/
+    /* right: 40%;*/
     /*margin-left: 45px;*/
-    
+
 }
-nav.elipseButton button{
+
+nav.elipseButton button {
     margin: 8px;
     border-radius: 100%;
-    height: 20px; /*debe ser cuadrado para darle borde 100% y que quede un circulo*/
+    height: 20px;
+    /*debe ser cuadrado para darle borde 100% y que quede un circulo*/
     width: 20px;
     background-color: var(--primaryColorS1);
     opacity: 0.71;
     /*opacity: 0;*/
-   /* border: none;
+    /* border: none;
     outline: none;*/
-    
+
 }
+
 /*.circleButton{
     height: 20px;
     width: 20px;
     opacity: 1;
     
 }*/
-nav.elipseButton button a{
+nav.elipseButton button a {
     opacity: 0;
     /*height: 20px;
     width: auto;*/
     /*text-decoration: none;*/
     /*border: none;*/
-   /* outline: none;*/
+    /* outline: none;*/
 }
- /*nav.elipseButton button:checked{
+
+/*nav.elipseButton button:checked{
     opacity: 1;
 }*/
 /*-----------------------------------carrusel mis juegos--------------------*/
 
-.carrusel{
+.carrusel {
     display: flex;
     align-items: center;
     position: relative;
-  }
-  .containerCarrusel{
+}
+
+.containerCarrusel {
     width: 100%;
     padding: 5px 0px;
     overflow: hidden;
     scroll-behavior: smooth;
-  }
-  .mgCard a img {
+}
+
+.mgCard a img {
     width: 100%;
     height: 100%;
     transition: all 400ms ease-out;
-  }
-  .mgCard:hover >.layer{
+}
+
+.mgCard:hover>.layer {
     opacity: 1;
     visibility: visible;
-  }
-  
-  .mgCard:hover >  a img{
+}
+
+.mgCard:hover>a img {
     transform: scale(1.1);
-  }
-  .categoryName h4 {
+}
+
+.categoryName h4 {
     color: #fff;
     font-size: 20px;
     margin-left: 15px;
-  }
-  .mgCard .layer button{
+}
+
+.mgCard .layer button {
     padding: 2px 8px;
     font-size: 10px;
     color: #fff;
-  }
-  button.cardButton.mgSolid.mgPlay{
+}
+
+button.cardButton.mgSolid.mgPlay {
     width: 50%;
     height: auto;
     margin-top: 10px;
-  }
-  .mgCard .layer button a{
+}
+
+.mgCard .layer button a {
     padding: 2px 8px;
     font-size: 12px;
-  }
-  .mgSolid, .fas {
+}
+
+.mgSolid,
+.fas {
     font-weight: 900;
-  }
-  .fa, .fa-brands, .fa-classic, .fa-regular, .fa-sharp, .mgSolid, .fab, .far, .fas {
+}
+
+.fa,
+.fa-brands,
+.fa-classic,
+.fa-regular,
+.fa-sharp,
+.mgSolid,
+.fab,
+.far,
+.fas {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    display: var(--fa-display,inline-block);
+    display: var(--fa-display, inline-block);
     font-style: normal;
     font-variant: normal;
     line-height: 1;
     text-rendering: auto;
-  }
-  .fa-classic, .fa-regular, .mgSolid, .far, .fas {
-    font-family: "Font Awesome 6 Free";
-  }
+}
 
-  .carrusel .btnScrollRight, .btnScrollRight {
+.fa-classic,
+.fa-regular,
+.mgSolid,
+.far,
+.fas {
+    font-family: "Font Awesome 6 Free";
+}
+
+.carrusel .btnScrollRight,
+.btnScrollRight {
     right: 0;
     margin-right: -25px;
-  }
-  .carrusel .btnScrollLeft, .btnScrollLeft{
+}
+
+.carrusel .btnScrollLeft,
+.btnScrollLeft {
     left: 0;
     margin-left: -25px;
-  }
-  .mgCard{
-    min-width: 70%; 
+}
+
+.mgCard {
+    min-width: 70%;
     height: 245px;
     position: relative;
     overflow: hidden;
     border-radius: 25px;
     margin-right: 10px;
-  }
-  .mgCard a img{
+}
+
+.mgCard a img {
     width: 100%;
     height: 100%;
     transition: all 400ms ease-out;
-  }
-  
-  .mgCard .layer{
+}
+
+.mgCard .layer {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -665,64 +797,70 @@ nav.elipseButton button a{
     justify-content: center;
     opacity: 0;
     visibility: hidden;
-  }
-  
-  .mgCard .layer h6{
+}
+
+.mgCard .layer h6 {
     font-size: 30px;
     margin-bottom: 10px;
-  }
-  .mgCard .layer button{
+}
+
+.mgCard .layer button {
     padding: 10px 25px;
     font-size: 18px;
     border-radius: 3px;
     color: #fff;
     transition: all 400ms;
     cursor: pointer;
-  }
-  
-  .mgCard .layer button a{
+}
+
+.mgCard .layer button a {
     /*padding: 10px 25px;*/
-   /* background-color: #27BF17;*/
+    /* background-color: #27BF17;*/
     font-size: 18px;
     border-radius: 3px;
     color: #fff;
     transition: all 400ms;
     cursor: pointer;
-  }
-  
+}
+
 /*.mgCard .layer button:hover{
     background-color: #0B7800;
   }*/
-  
-  /*.mgCard .layer a:hover{
+
+/*.mgCard .layer a:hover{
     background-color: #0B7800;
   }*/
-  
-  .mgCard:hover >.layer{
+
+.mgCard:hover>.layer {
     opacity: 1;
     visibility: visible;
-  }
-  
-  .mgCard:hover >  a img{
+}
+
+.mgCard:hover>a img {
     transform: scale(1.1);
-  }
-  div.myGames{
+}
+
+div.myGames {
     background-color: var(--primaryColorS1);
     margin-top: 30px;
     border-radius: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
-  }  
-  .categoryName h4{
+}
+
+.categoryName h4 {
     color: #fff;
     font-size: 20px;
     margin-left: 15px;
-  }
-  
+}
 
-  
-  .carrusel .btnScrollLeft,
-  .carrusel .btnScrollRight/*, .btnScrollRight,.btnScrollLeft*/ {
+
+
+.carrusel .btnScrollLeft,
+.carrusel .btnScrollRight
+
+/*, .btnScrollRight,.btnScrollLeft*/
+    {
     position: absolute;
     border: none;
     background-color: var(--secondaryColor);
@@ -739,21 +877,24 @@ nav.elipseButton button a{
     transition: 300ms ease all;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.253);
     display: none;
-  }
+}
 
-  .carrusel .btnScrollLeft:hover,
-  .carrusel .btnScrollRight:hover/*, .btnScrollLeft:hover, .btnScrollRight:hover */
-  {
-    background-color: var(--secondaryColorS1); 
+.carrusel .btnScrollLeft:hover,
+.carrusel .btnScrollRight:hover
+
+/*, .btnScrollLeft:hover, .btnScrollRight:hover */
+    {
+    background-color: var(--secondaryColorS1);
     opacity: 1;
-  }
-  
-  .carrusel .btnScrollLeft{
+}
+
+.carrusel .btnScrollLeft {
     left: 30px;
     margin-left: -25px;
-  }
-  /*para acomodar los botones de los carruseles chicos*/
- /* .btnScrollLeft{
+}
+
+/*para acomodar los botones de los carruseles chicos*/
+/* .btnScrollLeft{
     position: relative;
     top: 125px;
   }
@@ -763,48 +904,54 @@ nav.elipseButton button a{
     left: 96%;
     top: -122px;
   }*/
-  
-  .carrusel .btnScrollRight/*, .btnScrollRight*/{
+
+.carrusel .btnScrollRight
+
+/*, .btnScrollRight*/
+    {
     right: 30px;
     margin-right: -25px;
-  }
-  
-  .containerCarrusel{
+}
+
+.containerCarrusel {
     width: 100%;
     padding: 5px 0px;
     overflow: hidden;
     /*overflow-x: scroll;*/
     scroll-behavior: smooth;
-  }
-  
-  .containerCarrusel .contCards
-  {
+}
+
+.containerCarrusel .contCards {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: scroll;
     scroll-behavior: smooth;
-   
-  }
+
+}
 
 
 
 /*-----------------------------------Carrusel chico-----------------------*/
-h1.categoryName{
+h1.categoryName {
     color: var(--white);
     font-size: var(--h3);
 }
-.card{
+
+.card {
     border-radius: 10px;
     margin: 5px;
 }
-section.smallCarousel{
+
+section.smallCarousel {
     /*display: block;*/
     /*overflow-x: auto;*/
 }
-div.carousel{
+
+div.carousel {
     overflow-x: scroll;
 }
-div.slides{
+
+div.slides {
     display: flex;
     flex-direction: row;
     /*flex-wrap: nowrap;*/
@@ -813,98 +960,129 @@ div.slides{
     /*scroll-snap-type: x;*/
     /*transform: translateX(200px);*/
 }
+
 /*------------------------card pequeña-----------------*/
-section.smallCarousel{
+section.smallCarousel {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-div.card{
+
+div.card {
     background-color: var(--white);
     width: 250px;
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
     height: 180px;
 }
 
-div.card-img img{
+div.card-img img {
     height: 100px;
     width: 100%;
-    
+
 }
-button.cardButton{
-    background: linear-gradient(to bottom, var(--secondaryColor),var(--tertiaryColor) );
+
+button.cardButton {
+    background: linear-gradient(to bottom, var(--secondaryColor), var(--tertiaryColor));
     text-align: center;
     width: 100px;
     border-radius: 5px;
-    align-self: center; 
-    transition: transform 0.3s ease; /* Agrega una transición suave a la propiedad transform */
-    height:30px; 
+    align-self: center;
+    transition: transform 0.3s ease;
+    /* Agrega una transición suave a la propiedad transform */
+    height: 30px;
 }
-button.btnSizeMob{
+
+button.btnSizeMob {
     margin-top: 15px
 }
-button.cardButton a{
+
+button.cardButton a {
     color: var(--white);
 }
-div.card-title p{
+
+div.card-title p {
     color: var(--black);
     font-weight: bold;
     font-size: var(--bigCardText);
     margin-left: 2%;
     white-space: nowrap;
     text-overflow: ellipsis;
-    
+
 }
-div.card-price p{
+
+div.card-price p {
     color: var(--primaryColor);
     font-size: var(--smallCardText);
     margin-left: 2%;
-  
+
 }
-.card-price{
+
+.card-price {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;  /*esto pone al precio y boton sobre los margenes de la card*/
+    justify-content: space-between;
+    /*esto pone al precio y boton sobre los margenes de la card*/
     margin-top: 15px;
 }
+
 /*para alejar el boton de agregar del borde de la card*/
-.cardButtonPrice{
+.cardButtonPrice {
     margin-right: 2%;
-    
+
 }
+
 /*hace que lo que sobra de titulo se esconda y ponga ..*/
-p.title-card{
+p.title-card {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
 /*----------------------------------------------------botones card animados------------------------------------*/
 
 button.cardButton:hover {
-    animation: shake-animation 0.5s ease infinite; /* Aplica la animación al botón al pasar el mouse sobre él */
+    animation: shake-animation 0.5s ease infinite;
+    /* Aplica la animación al botón al pasar el mouse sobre él */
 }
+
 @keyframes shake-animation {
     0% {
-        transform: translateX(0); /* Sin sacudida al principio */
+        transform: translateX(0);
+        /* Sin sacudida al principio */
     }
+
     25% {
-        transform: translateX(-5px); /* Mueve el botón 5px a la izquierda */
+        transform: translateX(-5px);
+        /* Mueve el botón 5px a la izquierda */
     }
+
     50% {
-        transform: translateX(5px); /* Mueve el botón 5px a la derecha */
+        transform: translateX(5px);
+        /* Mueve el botón 5px a la derecha */
     }
+
     75% {
-        transform: translateX(-5px); /* Mueve el botón 5px a la izquierda */
+        transform: translateX(-5px);
+        /* Mueve el botón 5px a la izquierda */
     }
+
     100% {
-        transform: translateX(0); /* Sin sacudida al final */
+        transform: translateX(0);
+        /* Sin sacudida al final */
     }
 }
+
+/*------------------------------------ANIMACION REGISTRO CONFETI-----------------------*/
+
+
+
+
 /*---------------------------------------------------------formularios----------------------------------*/
-form label{
+form label {
     color: var(--primaryColorL3);
     font-size: var(--smallText);
 }
-form{
+
+form {
     background-color: var(--primaryColorL1);
     width: 500px;
     border-radius: 5px;
@@ -915,106 +1093,182 @@ form{
     margin: 0 auto;
     margin-top: 2%;
 }
-form div.field{
+
+form div.field {
     display: flex;
     flex-direction: column;
     width: 400px;
     height: 67.89px;
 }
-form input, form select{
+
+form input,
+form select {
     background-color: var(--primaryColorL2);
     border-radius: 10px;
 }
-form input{
+
+form input {
     width: 400px;
     height: 35.94px;
 }
-form h1, form p{
+
+form h1,
+form p {
     color: var(--white);
 }
-form h1{
+
+form h1 {
     margin-bottom: 20px;
     margin-top: 30px;
 }
-form a{
+
+form a {
     color: var(--accentColor);
 }
-form div.select, form div.agreement{
+
+form div.select,
+form div.agreement {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-form button{
+
+form button {
     border-radius: 10px;
     width: 203px;
     height: 55.91px;
     font-size: var(--buttonText);
     /*font-weight: bold;*/
     text-transform: uppercase;
-    background: linear-gradient(to bottom, var(--secondaryColor),var(--tertiaryColor) );
+    background: linear-gradient(to bottom, var(--secondaryColor), var(--tertiaryColor));
 }
-form select{
+
+form select {
     width: 120px;
     height: 35.94px;
 
 }
-form div.buttons{
+
+form div.buttons {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-form div.linkLogin{
+
+form div.linkLogin {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 30px;
 }
-form div.linkLogin p{
+
+form div.linkLogin p {
     margin-right: 5px;
 }
-form div.linkLogin a{
+
+form div.linkLogin a {
     margin-left: 5px;
 }
-div input.checkbox{
+
+div input.checkbox {
     width: 20px;
     height: 20px;
 }
-div.agreement label{
+
+div.agreement label {
     width: 355px;
 }
-div.agreement{
+
+div.agreement {
     margin-top: 30px;
 }
-form img.captcha{
+
+form img.captcha {
     margin-left: 12px;
     margin-top: 15px;
 }
-div.buttons a img.btnGoogle{
+
+div.buttons a img.btnGoogle {
     margin-bottom: 6px;
 }
-div.buttons a img.btnFace{
+
+div.buttons a img.btnFace {
     margin-bottom: 30px;
 }
-img.logoForm{
+
+img.logoForm {
     margin: 0 auto;
     margin-top: 2%;
     min-width: 280px;
     min-height: 140px;
+
 }
-form a.forgotPassword{
+
+form a.forgotPassword {
     margin-left: 170px;
 }
-form button.btnFormLogin{
+
+form button.btnFormLogin {
     margin-top: 50px;
-    
+
 }
 
 /*---------------- animacion registro exitoso------------------------*/
 
+.hidden {
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: rgba(226, 134, 134, 0.5);*/
+    backdrop-filter: blur(5px);
+    z-index: 999;
+}
+
+@keyframes slideAndColorChange {
+    0% {
+        transform: translateX(0);
+        color: var(--secondaryColor);
+    }
+
+    50% {
+        transform: translateX(100px);
+        color: var(--tertiaryColor);
+    }
+
+    100% {
+        transform: translateX(0);
+        color: var(--secondaryColor);
+    }
+}
+
+#successMessage {
+    animation: slideAndColorChange 2s ease-in-out infinite;
+    /*animation: slideAndColorChange 2s ease-in-out forwards;*/
+    position: fixed;
+    top: 30%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    /*color: linear-gradient(90deg, var(--accentColor), var(--secondaryColorL2), #ffeb3b, #FF9D0B);*/
+    /*background-color: var(--primaryColorS1);*/
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    font-size: 45px;
+    font-weight: 700;
+    /*animation: glow 8s linear infinite;*/
+
+}
 
 
 /*----------------animacion boton login------------------------------*/
-button.btnFormLogin{
+button.btnFormLogin,
+button.signUpBtn {
     position: relative;
     /*margin: 0 35px;
     border-radius: 50px;
@@ -1027,13 +1281,16 @@ button.btnFormLogin{
     cursor: pointer;
     transition: background 0.5s;
     overflow-y: hidden;
-  }
-  button.btnFormLogin:hover{
-    background: linear-gradient(90deg, var(--accentColor), var(--secondaryColorL2), #ffeb3b,#FF9D0B);
+}
+
+button.btnFormLogin:hover,
+button.signUpBtn:hover {
+    background: linear-gradient(90deg, var(--accentColor), var(--secondaryColorL2), #ffeb3b, #FF9D0B);
     background-size: 400%;
-  }
-  
-  button.btnFormLogin::before{
+}
+
+button.btnFormLogin::before,
+button.signUpBtn::before {
     content: '';
     position: absolute;
     background: inherit;
@@ -1045,23 +1302,30 @@ button.btnFormLogin{
     filter: blur(20px);
     opacity: 0;
     transition: opacity 0.5s;
-  }
-  button.btnFormLogin:hover::before{
+}
+
+button.btnFormLogin:hover::before,
+button.signUpBtn:hover::before {
     opacity: 1;
     z-index: -1;
-  }
- button.btnFormLogin:hover{
+}
+
+button.btnFormLogin:hover,
+button.signUpBtn:hover {
     z-index: 1;
     animation: glow 8s linear infinite;
-  }
-  @keyframes glow {
-    0%{
-      background-position: 0%;
+}
+
+@keyframes glow {
+    0% {
+        background-position: 0%;
     }
-    100%{
-      background-position: 400%;
+
+    100% {
+        background-position: 400%;
     }
-  }
+}
+
 /*-------------------------animacion boton comprar cart----------------------------*/
 
 /*** ESTILOS BOTÓN GROW BOX ***/
@@ -1070,19 +1334,24 @@ button.btnFormLogin{
     color: #4741d7; 
     border: 2px solid #4741d7; 
     padding: 16px 20px;
-    border-radius: 3px;*/ /* redondear bordes */
+    border-radius: 3px;*/
+    /* redondear bordes */
     position: relative;
     z-index: 1;
     overflow: hidden;
     display: inline-block;
     cursor: pointer;
-  }
-  .cartButton:hover {
-    color: var(--white);/* color de fuente hover */
-  }
-  .cartButton::after {
+}
+
+.cartButton:hover {
+    color: var(--white);
+    /* color de fuente hover */
+}
+
+.cartButton::after {
     content: "";
-    background: linear-gradient(#d2a259, #FF9D0B) ; /* color de fondo hover */
+    background: linear-gradient(#d2a259, #FF9D0B);
+    /* color de fondo hover */
     position: absolute;
     z-index: -1;
     padding: 16px 20px;
@@ -1093,13 +1362,15 @@ button.btnFormLogin{
     bottom: 0;
     transform: scale(0, 0);
     transition: all 0.3s ease;
-  }
-  .cartButton:hover::after {
+}
+
+.cartButton:hover::after {
     transition: all 0.3s ease-out;
     transform: scale(1, 1);
-  }
+}
+
 /*---------------------------------------Juego--------------------------------*/
-section.gameContainer{
+section.gameContainer {
     /*width: 100%;*/
     background-color: var(--primaryColorS1);
     border-radius: 10px;
@@ -1107,22 +1378,26 @@ section.gameContainer{
     margin-bottom: 30px;
     padding-bottom: 50px;
 }
-div.miniGameContainer{
-    display:flex;
+
+div.miniGameContainer {
+    display: flex;
     flex-direction: row;
 }
-div.miniGameContainer:first-child{
+
+div.miniGameContainer:first-child {
     margin-left: 28px;
 }
 
-img.game{
+img.game {
     width: 1000px;
     height: 700px;
 }
-div.asideGame{
+
+div.asideGame {
     margin-left: 118px;
 }
-div.turnContainer{
+
+div.turnContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1130,21 +1405,25 @@ div.turnContainer{
     width: 261px;
     height: 277px;
     border-radius: 20px;
-    border:10px solid var(--primaryColorL3); ;
+    border: 10px solid var(--primaryColorL3);
+    ;
 }
-div.turnContainer  p{
+
+div.turnContainer p {
     font-size: var(--h2);
     color: var(--primaryColorL3);
     margin-top: 30px;
 }
-img.turnKen{
+
+img.turnKen {
     width: 60px;
     height: 60px;
 }
-div.turnContainer button{
+
+div.turnContainer button {
     width: 180px;
     height: 56px;
-    background: linear-gradient(to bottom, var(--secondaryColor),var(--tertiaryColor) );
+    background: linear-gradient(to bottom, var(--secondaryColor), var(--tertiaryColor));
     color: var(--white);
     border-radius: 10px;
     font-size: var(--buttonText);
@@ -1152,27 +1431,30 @@ div.turnContainer button{
     font-weight: bold;
     margin-bottom: 35px;
 }
-div.gameAvatars{
+
+div.gameAvatars {
     height: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 40px;
 }
-div.gameAvatars div{
+
+div.gameAvatars div {
     display: flex;
     flex-direction: row;
     margin: 20px;
-    
+
 }
-div.gameAvatars div p{
+
+div.gameAvatars div p {
     margin-top: 10px;
     margin-left: 20px;
     color: var(--primaryColorL2);
     font-size: var(--bodyFontSize);
 }
 
-div.navGame{
+div.navGame {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1185,84 +1467,113 @@ div.navGame{
     border-bottom-left-radius: 20px;
     margin-left: 78px;
 }
-h1.gameName{
-    color:var(--primaryColorL2);
+
+h1.gameName {
+    color: var(--primaryColorL2);
     font-size: 40px;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
-div.optionsGame button{
+
+div.optionsGame button {
     margin-top: 20px;
     margin-right: 10px;
     margin-left: 10px;
 }
-div.optionsGame button.heart{
+
+div.optionsGame button.heart {
     margin-right: 22px;
 }
-section.autoPlay h2{
+
+section.autoPlay h2 {
     color: var(--primaryColorL3);
     font-size: var(--h2);
     margin-bottom: 10px;
 }
-iFrame{
+
+iFrame {
     width: 420px;
     height: 240px;
     margin-top: 30px;
     margin-bottom: 50px;
     margin-left: 8px;
 }
-div.breadCrumbs a, section.autoPlay p{
+
+div.breadCrumbs a,
+section.autoPlay p {
     color: var(--primaryColorL3);
-    font-size: var(--bodyFontSize); 
+    font-size: var(--bodyFontSize);
 }
-div.breadCrumbs a{
+
+div.breadCrumbs a {
     font-size: 20px;
 }
-img.banner{
+
+img.banner {
     width: 100%;
     display: block;
     height: auto;
 }
-button.share, button.like, button.dislike, button.heart, button.share img, button.like img, button.dislike img, button.heart img{
+
+button.share,
+button.like,
+button.dislike,
+button.heart,
+button.share img,
+button.like img,
+button.dislike img,
+button.heart img {
     background-color: var(--primaryColorS1);
 }
-div.popUpShare{ /*por ahora oculto el pop up para compatir*/
+
+div.popUpShare {
+    /*por ahora oculto el pop up para compatir*/
     display: none;
 }
-div.postedComment,input.comment{
+
+div.postedComment,
+input.comment {
     border-radius: 5px;
     padding: 5px;
 }
- div.postedComment {
+
+div.postedComment {
     background-color: var(--white);
     width: 90%;
 }
-input.comment{
+
+input.comment {
     background-color: var(--primaryColorL3);
     font-size: var(--bodyFontSize);
     width: 90%;
 }
-article div.postedComment p{
+
+article div.postedComment p {
     color: var(--black);
     margin-top: 10px;
 }
-div.posted, div.post{
+
+div.posted,
+div.post {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    
+
 }
 
-article, div.containerComment{
+article,
+div.containerComment {
     display: flex;
     flex-direction: column;
     justify-content: left;
 }
-div.containerComment{
+
+div.containerComment {
     margin-bottom: 40px;
 }
-div.containerComment button{
+
+div.containerComment button {
     margin-right: 20px;
     margin-left: auto;
     margin-top: 10px;
@@ -1270,40 +1581,50 @@ div.containerComment button{
     height: 36px;
     border-radius: 10px;
     color: var(--white);
-    background:linear-gradient(to bottom, var(--secondaryColorL3),var(--tertiaryColorL1) );
+    background: linear-gradient(to bottom, var(--secondaryColorL3), var(--tertiaryColorL1));
 }
-div.leaveComment h3, section.autoPlay h2, section.autoPlay p, div.pastComments h3{
+
+div.leaveComment h3,
+section.autoPlay h2,
+section.autoPlay p,
+div.pastComments h3 {
     margin-left: 8px;
 }
-div.pastComments{
+
+div.pastComments {
     margin-top: 10px;
 }
-img.line{
+
+img.line {
 
     width: 99%;
     margin-bottom: 20px;
     margin-top: 7px;
     background-color: var(--primaryColor);
 }
-div.buttonsComment{
+
+div.buttonsComment {
     display: flex;
     flex-direction: row;
     margin-left: 115px;
     margin-bottom: 25px;
     margin-top: 2px;
 }
-div.buttonsComment a{
+
+div.buttonsComment a {
     width: 100px;
     color: var(--accentColor);
 }
-@media only screen and (min-width:660px){
 
-    header{
+@media only screen and (min-width:660px) {
+
+    header {
         height: 70px;
         grid-template-columns: 5% 15% 60% 10% 10%;
         grid-template-areas: "menu logo search cart avatar";
     }
-    input.searchGames{
+
+    input.searchGames {
         display: block;
         width: 300px;
         height: 40px;
@@ -1312,27 +1633,32 @@ div.buttonsComment a{
         grid-area: search;
         align-self: center;
         justify-self: center;
-    
+
     }
-    input.searchGames[type="text"]{
+
+    input.searchGames[type="text"] {
         color: var(--white);
-        
+
     }
-    input.searchGames::placeholder{
+
+    input.searchGames::placeholder {
         color: var(--white);
         padding: 30px;
         opacity: 0.5;
-        
-        
+
+
 
     }
-   /* input.searchGames::placeholder{
+
+    /* input.searchGames::placeholder{
             margin-left: 10px;
             color: #111111; 
     }*/
-    input.searchGamesMob, li.searchGamesMob{
+    input.searchGamesMob,
+    li.searchGamesMob {
         display: none;
     }
+
     img.hamburger {
         margin-top: 0;
         width: 24px;
@@ -1342,63 +1668,72 @@ div.buttonsComment a{
         justify-self: left;
         margin-left: 35px;
     }
-    img.cart-icon{
+
+    img.cart-icon {
         width: 28px;
         height: 28px;
         /*margin-top: 23px;*/
         grid-area: cart;
         justify-self: right;
     }
-    img.avatar{
+
+    img.avatar {
         width: 32px;
         height: 32px;
         /*margin-top: 19px ;*/
         grid-area: avatar;
     }
-    a img.logo{
+
+    a img.logo {
         grid-area: logo;
-        
-    
+
+
     }
+
     /*navs*/
-    nav.userNav, nav.styleNav{
+    nav.userNav,
+    nav.styleNav {
         width: 20%;
     }
+
     /*-------------------------------cambia tamaño de big carousel-------------------------------*/
-    section.recommended{
+    section.recommended {
         height: 450px;
         overflow-y: hidden;
     }
-    div.imgBigCarousel{
+
+    div.imgBigCarousel {
         height: 400px;
     }
-    div.imgBigCarousel img{
+
+    div.imgBigCarousel img {
         height: 400px;
     }
-    nav.elipseButton{
+
+    nav.elipseButton {
         top: 400px;
     }
 
-/*-------------------------------------Carrusel MIS JUEGOS---------------------------*/
+    /*-------------------------------------Carrusel MIS JUEGOS---------------------------*/
 
 
-  /*.containerCarrusel{
+    /*.containerCarrusel{
     width: 100%;
     padding: 5px 0px;
     overflow: hidden;
     scroll-behavior: smooth;
   }*/
- 
 
-  /*.mgCard a img {
+
+    /*.mgCard a img {
     width: 100%;
     height: 100%;
     transition: all 400ms ease-out;
   }*/
 
 
-  
-  /*.mgCard:hover >.layer{
+
+    /*.mgCard:hover >.layer{
     opacity: 1;
     visibility: visible;
   }
@@ -1412,166 +1747,196 @@ div.buttonsComment a{
     margin-left: 15px;
   }*/
 
- 
-  .mgCard .layer button{
-    padding: 2px 8px;
-    font-size: 10px;
-    color: #fff;
-  }
-  button.cardButton.mgSolid.mgPlay{
-    /*width: 30%;
+
+    .mgCard .layer button {
+        padding: 2px 8px;
+        font-size: 10px;
+        color: #fff;
+    }
+
+    button.cardButton.mgSolid.mgPlay {
+        /*width: 30%;
     height: auto;*/
-    width: 40%;
-    height: 15%;
-    padding: 0;
-  }
-  .mgCard .layer button a{
-    padding: 2px 8px;
-    font-size: 12px;
-  }
-  .mgSolid, .fas {
-    font-weight: 900;
-  }
-  .fa, .fa-brands, .fa-classic, .fa-regular, .fa-sharp, .mgSolid, .fab, .far, .fas {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    display: var(--fa-display,inline-block);
-    font-style: normal;
-    font-variant: normal;
-    line-height: 1;
-    text-rendering: auto;
-  }
-  .fa-classic, .fa-regular, .mgSolid, .far, .fas {
-    font-family: "Font Awesome 6 Free";
-  }
+        width: 40%;
+        height: 15%;
+        padding: 0;
+    }
 
-  .carrusel .btnScrollRight {
-    right: 0;
-    margin-right: -25px;
-    display: block;
-  }
-  .carrusel .btnScrollLeft{
-    left: 0;
-    margin-left: -25px;
-    display: block;
-  }
-  .mgCard{
-    min-width: 35%; 
-    height: 245px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 25px;
-    margin-right: 10px;
-  }
-  .mgCard a img{
-    width: 100%;
-    height: 100%;
-    transition: all 400ms ease-out;
-  }
-  
-  .mgCard .layer{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.863);
-    color: #fff;
-    transition: all 400ms ease-out;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-  }
-  
-  .mgCard .layer h6{
-    font-size: 30px;
-    margin-bottom: 10px;
-  }
-  .mgCard .layer button{
-    padding: 10px 25px;
-    font-size: 18px;
-    border-radius: 3px;
-    color: #fff;
-    transition: all 400ms;
-    cursor: pointer;
-  }
-  
-  .mgCard .layer button a{
-    /*padding: 10px 25px;*/
-   /* background-color: #27BF17;*/
-    font-size: 18px;
-    border-radius: 3px;
-    color: #fff;
-    transition: all 400ms;
-    cursor: pointer;
-  }
-  
-/*.mgCard .layer button:hover{
+    .mgCard .layer button a {
+        padding: 2px 8px;
+        font-size: 12px;
+    }
+
+    .mgSolid,
+    .fas {
+        font-weight: 900;
+    }
+
+    .fa,
+    .fa-brands,
+    .fa-classic,
+    .fa-regular,
+    .fa-sharp,
+    .mgSolid,
+    .fab,
+    .far,
+    .fas {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: var(--fa-display, inline-block);
+        font-style: normal;
+        font-variant: normal;
+        line-height: 1;
+        text-rendering: auto;
+    }
+
+    .fa-classic,
+    .fa-regular,
+    .mgSolid,
+    .far,
+    .fas {
+        font-family: "Font Awesome 6 Free";
+    }
+
+    .carrusel .btnScrollRight {
+        right: 0;
+        margin-right: -25px;
+        display: block;
+    }
+
+    .carrusel .btnScrollLeft {
+        left: 0;
+        margin-left: -25px;
+        display: block;
+    }
+
+    .mgCard {
+        min-width: 35%;
+        height: 245px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 25px;
+        margin-right: 10px;
+    }
+
+    .mgCard a img {
+        width: 100%;
+        height: 100%;
+        transition: all 400ms ease-out;
+    }
+
+    .mgCard .layer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.863);
+        color: #fff;
+        transition: all 400ms ease-out;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .mgCard .layer h6 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .mgCard .layer button {
+        padding: 10px 25px;
+        font-size: 18px;
+        border-radius: 3px;
+        color: #fff;
+        transition: all 400ms;
+        cursor: pointer;
+    }
+
+    .mgCard .layer button a {
+        /*padding: 10px 25px;*/
+        /* background-color: #27BF17;*/
+        font-size: 18px;
+        border-radius: 3px;
+        color: #fff;
+        transition: all 400ms;
+        cursor: pointer;
+    }
+
+    /*.mgCard .layer button:hover{
     background-color: #0B7800;
   }*/
-  
-  /*.mgCard .layer a:hover{
+
+    /*.mgCard .layer a:hover{
     background-color: #0B7800;
   }*/
-  
-  .mgCard:hover >.layer{
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  .mgCard:hover >  a img{
-    transform: scale(1.1);
-  }
-  div.myGames{
-    background-color: var(--primaryColorS1);
-    margin-top: 30px;
-    border-radius: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }  
-  .categoryName h4{
-    color: #fff;
-    font-size: 20px;
-    margin-left: 15px;
-  }
-  
 
-  
-  .carrusel .btnScrollLeft,
-  .carrusel .btnScrollRight/*, .btnScrollRight,.btnScrollLeft*/ {
-    position: absolute;
-    border: none;
-    background-color: var(--secondaryColor);
-    font-size: 24px;
-    height: 50px;
-    width: 50px;
-    border-radius: 10%;
-    top: calc(50%-25%);
-    line-height: 24px;
-    color: #fff;
-    cursor: pointer;
-    opacity: 0.7;
-    z-index: 40;
-    transition: 300ms ease all;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.253);
-   
-  }
+    .mgCard:hover>.layer {
+        opacity: 1;
+        visibility: visible;
+    }
 
-  .carrusel .btnScrollLeft:hover,
-  .carrusel .btnScrollRight:hover/*, .btnScrollLeft:hover, .btnScrollRight:hover */
-  {
-    background-color: var(--secondaryColorS1); 
-    opacity: 1;
-  }
-  
-  .carrusel .btnScrollLeft{
-    left: 30px;
-    margin-left: -25px;
-  }
-  /*para acomodar los botones de los carruseles chicos*/
- /* .btnScrollLeft{
+    .mgCard:hover>a img {
+        transform: scale(1.1);
+    }
+
+    div.myGames {
+        background-color: var(--primaryColorS1);
+        margin-top: 30px;
+        border-radius: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .categoryName h4 {
+        color: #fff;
+        font-size: 20px;
+        margin-left: 15px;
+    }
+
+
+
+    .carrusel .btnScrollLeft,
+    .carrusel .btnScrollRight
+
+    /*, .btnScrollRight,.btnScrollLeft*/
+        {
+        position: absolute;
+        border: none;
+        background-color: var(--secondaryColor);
+        font-size: 24px;
+        height: 50px;
+        width: 50px;
+        border-radius: 10%;
+        top: calc(50%-25%);
+        line-height: 24px;
+        color: #fff;
+        cursor: pointer;
+        opacity: 0.7;
+        z-index: 40;
+        transition: 300ms ease all;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.253);
+
+    }
+
+    .carrusel .btnScrollLeft:hover,
+    .carrusel .btnScrollRight:hover
+
+    /*, .btnScrollLeft:hover, .btnScrollRight:hover */
+        {
+        background-color: var(--secondaryColorS1);
+        opacity: 1;
+    }
+
+    .carrusel .btnScrollLeft {
+        left: 30px;
+        margin-left: -25px;
+    }
+
+    /*para acomodar los botones de los carruseles chicos*/
+    /* .btnScrollLeft{
     position: relative;
     top: 125px;
   }
@@ -1581,108 +1946,134 @@ div.buttonsComment a{
     left: 96%;
     top: -122px;
   }*/
-  
-  .carrusel .btnScrollRight/*, .btnScrollRight*/{
-    right: 30px;
-    margin-right: -25px;
-  }
-  
-  .containerCarrusel{
-    width: 100%;
-    padding: 5px 0px;
-    overflow: hidden;
-    /*overflow-x: scroll;*/
-    scroll-behavior: smooth;
-  }
-  
-  .containerCarrusel .contCards
-  {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-   
-  }
+
+    .carrusel .btnScrollRight
+
+    /*, .btnScrollRight*/
+        {
+        right: 30px;
+        margin-right: -25px;
+    }
+
+    .containerCarrusel {
+        width: 100%;
+        padding: 5px 0px;
+        overflow: hidden;
+        /*overflow-x: scroll;*/
+        scroll-behavior: smooth;
+    }
+
+    .containerCarrusel .contCards {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+
+    }
 
 
 
 
 
     /*------------------------------ estilos cards chicas-----------------------------------------*/
-    div.card{
+    div.card {
         height: 220px;
     }
-    div.card-img img{
+
+    div.card-img img {
         height: 140px;
     }
+
     button.cardBtndesktop {
         height: 30px;
     }
+
     .card-price {
         margin-top: 15px;
     }
-    button.cardBtndeskPlay{
+
+    button.cardBtndeskPlay {
         height: 30px;
         margin-top: 16px;
     }
-/*---------------------------------- footer------------------------------------------------------*/
-    footer{
+
+    /*---------------------------------- footer------------------------------------------------------*/
+    footer {
         height: 300px;
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
         grid-template-rows: 90% 10%;
         grid-template-areas: "footerLogo aboutUs categories contact"
-                             "copyR copyR copyR copyR";
+            "copyR copyR copyR copyR";
 
     }
-    div.categoriesFooter, img.logoFooter{
+
+    div.categoriesFooter,
+    img.logoFooter {
         display: block;
     }
-    img.logoFooter{
-        width:296px ;
+
+    img.logoFooter {
+        width: 296px;
         height: 141px;
         grid-area: footerLogo;
     }
-    div.categoriesFooter{
+
+    div.categoriesFooter {
         grid-area: categories;
     }
-    div.contact{
+
+    div.contact {
         grid-area: contact;
     }
-    div.aboutUs{
+
+    div.aboutUs {
         grid-area: aboutUs;
     }
-    img.logoFooter, div.contact,  div.aboutUs, div.categoriesFooter{
+
+    img.logoFooter,
+    div.contact,
+    div.aboutUs,
+    div.categoriesFooter {
         margin-top: 40px;
         margin-bottom: 20px;
     }
-    div.contact li, div.aboutUs li, div.categoriesFooter li{
-        margin:10px;
+
+    div.contact li,
+    div.aboutUs li,
+    div.categoriesFooter li {
+        margin: 10px;
         margin-left: 0%;
     }
-    p.copyright{
+
+    p.copyright {
         grid-area: copyR;
         align-self: center;
         justify-self: center;
         margin-bottom: 20px;
     }
-    div.contact ul li a img{
+
+    div.contact ul li a img {
         background-color: var(--primaryColorS2);
     }
-    div.socials{
+
+    div.socials {
         display: flex;
         flex-direction: row;
 
     }
-    footer ul.ulFooter{
+
+    footer ul.ulFooter {
         display: block;
         height: 147.84px;
         width: 379.8px;
     }
-    footer div.contact{
+
+    footer div.contact {
         position: static;
     }
-   footer div.aboutUs{
-    position: static;
-   }
+
+    footer div.aboutUs {
+        position: static;
+    }
 }

@@ -1,79 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css">
-    <title>Registrate-ArcadeZone</title>
-  </head>
-  <body>
-    <img class="logoForm" src="img/avatar/Logo.png" alt="logo">
-    <form>
-      <h1>CREA TU CUENTA</h1>
 
-      <div class="buttons">
-        <a href="#"><img class="btnGoogle" src="img/botones/Btn-Google (1).svg" alt="google"></a>
-        <a href="#"><img class="btnFace"src="img/botones/Btn-Facebook.svg" alt="facebook"></a>
-       
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Registrate-ArcadeZone</title>
+</head>
+
+<body>
+
+  <img class="logoForm" src="img/avatar/Logo.png" alt="logo">
+
+  <div id="overlay" class="overlay hidden"></div> <!-- Overlay para el desenfoque -->
+  <div id="successMessage" class="hidden">
+    <p>¡Registro exitoso!</p>
+  </div>
+
+  <form>
+    <h1>CREA TU CUENTA</h1>
+
+    <div class="buttons">
+      <a href="index.html"><img class="btnGoogle" src="img/botones/Btn-Google (1).svg" alt="google"></a>
+      <a href="index.html"><img class="btnFace" src="img/botones/Btn-Facebook.svg" alt="facebook"></a>
+
+    </div>
+
+    <div class="field">
+      <label for="name">Nombre*</label>
+      <input type="text" name="name" required />
+    </div>
+
+    <div class="field">
+      <label for="surname">Apellido*</label>
+      <input type="text" name="surname" required />
+    </div>
+
+    <div class="field">
+      <label for="nickname">NickName</label>
+      <input type="text" name="nickname" />
+    </div>
+
+    <div class="field">
+      <label for="birthday">Fecha de nacimiento*</label>
+      <div class="select">
+        <select name="" id="day" placeholder="Día"></select>
+        <select name="" id="month" placeholder="Mes"></select>
+        <select name="" id="year" placeholder="Año"></select>
       </div>
+    </div>
 
-      <div class="field">
-        <label for="name">Nombre*</label>
-        <input type="text" name="name" required/>
-      </div>
+    <div class="field">
+      <label for="mail">Mail*</label>
+      <input type="email" name="mail" required />
+    </div>
 
-      <div class="field">
-        <label for="surname">Apellido*</label>
-        <input type="text" name="surname" required/>
-      </div>
+    <div class="field">
+      <label for="password">Contraseña*</label>
+      <input type="password" name="password" required />
+    </div>
 
-      <div class="field">
-        <label for="nickname">NickName</label>
-        <input type="text" name="nickname" />
-      </div>
+    <div class="field">
+      <label for="repeatePassword">Repetir contraseña*</label>
+      <input type="password" name="repeatePassword" required />
+    </div>
 
-      <div class="field">
-        <label for="birthday">Fecha de nacimiento*</label>
-        <div class="select">
-          <select name="" id="day" placeholder="Día"></select>
-          <select name="" id="month" placeholder="Mes"></select>
-          <select name="" id="year" placeholder="Año"></select>
-        </div>
-      </div>
+    <img class="captcha" src="img/botones/Capcha.png" alt="recaptcha"> <!--agregar imagen de recaptcha-->
 
-      <div class="field">
-        <label for="mail">Mail*</label>
-        <input type="text" name="mail" required/>
-      </div>
+    <div class="field agreement">
+      <input class="checkbox" type="checkbox" name="suscriptionAgreement" id="">
+      <label for="suscriptionAgreement">Acepto los términos de Acuerdo de Suscriptor de ArcadeZone</label>
 
-      <div class="field">
-        <label for="password">Contraseña*</label>
-        <input type="password" name="password" required/>
-      </div>
+    </div>
 
-      <div class="field">
-        <label for="repeatePassword">Repetir contraseña*</label>
-        <input type="password" name="repeatePassword" required/>
-      </div>
+    <button id="signUp-btn" class="signUpBtn" type="submit">Registrarme</button>
+    <!--poner type="submit"? hay q agregarle el eventPreventDefault al boton-->
 
-      <img class="captcha"src="img/botones/Capcha.png" alt="recaptcha"> <!--agregar imagen de recaptcha-->
+    <div class="linkLogin">
+      <p>¿Ya tienes cuenta?</p>
+      <a href="loginForm.html">Iniciar Sesión</a>
+    </div>
 
-      <div class="field agreement">
-        <input class="checkbox" type="checkbox" name="suscriptionAgreement" id="">
-        <label for="suscriptionAgreement">Acepto los términos de Acuerdo de Suscriptor de ArcadeZone</label>
-        
-      </div>  
+  </form>
 
-      <button id="signUp-btn" class="signUpBtn" type="button">Registrarme</button> <!--poner type="submit"? hay q agregarle el eventPreventDefault al boton-->
 
-      <div class="linkLogin">
-        <p>¿Ya tienes cuenta?</p>
-        <a href="loginForm.html">Iniciar Sesión</a>
-      </div>
 
-    </form>
 
-    <script src="js/script.js"></script>
-    <script src="js/registerAnimation.js"></script>
-  </body>
+  <script src="js/script.js"></script>
+  <script src="js/registerAnimation.js"></script>
+</body>
+
 </html>
