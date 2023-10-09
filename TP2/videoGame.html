@@ -9,7 +9,28 @@
 </head>
 
 <body>
-   
+   <!--compartir pop up-->
+   <div id="shareBlur" class=""></div>
+   <div id="sharePopUp"class="sharePopUp dNone">
+        <div class="popUpHead">
+            
+            <h2>Compartir</h2>
+            <button id="crossShare"><img src="img/iconos/crossColor.svg" alt="cross"></button>
+        </div>
+        <div class="shareSocials">
+            <img src="img/iconos/Tumblr.svg" alt="">
+            <img src="img/iconos/Facebook.svg" alt="">
+            <img src="img/iconos/whatsappPopUp.svg" alt="">
+            <img src="img/iconos/Instagram.svg" alt="">
+
+        </div>
+            
+
+        
+        <div class="link"><p>https://www.arcadezone.com/estrategia/4-en-linea</p></div>
+        <button class="shareBtn">COPIAR</button>
+   </div>
+
     <header>
         <button class="btnMenu" id="menu-btn"><img class="hamburger" src="img/iconos/hamburger.svg"
             alt="hamburgerIcon" /></button>
@@ -109,7 +130,7 @@
                     <div class="navGame">
                         <img src="img/avatar/pacmanBugs.svg" alt="logo">
                         <div class="optionsGame">
-                            <button class="share"><img src="img/botones/share.svg" alt=""></button>
+                            <button id="share"class="share"><img id="shareImg" src="img/botones/share.svg" alt=""></button>
                             <button class="like"><img src="img/botones/handUp.svg" alt=""></button>
                             <button class="dislike"><img src="img/botones/dislike.svg" alt=""></button>
                             <button class="heart"><img src="img/botones/heart.svg" alt=""></button>
@@ -139,7 +160,7 @@
                 </div>
             </div>
             <!--Pop-up-->
-            <div class="popUpShare">
+            <!--div class="popUpShare">
                 <h2>Compartir</h2>
                 <img src="img/iconos/closePopUp.svg" alt="close">
                 <img src="img/iconos/TwitterXPopUp.jpg" alt="twitter">
@@ -152,7 +173,7 @@
                     <button type="button">COMPARTIR</button>
                     <button>CANCELAR</button>
                 </div>
-            </div>
+            </div-->
         </section>
         <!--img class= "banner" src="img/Publicidad/Banner-logo-Booking.jpg" alt="banner"-->
         <section class="autoPlay">
@@ -294,6 +315,7 @@
 
     </footer>
     <script src="js/nav.js"></script>
+    <script src="js/share.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,5 @@
 "use strict";
+
 let daySelect = document.getElementById("day");
 let monthSelect=document.getElementById("month");
 let yearSelect=document.getElementById("year")
@@ -24,3 +25,4 @@ for (let i = currentYear; i >= 1930; i--) {
     option.text = i;
     yearSelect.appendChild(option);
 }
+
