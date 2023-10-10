@@ -437,9 +437,7 @@ img.cart-icon {
     /*margin-top: 33%;*/
 }
 
-button#cart-btn {
-    padding-left: 120px;
-}
+
 
 button.btnMenu {
     background-color: var(--primaryColorS2);
@@ -1733,6 +1731,10 @@ div.buttonsComment a {
 
 
 
+    }
+
+    button#cart-btn {
+        padding-left: 120px;
     }
 
     /* input.searchGames::placeholder{
