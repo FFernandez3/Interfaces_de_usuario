@@ -45,8 +45,8 @@ div.buyButton img{
 
 div.container{
     width: 1080px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 7.81%;
+    margin-right: 7.81%;
     position: absolute;
     top: 0;
    
@@ -121,6 +121,10 @@ img.spideyBlack{
     z-index: 10;
 }
 /*---------------------------------------------Seccion 2----------------*/
+section.goblin{
+    width: 100%;
+    height:844.5px;
+}
 img.backgroundGoblin{
     width: 100%;
     height: 844.5px;
@@ -167,6 +171,13 @@ img.imgGreenGoblin{
 }
 
 /*-----------------------------------Seccion 3 small cards----------------*/
+section.smallCards{
+    display: flex;
+    /*flex-direction: column-reverse;*/
+    justify-content: center;
+    width: 100%;
+    height: 1085px;
+}
 div.sectionSmallCards{
     position: absolute;
     top: 1548px;
@@ -174,6 +185,7 @@ div.sectionSmallCards{
 img.backgroundSmallCards{
     z-index: 5;
     height: 1085px;
+    width: 100%;
 }
 img.imgSmallCards{
     width: 332.96px;
@@ -189,11 +201,113 @@ div.ctn3{
     /* width: 100%; */
     display: flex;
     /* flex-direction: row; */
-    /* justify-content: space-between; */
+     justify-content: center; 
 }
 div.smallCard p{
     width: 88%;
     margin-left: 10px;
     font-size: 20px;
 }
+/*-------------------------------------Section 4 spidey blanca------------*/
+section.sectionSpideyWhite{
+    width: 100%;
+    height: 566px;
+   
+}
+img.spideyWhiteImg{
+    width: 546.11px;
+    height: 326.51px;
+}
+div.spideyWhite, div.spideyWhite img{
+    position: absolute;
+}
+div.spideyWhite img{
+    top: -310px;
+    width: 100%;
+}
+div.ctn4{
+    position: relative;
+}
+
+img.sw1, img.sw2, img.sw3{
+    width: 65%;
+    height: auto;
+    position: absolute;
+    left: -45px;
+}
+img.sw1{
+    top: -480px;
+   
+}
+img.sw2{
+    top: -320px;
+   
+
+}
+img.sw3{
+    top: -90px;
+    
+
+}
+/*-----------------------------------Seccion 5 avengers-------------*/
+section.avengers{
+    width: 100%;
+    height: 900px;
+}
+h2.h2Avengers{
+    color: white;
+    font-size: 60px;
+    font-weight: lighter;
+    width: 50%;
+}
+div.ctn5{
+    position: relative;
+    height: 900px ;
+    margin: 0 auto;
+}
+img.avengersImage{
+    position: absolute;
+    
+}
+img.clouds, img.vegetation, img.lessVegetation{
+    width: 100%;
+    height: auto;
+}
+img.clouds{
+    z-index: 7;
+}
+img.vegetation{
+    z-index: 8;
+}
+img.lessVegetation{
+    z-index: 10;
+
+}
+div.avengersBackground{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 527px
+}
+img.flashGirl,img.ironman, img.hulk{
+    position: absolute;
+    z-index: 9;
+
+}
+img.flashGirl{
+    top:160px
+
+}
+img.ironman{
+    top: -15px;
+    left: 41%;
+    width: 47%;
+    height: auto;
+}
+img.hulk{
+    top:360px ;
+    right: -50px;
+    
+}
+
 
