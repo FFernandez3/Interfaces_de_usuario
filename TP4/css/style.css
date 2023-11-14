@@ -309,5 +309,82 @@ img.hulk{
     right: -50px;
     
 }
+/*------------------------------------------seccion 6 --------------------------------------*/
+section.bigCards{
+    height: 2000px;
+    width: 100%;
+    position: relative;
+}
+div.ctn6{
+    position: relative;
+    height: 2000px;
+    margin: 0 auto;
+}
+img.imgBigCards{
+    width: 100%;
+    height: 2050px;
+    position: absolute;
+    top: -300px;
 
-
+}
+h2.h2BigCards{
+    font-size: 50px;
+    font-weight: lighter;
+}
+div.divBigCards{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 80px;
+}
+div.divImgBG{
+    margin-right: 40px;
+}
+h3.h3BigCards{
+    font-size: 30px;
+    font-weight: lighter;
+    margin-top: 0;
+}
+p.pBigCards{
+    font-size: 18px;
+}
+img.imgBG{
+    width: 552px;
+    height: 302.76px;
+}
+/*--------------------------------seccion 7--------------------------------------*/
+section.buyNow{
+    width: 100%;
+    height: 20px;
+    position: relative;
+}
+div.ctn7{
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top:-250px;
+}
+h2.h2BuyNow{
+    color: white;
+    font-size: 50px;
+    font-weight: lighter;
+    width: 55%;
+}
+/*-------------------------seccion 8----------------------------------------------------*/
+section.spiders{
+    width: 100%;
+    height: 720px;
+    position: relative;
+}
+img.imgBuyNow{
+    width: 100%;
+    height: 720px;
+}
+div.ctn8{
+    width: 100%;
+    height: 720px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 180px;
+}
