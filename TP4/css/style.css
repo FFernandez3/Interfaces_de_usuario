@@ -218,13 +218,20 @@ img.imgSmallCards{
 div.smallCard {
     z-index: 10;
     width: 33%;
+    opacity: 0;
+    transform: translateY(30px); /* Inicialmente, oculta los cards 30px por debajo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Agrega transiciones suaves */
 }
+#smc1 { transition-delay: 0.4s; } /* Ajusta los retardos para efectos de entrada escalonados */
+#smc2 { transition-delay: 0.8s; }
+#smc3 { transition-delay: 1.2s; }
 div.ctn3{
     top:1830px;
     /* width: 100%; */
     display: flex;
     /* flex-direction: row; */
      justify-content: center; 
+     overflow: hidden;
 }
 div.smallCard p{
     width: 88%;
@@ -494,6 +501,34 @@ img.spideyWhiteSpritesheet{
     bottom: 160px;
     left: 434px;
 }
+/*---------------------------------Efecto spritesheet-------------------------*/
+
+.spidey{
+    /* Tamaño de la viñeta individual */
+    width:102px;
+    height:88px;
+    /* Cómo hay establecido un tamaño, centramos con margin:auto */
+    position: absolute;
+    bottom: 240px;
+    right: 88px;
+    /* Cargamos el sprite (el repeat-x se puede omitir, por defecto se repite) */
+    background:url(../img/sprite2big.png) repeat-x;
+    /* Aplicamos la animación "walk": 0.8seg, 6 viñetas y repetimos infinitamente */
+    animation:walk 1.5s steps(6) infinite;
+    /* Posicionamos el personaje sobre el camino de madera */
+   
+  }
+  
+  /* Animación de personaje caminando: Simplemente mueve el sprite sheet hacia la izquierda, realizando el movimiento. */
+  @keyframes walk {
+    /* Partimos de la primera viñeta del sprite sheet */
+    0% { background-position:0 }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+    100% { background-position:-612px }
+  }
+  .display{
+    display: none;
+  }
 /*---------------------------------Section 10 sponsors------------------*/
 section.banner{
     position: relative;
