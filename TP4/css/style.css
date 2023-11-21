@@ -44,6 +44,34 @@ div.buyButton{
    
     z-index: 10;
 }
+/*----------------------------boton comprar-----------------------------------------*/
+
+button.btn{
+    width: 200px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 111px;
+    border: 8px solid var(--2982-ff, #2982FF);
+    background: #FFE901;
+
+    /* Drop Shadow */
+    box-shadow: 4px 5px 0px 0px #02187E;
+    color: #02187E;
+    
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 94.5%; /* 18.9px */
+    letter-spacing: 2.2px;
+    transition: background-color 0.3s, transform 0.3s,border 0.3s, color 0.3s;
+}
+button.btn:hover{
+    background-color: #2982FF;
+    border: 8px solid #FFE901;
+    transform: scale(1.1);
+    color: #e0d01f;
+}
+/*---------------------------------------------------------------------------------------*/
 div.buyButton img{
     height: 50px;
     width: 200px;
@@ -405,6 +433,10 @@ h2.h2BuyNow{
     font-size: 50px;
     font-weight: lighter;
     width: 55%;
+}
+button.btnNow{
+    width: 292px;
+    
 }
 /*-------------------------seccion 8----------------------------------------------------*/
 section.spiders{
