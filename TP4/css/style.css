@@ -223,7 +223,7 @@ img.spideyBlack{
 /*---------------------------------------------Seccion 2----------------*/
 section.goblin{
     width: 100%;
-    height:844.5px;
+    height:1100px/*844.5px*/;
   
 }
 img.backgroundGoblin{
@@ -237,6 +237,7 @@ div.textGoblin{
     width: 70%;
     height: fit-content;
     position: relative;
+    top: 30px;
 }
 p.pGoblin, h1.h1Goblin{
     color: white;
@@ -257,19 +258,24 @@ p.pGoblin{
     
 }
 div.ctn2{
-    
+    height: 1100px;
     top: 890px;
     z-index: 10;
 }
 img.imgLeftGoblin{
     /*margin-top: 20px;*/
-    
+    position: relative;
+    top: 0;
 }
-img.imgGreenGoblin{
+div.imgGreenGoblin{
+    background-image: url(../img/duende_verde.png);
+    width: 553px;
+    height: 921px;
     position: absolute;
     z-index: 10;
     right: -100px;
     top: -10px;
+    /*transform: translate(-5%, -21%);*/
 }
 
 /*-----------------------------------Seccion 3 small cards----------------*/
