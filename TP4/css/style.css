@@ -20,21 +20,56 @@ header.header{
     top: 0;
     left: 0;
     z-index: 1000;
+    /*background-image: url(../img/header_sin_logo.png);*/
+    transition: all 0.2s ease;
 }
 img.headerImg{
     width: 100%;
     height: 150px;
+}
+div.smallLogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+img.smallLogo{
+    opacity: 0;
 }
 div.hamburguerMenu{
    position: absolute;
    top:20px;
    cursor: pointer;
    z-index: 10;
+   display: flex;
+   flex-direction: column;
 }
-div.hamburguerMenu img{
+/*div.hamburguerMenu img{
     height: 26px;
     width: 34px;
+}*/
+.line{
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+    margin: -3px;
+    transition: all 0.3s;
 }
+div.hamburguerMenuOpen .line:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+div.hamburguerMenuOpen .line:nth-child(2) {
+    opacity: 0;
+}
+div.hamburguerMenuOpen .line:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+}
+div.hamburguerMenuOpen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 
 div.buyButton{
     position: absolute;
@@ -47,6 +82,7 @@ div.buyButton{
 /*----------------------------boton comprar-----------------------------------------*/
 
 button.btn{
+    cursor: pointer;
     width: 200px;
     height: 50px;
     flex-shrink: 0;
@@ -85,10 +121,22 @@ div.container{
     top: 0;
    
 }
+header.scrollHeader {
+    height: 115px;
+    background: linear-gradient(
+      180deg,
+      #5499f8 0%,
+      #5499f8 87.9%,
+      #5499f8 87.91%,
+      rgba(84, 153, 248, 0.91) 87.92%,
+      rgba(84, 153, 248, 0) 100%
+    );
+  }
 img.scrollHeader{
     height: 103px;
     width: 1280px;
     overflow-y: hidden;
+    z-index: 1002;
 
 }
 div.ctnHeader{
@@ -98,14 +146,17 @@ div.ctnHeader{
 /*---------------------------------Seccion 1 spideys---------------------*/
 section.spiderPpal{
     width: 100%;
-    height: 720px;
+    height: 820px;
+    /*height: 720px;*/
     position: relative;
     top: 133px;
 }
 
 img.imgSpiderPpal{
     width: 100%;
-    height: 720px;
+    height: 820px;
+    position: absolute;
+    top: -140px;
     z-index: 7;
 }
 
@@ -118,14 +169,15 @@ img.buildingsRight{
     position: absolute;
     right: -7px;
     /* top: 190px; */
-    bottom: -10px;
+   /* top: -35px;*/
+   bottom: 100px;
     z-index: 8;
 }
 img.buildingsLeft{
     position: absolute;
     left: -55px;
     /* top: 210px; */
-    bottom: -30px;
+    bottom: 90px;
     z-index: 8;
 
 }
@@ -133,7 +185,7 @@ img.buildingsCenter{
     position: absolute;
     left: 26%;
     /* top: 660px; */
-    bottom: 0;
+    bottom: 90px;
     width: 610px;
     z-index: 8;
 }
@@ -143,7 +195,8 @@ img.title{
     left: 245px;
     width: 590px;
     height: 301px;
-    z-index: 10;
+    z-index: 1001;
+    /*transition: height 0.1s ease, width 0.1s ease;*/
 }
 
 img.spideyWhite{
