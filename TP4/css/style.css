@@ -167,18 +167,22 @@ div.buildings{
 }
 img.buildingsRight{
     position: absolute;
-    right: -7px;
+    /*right: -7px;*/
+    right: -100px;
     /* top: 190px; */
    /* top: -35px;*/
    bottom: 100px;
     z-index: 8;
+    transition: right 1.8s ease-out;
 }
 img.buildingsLeft{
     position: absolute;
-    left: -55px;
+   /* left: -55px;*/
+    left: -175px;
     /* top: 210px; */
     bottom: 90px;
     z-index: 8;
+    transition: left 1.8s ease-out;
 
 }
 img.buildingsCenter{
@@ -196,30 +200,42 @@ img.title{
     width: 590px;
     height: 301px;
     z-index: 1001;
+    opacity: 0.2;
+    transition: opacity 2s ease;
     /*transition: height 0.1s ease, width 0.1s ease;*/
 }
 
 img.spideyWhite{
     position: absolute;
-    top: 255px;
+    top: 1255px;
+    /*top: 255px;*/
     left: -3px;
     z-index: 10;
     height: 420px;
+    transition: top 0.9s ease-out;
 }
+
 img.spideyRed{
     position: absolute;
-    top: 220px;
+    /*top: 220px;*/
+    top: 1220px;
     width: 1050px;
     left: -363px;
     z-index: 10;
+    transition: top 1.5s ease-out;
 }
+
+
 img.spideyBlack{
     position: absolute;
-    top: 180px;
+    /*top: 180px;*/
+    top: 1180px;
     right: -230px;
     width: 700px;
     z-index: 10;
+    transition: top 0.9s ease-out;
 }
+
 /*---------------------------------------------Seccion 2----------------*/
 section.goblin{
     width: 100%;
