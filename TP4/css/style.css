@@ -531,7 +531,33 @@ div.ctn8{
     justify-content: center;
     position: absolute;
     top: 180px;
+    transition: background-image 0.1s ease;
 }
+
+  
+  .img-container {
+    margin: 0 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
+  }
+  
+  .imgSpidey {
+    /*width: 150px;*/
+   /* height: auto;*/
+    transition: transform 0.3s;
+  }
+  
+  /* Efecto hover */
+.ctn8:hover .img-container:hover {
+    transform: scale(1.2); /* Agrandar la imagen seleccionada */
+  }
+  
+  .ctn8:hover .img-container:not(:hover) {
+    transform: scale(0.8); /* Achicar las otras imágenes */
+    filter: blur(5px); /* Aplicar desenfoque a las otras imágenes */
+  }
 /*-------------------------------Seccion 9 Spritesheet-----------------*/
 section.spritesheet{
     width: 100%;
