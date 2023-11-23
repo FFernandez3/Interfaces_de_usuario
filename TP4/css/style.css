@@ -357,7 +357,7 @@ div.spideyWhite, div.spideyWhite img{
     height: 566px;
 }
 div.spideyWhite img{
-    top: -160px;
+    top: -520px;
   
 }
 div.ctn4{
@@ -370,18 +370,23 @@ img.sw1, img.sw2, img.sw3{
     position: absolute;
     left: -45px;
     width: 590px;
+    transition: transform 0.8s ease-out
 }
 img.sw1{
-    top: -305px;
+    top: -670px;
    
 }
+.hovered {
+    transform: translateY(10px) rotateX(45deg);
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}
 img.sw2{
-    top: -170px;
+    top: -535px;
    
 
 }
 img.sw3{
-    top: 35px;
+    top: -330px;
     
 
 }
