@@ -8,6 +8,7 @@ body{
     overflow-x: hidden;
     background-color: black;
     font-family: 'Lato', sans-serif;
+    
 }
 .widhPage{
     width: 100%;
@@ -93,7 +94,7 @@ button.btn{
     /* Drop Shadow */
     box-shadow: 4px 5px 0px 0px #02187E;
     color: #02187E;
-    
+    -webkit-text-stroke: 1px;
     font-size: 18px;
     font-style: normal;
     font-weight: 900;
@@ -475,15 +476,39 @@ img.imgBigCards{
 h2.h2BigCards{
     font-size: 50px;
     font-weight: lighter;
+    -webkit-text-stroke: 1px;
 }
-div.divBigCards{
+div.flexBC{
+    width: 100%;
+    height: 305px;
     display: flex;
     flex-direction: row;
-    margin-bottom: 80px;
 }
+/*------------------------------------div titulo y texto-----------------------------------*/
+div.divBigCards{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+    overflow-y: scroll;
+    width: 467px;
+}
+div.divBC{
+    position: absolute;
+    margin: 10px;
+    transition: ease-in 0.3s;
+}
+#divBC1{
+    opacity:1;
+}
+/*----------------------------------- div imagenes------------------------------------------*/
 div.divImgBG{
     margin-right: 40px;
+    width: 548px;
 }
+#imgBC1{
+    opacity:1;
+}
+/*--------------------------------------------------------------------------------------------*/
 h3.h3BigCards{
     font-size: 30px;
     font-weight: lighter;
@@ -493,8 +518,11 @@ p.pBigCards{
     font-size: 18px;
 }
 img.imgBG{
+    position: absolute;
     width: 552px;
     height: 302.76px;
+    transition: ease-in 1.7s;
+    opacity: 0;
 }
 /*--------------------------------seccion 7--------------------------------------*/
 section.buyNow{
