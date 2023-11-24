@@ -482,18 +482,35 @@ div.flexBC{
     width: 100%;
     height: 305px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    position: absolute;
+    justify-content: space-between;
+
+   /* width: 100%;
+    height: 305px;
+    display: flex;
+    flex-direction: row;*/
 }
 /*------------------------------------div titulo y texto-----------------------------------*/
 div.divBigCards{
     display: flex;
     flex-direction: column;
-    margin-bottom: 80px;
+    /* margin-bottom: 80px; */
     overflow-y: scroll;
     width: 467px;
+    /* position: absolute; */
+    /* width: 30%; */
+    /* height: 1000px; */
+    margin-left: 600px;
+
+    /*display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+    overflow-y: scroll;
+    width: 467px;*/
 }
 div.divBC{
-    position: absolute;
+    position: relative; /*antes absolute*/
     margin: 10px;
     transition: ease-in 0.3s;
 }
@@ -504,6 +521,7 @@ div.divBC{
 div.divImgBG{
     margin-right: 40px;
     width: 548px;
+    height: 302px;
 }
 #imgBC1{
     opacity:1;
