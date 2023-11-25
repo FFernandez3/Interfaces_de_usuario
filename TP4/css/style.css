@@ -8,6 +8,7 @@ body{
     overflow-x: hidden;
     background-color: black;
     font-family: 'Lato', sans-serif;
+    height: 0px;
     
 }
 .widhPage{
@@ -149,7 +150,6 @@ div.buyButton{
     right: 0;
     top: 20px;
     cursor: pointer;
-   
     z-index: 10;
 }
 /*----------------------------boton comprar-----------------------------------------*/
@@ -216,6 +216,74 @@ div.ctnHeader{
     height: 150px;
    
 }
+/*------------------------------Preloader--------------------------------*/
+.loadContainer {
+    height: 100%; /*antes 100%*/
+    width: 100%;
+    z-index: 2000;
+    background-color:#FFE901;
+    position: fixed;
+    transition: all 1s ease;
+    overflow: hidden;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img.imgLoader{
+    position: absolute;
+    left:  440px;
+    top: 10%;
+    width: 400px;
+    height:204px ;
+
+}
+
+.load-container-hidden {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    visibility: hidden;
+}
+
+.loadContainer .load {
+    position: absolute;
+    top:50%;
+    left:  640px;
+
+    /*left: 50%;*/ /*PONER EN MEDIAQ*/
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border-top: 5px solid #5499f8;
+    border-right: 5px solid #5499f8;
+    animation: spin 3s infinite ease-out;
+    z-index: 2500;
+}
+
+.loadContainer .percentage {
+    position: absolute;
+    top: 50%;
+    left: 640px;
+    /*left: 50%;*/ /*PONER EN MEDIAQ*/
+    font-size: 30px;
+    font-weight: 700;
+    color: #5499f8;
+    z-index: 2500;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg)
+    }
+}
 /*---------------------------------Seccion 1 spideys---------------------*/
 section.spiderPpal{
     width: 100%;
@@ -230,7 +298,7 @@ img.imgSpiderPpal{
     height: 820px;
     position: absolute;
     top: -140px;
-    z-index: 7;
+    z-index: 6;
 }
 
 div.buildings{
@@ -245,7 +313,7 @@ img.buildingsRight{
     /* top: 190px; */
    /* top: -35px;*/
    bottom: 100px;
-    z-index: 8;
+    z-index: 7;
     transition: right 1.8s ease-out;
 }
 img.buildingsLeft{
@@ -254,7 +322,7 @@ img.buildingsLeft{
     left: -175px;
     /* top: 210px; */
     bottom: 90px;
-    z-index: 8;
+    z-index: 7;
     transition: left 1.8s ease-out;
 
 }
@@ -264,7 +332,7 @@ img.buildingsCenter{
     /* top: 660px; */
     bottom: 90px;
     width: 610px;
-    z-index: 8;
+    z-index: 7;
 }
 img.title{
     position: absolute;
@@ -280,10 +348,10 @@ img.title{
 
 img.spideyWhite{
     position: absolute;
-    top: 1255px;
+    top: 755px;
     /*top: 255px;*/
     left: -3px;
-    z-index: 10;
+    z-index: 8;
     height: 420px;
     transition: top 0.9s ease-out;
 }
@@ -291,10 +359,10 @@ img.spideyWhite{
 img.spideyRed{
     position: absolute;
     /*top: 220px;*/
-    top: 1220px;
+    top: 720px;
     width: 1050px;
     left: -363px;
-    z-index: 10;
+    z-index: 8; /*antes 10*/
     transition: top 1.5s ease-out;
 }
 
@@ -302,17 +370,17 @@ img.spideyRed{
 img.spideyBlack{
     position: absolute;
     /*top: 180px;*/
-    top: 1180px;
+    top: 680px;
     right: -230px;
     width: 700px;
-    z-index: 10;
+    z-index: 8;
     transition: top 0.9s ease-out;
 }
 
 /*---------------------------------------------Seccion 2----------------*/
 section.goblin{
     width: 100%;
-    height:1100px/*844.5px*/;
+    height: 990px/*844.5px*/;
   
 }
 img.backgroundGoblin{
@@ -373,7 +441,7 @@ section.smallCards{
     /*flex-direction: column-reverse;*/
     justify-content: center;
     width: 100%;
-    height: 1085px;
+    height: 550px;
 }
 div.sectionSmallCards{
     position: absolute;
@@ -430,7 +498,7 @@ div.spideyWhite, div.spideyWhite img{
     height: 566px;
 }
 div.spideyWhite img{
-    top: -520px;
+    top: 120px;
   
 }
 div.ctn4{
@@ -446,7 +514,7 @@ img.sw1, img.sw2, img.sw3{
     transition: transform 0.8s ease-out
 }
 img.sw1{
-    top: -670px;
+    top: -55px;
    
 }
 .hovered {
@@ -454,12 +522,12 @@ img.sw1{
     transition: transform 0.3s ease; /* Agrega una transición suave */
 }
 img.sw2{
-    top: -535px;
+    top: 85px;
    
 
 }
 img.sw3{
-    top: -330px;
+    top: 285px;
     
 
 }
@@ -468,7 +536,7 @@ section.avengers{
     width: 100%;
     height: 900px;
     position: relative;
-    top: -50px;
+    top: 230px;
 }
 h2.h2Avengers{
     color: white;
@@ -530,17 +598,17 @@ section.bigCards{
     height: 1830px;
     width: 100%;
     position: relative;
-    top: -170px;
+    top: 110px;
 }
 div.ctn6{
     position: relative;
-    height: 1650px;
+    height: 430px;
     margin: 0 auto;
     top: 50px;
 }
 img.imgBigCards{
     width: 100%;
-    height: 1950px;
+    height: 750px;
     position: absolute;
     top: -180px;
 
@@ -581,6 +649,31 @@ div.divBigCards{
     overflow-y: scroll;
     width: 467px;*/
 }
+
+/* Estilos para la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Fondo de la barra de desplazamiento */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Color de la barra de desplazamiento */
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+  }
+  
+  /* Cambiar el color al pasar el ratón por la barra de desplazamiento */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  div.divBigCards::-webkit-scrollbar {
+    width: 0; /* Oculta la barra de desplazamiento en navegadores WebKit como Chrome y Safari */
+}
+
 div.divBC{
     position: relative; /*antes absolute*/
     margin: 10px;
@@ -619,14 +712,15 @@ img.imgBG{
 /*--------------------------------seccion 7--------------------------------------*/
 section.buyNow{
     width: 100%;
-    height: 20px;
+    height: 300px;
     position: relative;
+    top: -1130px;
 }
 div.ctn7{
     width: 100%;
-    height: 20px;
+    height: 300px;
     position: absolute;
-    top:-250px;
+    
 }
 h2.h2BuyNow{
     color: white;
@@ -642,6 +736,7 @@ button.btnNow{
 section.spiders{
     width: 100%;
     height: 720px;
+    top: -1150px;
     position: relative;
 }
 img.imgBuyNow{
@@ -688,6 +783,7 @@ section.spritesheet{
     width: 100%;
     height: 1266px;
     position: relative;
+    top: -1190px;
 }
 img.cloudsSpritesheet, img.buildingsSpritesheet{
     width: 100%;
@@ -790,6 +886,7 @@ img.spideyWhiteSpritesheet{
 /*---------------------------------Section 10 sponsors------------------*/
 section.banner{
     position: relative;
+    top: -1195px;
 }
 img.backgroundSponsors{
     width: 100%;
@@ -801,6 +898,7 @@ footer{
     position:relative;
     height: 690px;
     width: 100%;
+    top: -1200px;
 }
 div.ctn11{
     width: 850px;
@@ -816,9 +914,46 @@ img.socials{
 }
 img.backgroundFooter{
     height: 690px;
+    width: 100%;
 }
 .hidden{
     display: none;
+}
+
+
+@media only screen and (min-width:1340px){
+    img.spideyBlack{
+        right: -330px;
+    }
+    
+
+}
+@media only screen and (min-width:1500px){
+    img.spideyBlack{
+        right: -430px;
+    }
+    img.spideyRed{
+        width: 1150px;
+        left: -400px;
+
+    }
+    .loadContainer{
+        justify-self: center;
+        align-items: center;
+    }
+    img.imgLoader{
+        left: 35%
+    }
+    .loadContainer .percentage{
+        left: 50%;
+    }
+    .loadContainer .load {
+        left: 50%;
+    }
+
+ 
+    
+
 }
 
 

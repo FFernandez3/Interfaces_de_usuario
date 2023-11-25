@@ -1,25 +1,10 @@
-/*document.addEventListener('scroll', function () {
-    var scrollPosition = window.scrollY;
-    var card1 = document.querySelector('#sw1');
-    var card2 = document.querySelector('#sw2');
-    var card3 = document.querySelector('#sw3');
-    var speed = 0.05; // Ajusta la velocidad según tus necesidades
-  
-    // Mueve el Duende Verde en la dirección del scroll, pero más lentamente
-    card1.style.transform = 'translate(-5%, -21%) translateY(' + scrollPosition * speed + 'px)';
-    card2.style.transform = 'translate(-4%, -20%) translateY(' + scrollPosition * speed + 'px)';
-    card3.style.transform = 'translate(-3%, -19%) translateY(' + scrollPosition * speed + 'px)';
 
-   card1.addEventListener('mouseover', function(){
-    card1.style.transform = 'transform: translateY(10px) rotateX(45deg)';
-   }) 
-  });*/
   document.addEventListener('DOMContentLoaded', function () {
     var scrollPosition = window.scrollY;
     var card1 = document.querySelector('#sw1');
     var card2 = document.querySelector('#sw2');
     var card3 = document.querySelector('#sw3');
-    var speed = 0.05; // Ajusta la velocidad según tus necesidades
+    var speed = 0.05; 
 
     function handleScroll() {
         // Mueve las tarjetas en la dirección del scroll, pero más lentamente

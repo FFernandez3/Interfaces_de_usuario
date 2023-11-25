@@ -18,7 +18,4 @@ document.addEventListener('scroll', function () {
     // Aplica el nuevo tamaño al logo y ajusta otros estilos según sea necesario
     document.getElementById('headerTitle').style.width =logoWidthSize  + 'px';
     document.getElementById('headerTitle').style.height = logoHeightSize + 'px';
-
-    console.log("ancho"+document.getElementById('headerTitle').style.width)
-    console.log("alto"+  document.getElementById('headerTitle').style.height)
 });
