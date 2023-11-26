@@ -872,19 +872,15 @@ img.spideyWhiteSpritesheet{
     /* Tamaño de la viñeta individual */
     width:102px;
     height:88px;
-    /* Cómo hay establecido un tamaño, centramos con margin:auto */
     position: absolute;
     bottom: 240px;
     right: 88px;
     /* Cargamos el sprite (el repeat-x se puede omitir, por defecto se repite) */
     background:url(../img/sprite2big.png) repeat-x;
-    /* Aplicamos la animación "walk": 0.8seg, 6 viñetas y repetimos infinitamente */
     animation:walk 1.5s steps(6) infinite;
-    /* Posicionamos el personaje sobre el camino de madera */
    
   }
   
-  /* Animación de personaje caminando: Simplemente mueve el sprite sheet hacia la izquierda, realizando el movimiento. */
   @keyframes walk {
     /* Partimos de la primera viñeta del sprite sheet */
     0% { background-position:0 }
@@ -893,6 +889,24 @@ img.spideyWhiteSpritesheet{
   }
   .display{
     display: none;
+  }
+  .spideyBlackSprite{
+    width:92px;
+    height:88px;
+    position: absolute;
+    bottom: 70px;
+    left: 118px;
+    background:url(../img/spider_man_black_sprite_sheet3.png) repeat-x;
+    animation:fly 1.5s steps(3) infinite;
+   
+  }
+  
+ 
+  @keyframes fly {
+   
+    0% { background-position:0 }
+   
+    100% { background-position:-281px }
   }
 /*---------------------------------Section 10 sponsors------------------*/
 section.banner{
