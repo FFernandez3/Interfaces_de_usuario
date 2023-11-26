@@ -12,8 +12,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     divSpideyWhite.addEventListener('mouseover', function(){
       /*contenedor.style.backgroundImage="url(img/fondo_rosa.png)";*/
-      imgBackground.src="./img/fondo_rosa.png";
-      section.style.backgroundColor="#f0f0f0";
+      imgBackground.src="./img/fondo_rosa_full_blanco.png";
+      imgBackground.style.height="797px";
+     /* section.style.backgroundColor="#f0f0f0";*/
     })
   
     /*container.addEventListener('mouseout', function () {
@@ -22,26 +23,31 @@ document.addEventListener('DOMContentLoaded', function () {
     divSpideyWhite.addEventListener('mouseout', function(){
       /*container.style.backgroundImage="url(img/fondo_blanco.png";*/
       imgBackground.src="./img/fondo_tres_muñecos_abajo.png";
-      section.style.backgroundColor="#000000";
+      imgBackground.style.height="680px";
+      /*section.style.backgroundColor="#000000";*/
     })
     divSpideyRed.addEventListener('mouseover', function(){
       //container.style.backgroundImage="url(img/fondo_azul.png)";
-      imgBackground.src="./img/fondo_azul.png";
-      section.style.backgroundColor="#f0f0f0";
+      imgBackground.src="./img/fondo_azul_full_blanco.png";
+      imgBackground.style.height="797px";
+     /* section.style.backgroundColor="#f0f0f0";*/
     })
     divSpideyBlack.addEventListener('mouseover', function(){
       //container.style.backgroundImage="url(img/fondo_gris.png)";
-      imgBackground.src="./img/fondo_gris.png";
-      section.style.backgroundColor="#f0f0f0";
+      imgBackground.src="./img/fondo_gris_full_blanco.png";
+      imgBackground.style.height="797px";
+      /*section.style.backgroundColor="#f0f0f0";*/
     })
     divSpideyRed.addEventListener('mouseout', function(){
       //container.style.backgroundImage="url(img/fondo_blanco.png";
       imgBackground.src="./img/fondo_tres_muñecos_abajo.png";
-      section.style.backgroundColor="#000000";
+      imgBackground.style.height="680px";
+      /*section.style.backgroundColor="#000000";*/
     })
     divSpideyBlack.addEventListener('mouseout', function(){
       //container.style.backgroundImage="url(img/fondo_blanco.png";
       imgBackground.src="./img/fondo_tres_muñecos_abajo.png";
-      section.style.backgroundColor="#000000";
+      imgBackground.style.height="680px";
+      /*section.style.backgroundColor="#000000";*/
     })
   });

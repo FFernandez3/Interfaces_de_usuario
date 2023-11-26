@@ -109,8 +109,13 @@ div.hamburguerMenuOpen{
     opacity: 0.9;
 
   }
+  .menu li a{
+    text-decoration: none;
+    
+  }
   
-  .menu li {
+  
+  .menu li, .menu li a {
     padding: 15px;
     color: #FFE901;
     font-size: 18px;
@@ -128,17 +133,17 @@ div.hamburguerMenuOpen{
     left: 0;
   }
   
-  .menu.active li {
+  .menu.active li,  .menu.active li a  {
     opacity: 1;
     transform: translateX(0);
     transition-delay: 0.5s;
   }
-  
+
   .menu li:nth-child(1) { transition-delay: 0.6s; }
   .menu li:nth-child(2) { transition-delay: 0.9s; }
   .menu li:nth-child(3) { transition-delay: 1.2s; }
   
-  .menu li:hover{
+  .menu li:hover, .menu li a:hover{
     font-size: 20px ;
     transition: font-size 0.3s ease;
     
@@ -738,10 +743,14 @@ section.spiders{
     height: 720px;
     top: -1150px;
     position: relative;
+    z-index: 10;
 }
 img.imgBuyNow{
     width: 100%;
-    height: 720px;
+    height: 680px; /*antes 720*/
+   
+    
+   
 }
 div.ctn8{
     width: 100%;
@@ -752,6 +761,7 @@ div.ctn8{
     position: absolute;
     top: 180px;
     transition: background-image 0.1s ease;
+
 }
 
   
@@ -784,6 +794,7 @@ section.spritesheet{
     height: 1266px;
     position: relative;
     top: -1190px;
+    z-index: 9;
 }
 img.cloudsSpritesheet, img.buildingsSpritesheet{
     width: 100%;
