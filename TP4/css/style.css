@@ -50,20 +50,86 @@ div.hamburguerMenu{
     height: 26px;
     width: 34px;
 }*/
+div.hamburguerMenu .line:nth-child(2) {
+    animation: line2AnimationReverse 0.3s forwards;
+}
+@keyframes line2AnimationReverse{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+div.hamburguerMenu .line:nth-child(1) {
+    animation: line1AnimationReverse 0.3s forwards;
+ }
+
+@keyframes line1AnimationReverse {
+    0% {
+       transform: translateY(11px) rotate(45deg);
+    }
+    100% {
+       transform: translateY(0) rotate(0);
+    }
+}
+div.hamburguerMenu .line:nth-child(3) {
+     animation: line3AnimationReverse 0.3s forwards;
+ }
+@keyframes line3AnimationReverse {
+    0% {
+       transform: translateY(-13px) rotate(-45deg);
+    }
+    100% {
+       transform: translateY(0) rotate(0);
+    }
+}
 .line{
     opacity: 1;
     transform: translateY(0) rotate(0);
     margin: -3px;
     transition: all 0.3s;
 }
+
+
 div.hamburguerMenuOpen .line:nth-child(1) {
-    transform: translateY(11px) rotate(45deg);
+   animation: line1Animation 0.3s forwards;
+}
+@keyframes line1Animation {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    100% {
+        transform: translateY(11px) rotate(45deg);
+     
+    }
 }
 div.hamburguerMenuOpen .line:nth-child(2) {
-    opacity: 0;
+   
+    animation: line2Animation 0.3s forwards;
 }
+@keyframes line2Animation {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 div.hamburguerMenuOpen .line:nth-child(3) {
-    transform: translateY(-13px) rotate(-45deg);
+    animation: line3Animation 0.3s forwards;
+}
+@keyframes line3Animation {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    100% {
+        transform: translateY(-13px) rotate(-45deg);
+    }
 }
 div.hamburguerMenuOpen{
     display: flex;
@@ -71,6 +137,7 @@ div.hamburguerMenuOpen{
     align-items: center;
 
 }
+
 /*-----------------------------menu desplegable-----------------------------------*/
 
 .menu {
